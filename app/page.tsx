@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 import HeroSection from "@/components/Home/HeroSection";
 import VisionMission from "@/components/Home/VisionMission";
-import CoreObjectives from "@/components/Home/CoreObjectives";
 import WhoWeAre from "@/components/Home/WhoWeAre";
 import FooterSection from "@/components/Home/FooterSection";
 import StaggeredMenu from "@/components/StaggeredMenu";
-import LeadershipSection from "@/components/Home/LeadershipSection";
+import FeaturesSectionDemo from "@/components/features-section-demo-2";
+import { LeadershipSection } from "@/components/Home/LeadershipSection";
 
 const SECTION_IDS = ["hero", "vision", "objectives", "who-we-are", "leadership", "contact"];
 const menuItems = [
-    { label: "Home", ariaLabel: "Go to home page", link: "/" },
+  { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About Us", ariaLabel: "Learn about us", link: "/" },
   { label: "Publications", ariaLabel: "View our publications", link: "/" },
   { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
@@ -82,9 +82,9 @@ export default function Home() {
 
         <HeroSection />
         <VisionMission />
-        <CoreObjectives />
-        <WhoWeAre />
-        <LeadershipSection />
+        <FeaturesSectionDemo />
+      <LeadershipSection />
+         <WhoWeAre />
         <FooterSection />
       </div>
     </>

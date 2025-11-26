@@ -63,7 +63,7 @@ export default function CoreObjectives() {
   return (
     <section
       id="objectives"
-      className="relative w-full py-16 sm:py-20 bg-gradient-to-b from-slate-950 via-indigo-950 to-slate-900 overflow-hidden"
+      className="relative w-full py-16 sm:py-20  overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-start flex flex-col items-start justify-between gap-4 mb-10 sm:mb-14">
@@ -97,10 +97,10 @@ export default function CoreObjectives() {
                   hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(56,189,248,0.5)]`}
               >
                 {/* glow bar */}
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 via-sky-400 to-fuchsia-500 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-blue-500 via-sky-400 to-fuchsia-500 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* subtle background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 opacity-90" />
+                <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-slate-950 to-slate-900 opacity-90" />
 
                 {/* content */}
                 <div className="relative z-10 h-full w-full flex flex-col justify-between p-5 sm:p-6">

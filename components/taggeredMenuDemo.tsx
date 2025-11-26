@@ -1,7 +1,7 @@
 import StaggeredMenu from './StaggeredMenu';
 
 const menuItems = [
-    { label: "Home", ariaLabel: "Go to home page", link: "/" },
+  { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About Us", ariaLabel: "Learn about us", link: "/" },
   { label: "Publications", ariaLabel: "View our publications", link: "/" },
   { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
