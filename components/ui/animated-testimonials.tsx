@@ -41,6 +41,17 @@ export const AnimatedTestimonials = ({
 
   return (
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+      {/* ==== NEW HEADER SECTION ==== */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-black">
+          Leader Spotlight
+        </h2>
+        <p className="mt-3 text-base md:text-lg text-gray-700">
+          Meet the visionaries leading Lurnexa Publications
+        </p>
+      </div>
+
+      {/* ==== EXISTING TESTIMONIAL SECTION ==== */}
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         {/* ==== LEFT IMAGE SECTION ==== */}
         <div>
@@ -68,7 +79,7 @@ export const AnimatedTestimonials = ({
         </div>
 
         {/* ==== RIGHT TEXT SECTION ==== */}
-        <div className="flex flex-col justify-between py-4 ">
+        <div className="flex flex-col justify-between py-4">
           {current && (
             <AnimatePresence mode="wait">
               <motion.div
@@ -81,9 +92,7 @@ export const AnimatedTestimonials = ({
                 <h3 className="text-2xl font-bold text-black ">
                   {current.name}
                 </h3>
-                <p className="text-sm text-dark">
-                  {current.designation}
-                </p>
+                <p className="text-sm text-dark">{current.designation}</p>
 
                 <motion.p className="mt-8 text-lg text-black leading-relaxed">
                   {current.quote?.split(" ").map((word, index) => (
@@ -106,8 +115,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           )}
 
-          {/* ==== CONTROLS ==== */}
-         
+          {/* ==== CONTROLS (Optional UI controls can go here) ==== */}
         </div>
       </div>
     </div>

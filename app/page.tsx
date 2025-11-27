@@ -81,10 +81,10 @@ export default function Home() {
         />
 
         <HeroSection />
+        <WhoWeAre />
         <VisionMission />
         <FeaturesSectionDemo />
       <LeadershipSection />
-         <WhoWeAre />
         <FooterSection />
       </div>
     </>

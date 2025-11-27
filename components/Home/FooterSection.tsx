@@ -1,61 +1,119 @@
-import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter, Mail } from "lucide-react";
 
 export default function FooterSection() {
   const socialLinks = [
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
   ];
 
   return (
-    <footer className="border-t border-slate-200 py-8 md:py-12" style={{ backgroundColor: '#FFF0E6' }}>
-      <div className="mx-auto max-w-6xl px-6">
-        {/* Main Footer Content */}
-        <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:mb-12">
-          {/* Company Info */}
-          <div className="flex flex-col justify-between">
+    <footer
+      className="border-t border-slate-200 py-8 md:py-12"
+      style={{ backgroundColor: "#FFF0E6" }}
+    >
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* ==== Main Footer Content ==== */}
+        <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+          {/* ==== Company Info ==== */}
+          <div className="flex flex-col items-start justify-between text-center sm:text-left">
             <div>
-              <div className="mb-4 inline-flex items-center rounded-lg  p-2">
-                <span className="text-lg font-bold text-white bg-transparent">
-                  <img src="/Logo.png" alt="Lurnexa Logo" className="h-8 w-auto object-contain" />
-                </span>
+              <div className="mb-4 inline-flex items-center justify-center rounded-lg p-2 sm:justify-start">
+                <img
+                  src="/Logo.png"
+                  alt="Lurnexa Logo"
+                  className="h-10 w-auto object-contain sm:h-8"
+                />
               </div>
-              <h3 className="text-sm font-semibold text-slate-800">Lurnexa Publications</h3>
-              <p className="mt-2 text-xs text-slate-600"></p>
+              <h3 className="text-base font-semibold text-slate-800 sm:text-sm">
+                Lurnexa Publications
+              </h3>
+              <p className="mt-2 text-xs text-slate-600 max-w-xs mx-auto sm:mx-0">
+                Empowering technology, innovation, and creativity through
+                knowledge.
+              </p>
+
+              {/* ==== Email Section ==== */}
+              <div className="mt-3 flex items-center justify-center sm:justify-start text-xs text-slate-700">
+                <Mail size={14} className="mr-2 text-slate-700" />
+                <a
+                  href="mailto:contact@lurnexa.com"
+                  className="hover:text-slate-900 transition-colors"
+                >
+                  lurnexapublication@gmail.com
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold text-slate-800">Quick Links</h4>
+          {/* ==== Quick Links ==== */}
+          <div className="text-center sm:text-left">
+            <h4 className="mb-4 text-base font-semibold text-slate-800 sm:text-sm">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">About</button></li>
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Company</button></li>
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Services</button></li>
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Testimonials</button></li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  About
+                </button>
+              </li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Company
+                </button>
+              </li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Services
+                </button>
+              </li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Testimonials
+                </button>
+              </li>
             </ul>
           </div>
 
-          {/* Legal Links */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold text-slate-800">Legal</h4>
+          {/* ==== Legal Links ==== */}
+          <div className="text-center sm:text-left">
+            <h4 className="mb-4 text-base font-semibold text-slate-800 sm:text-sm">
+              Legal
+            </h4>
             <ul className="space-y-2">
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Privacy Policy</button></li>
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Terms of Service</button></li>
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Contact Us</button></li>
-              <li><button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">Sitemap</button></li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Contact Us
+                </button>
+              </li>
+              <li>
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                  Sitemap
+                </button>
+              </li>
             </ul>
           </div>
         </div>
 
-        {/* Divider */}
+        {/* ==== Divider ==== */}
         <div className="mb-6 border-t border-slate-300"></div>
 
-        {/* Bottom Footer */}
+        {/* ==== Bottom Footer ==== */}
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           {/* Copyright */}
-          <p className="text-xs text-slate-600">
-            All rights reserved. © {new Date().getFullYear()} Lurnexa.
+          <p className="text-xs text-slate-600 text-center sm:text-left">
+            All rights reserved. © {new Date().getFullYear()}{" "}
+            <span className="font-semibold">Lurnexa</span>.
           </p>
 
           {/* Social Media Icons */}
