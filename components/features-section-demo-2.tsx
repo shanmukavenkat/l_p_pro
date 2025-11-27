@@ -77,7 +77,7 @@ export default function FeaturesSectionDemo() {
               ecosystem.
             </p>
           </div>
-          <span className="rounded-full bg-blue-600/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700 dark:bg-sky-500/15 dark:text-sky-300">
+          <span className="rounded-full  px-4 py-1 text-xs font-semibold uppercase tracking-wide text-grey-700 bg-sky-500/15 ">
             7 Key Focus Areas
           </span>
         </div>
