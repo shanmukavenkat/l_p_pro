@@ -385,7 +385,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           <img
               src="/Logo.png"
               alt="Lurnexa Logo"
-              className="sm-logo-img block   object-contain mix-blend-multiply opacity-100%"
+              className="sm-logo-img block  mix-blend-multiply   object-contain  opacity-100%"
               draggable={false}
               width={440}
             height={440}
@@ -412,7 +412,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             >
               <span ref={textInnerRef} className="sm-toggle-textInner flex flex-col text-end leading-none">
                 {textLines.map((l, i) => (
-                  <span className="sm-toggle-line block h-[1em] leading-none mix-blend-difference " key={i}>
+                  <span className="sm-toggle-line block h-[1em] leading-none  " key={i}>
                     {l}
                   </span>
                 ))}
@@ -586,7 +586,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     left: 0;
     right: 0;
   }
-  .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(100%); }
+  .sm-scope .staggered-menu-wrapper[data-open]  }
 }
 @media (max-width: 640px) {
   .sm-scope .staggered-menu-panel {
@@ -594,7 +594,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     left: 0;
     right: 0;
   }
-  .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(100%); }
+  .sm-scope .staggered-menu-wrapper[data-open]  }
 }
       `}</style>
     </div>

@@ -5,41 +5,40 @@ import HeroSection from "@/components/Home/HeroSection";
 import VisionMission from "@/components/Home/VisionMission";
 import WhoWeAre from "@/components/Home/WhoWeAre";
 import FooterSection from "@/components/Home/FooterSection";
-import StaggeredMenu from "@/components/StaggeredMenu";
 import FeaturesSectionDemo from "@/components/features-section-demo-2";
 import { LeadershipSection } from "@/components/Home/LeadershipSection";
-
-const SECTION_IDS = ["hero", "vision", "objectives", "who-we-are", "leadership", "contact"];
-const menuItems = [
-  { label: "Home", ariaLabel: "Go to home page", link: "/" },
-  { label: "About Us", ariaLabel: "Learn about us", link: "/" },
-  { label: "Publications", ariaLabel: "View our publications", link: "/" },
-  { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
-  { label: "Case Center", ariaLabel: "Browse our case center", link: "/" },
-  { label: "Join Editorial Board", ariaLabel: "Apply to join the editorial board", link: "/" },
-  { label: "Contact", ariaLabel: "Get in touch with us", link: "/" },
-  { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/" }
-];
-
-
+import NavigationPage from "@/app/nav/page";
 
 export default function Home() {
+  // ✅ Section tracking
+  const SECTION_IDS = [
+    "hero",
+    "who-we-are",
+    "vision",
+    "objectives",
+    "leadership",
+    "contact",
+  ];
+
   const [activeSection, setActiveSection] = useState<string>("hero");
 
-  // Smooth scroll when nav item clicked
+  // ✅ Smooth scroll (optional — for future nav use)
   const handleNavClick = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // Track active section with IntersectionObserver
+  // ✅ Intersection Observer for active section tracking
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0));
+          .sort(
+            (a, b) =>
+              (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0)
+          );
 
         if (visibleSections.length > 0) {
           const id = visibleSections[0].target.id;
@@ -60,32 +59,38 @@ export default function Home() {
     });
 
     return () => observer.disconnect();
-  }, [activeSection]);
+  }, []); // ✅ no dependency on activeSection to prevent re-observing each update
 
   return (
     <>
-      <div className="min-h-screen  text-slate-900">
-        
-        <StaggeredMenu
-          position="right"
-          items={menuItems}
-          displayItemNumbering = {false}
-          menuButtonColor="#000"
-          openMenuButtonColor="#000"
-          changeMenuColorOnOpen={true}
-          colors={['#B19EEF', '#5227FF']}
-          logoUrl="/path-to-your-logo.svg"
-          accentColor="#ff6b6b"
-          isFixed={true}
-          // keep it fixed
-        />
+      <div className="min-h-screen text-slate-900">
+        {/* Fixed navigation */}
+        <NavigationPage />
 
-        <HeroSection />
-        <WhoWeAre />
-        <VisionMission />
-        <FeaturesSectionDemo />
-      <LeadershipSection />
-        <FooterSection />
+        {/* Sections with proper IDs for observer tracking */}
+        <section id="hero">
+          <HeroSection />
+        </section>
+
+        <section id="who-we-are">
+          <WhoWeAre />
+        </section>
+
+        <section id="vision">
+          <VisionMission />
+        </section>
+
+        <section id="objectives">
+          <FeaturesSectionDemo />
+        </section>
+
+        <section id="leadership">
+          <LeadershipSection />
+        </section>
+
+        <section id="contact">
+          <FooterSection />
+        </section>
       </div>
     </>
   );

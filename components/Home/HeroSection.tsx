@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 
