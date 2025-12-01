@@ -4,7 +4,7 @@ import { FileDown, Send, Cpu } from "lucide-react";
 import Link from "next/link";
 import { Timeline } from "@/components/ui/timeline";
 
-export function TimelineDemo() {
+export function ACIETTimeline() {
   const data = [
     {
       title: "About Us",

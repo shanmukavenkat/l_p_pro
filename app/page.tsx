@@ -7,7 +7,7 @@ import WhoWeAre from "@/components/Home/WhoWeAre";
 import FooterSection from "@/components/Home/FooterSection";
 import FeaturesSectionDemo from "@/components/features-section-demo-2";
 import { LeadershipSection } from "@/components/Home/LeadershipSection";
-import NavigationPage from "@/app/nav/page";
+import NavigationPage from "@/components/Home/nav/page";
 
 export default function Home() {
   // ✅ Section tracking

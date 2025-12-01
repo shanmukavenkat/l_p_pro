@@ -10,7 +10,7 @@ const SECTION_IDS = [
   "leadership",
   "contact",
 ];
-
+  
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About Us", ariaLabel: "Learn about us", link: "/" },
@@ -86,6 +86,7 @@ export default function NavigationPage() {
         logoUrl="/Logo.png"
         accentColor="#ff6b6b"
         isFixed={true}
+      
       />
     </main>
   );

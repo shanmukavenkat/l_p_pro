@@ -345,9 +345,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   }, [playOpen, playClose, animateIcon, animateColor, animateText, onMenuOpen, onMenuClose]);
 
   return (
-    <div
-      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}
-    >
+     <div
+    className={`sm-scope z-40 ${
+      isFixed
+        ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden pointer-events-none'  // ✅ added pointer-events-none
+        : 'w-full h-full'
+    }`}
+  >
       <div
         className={(className ? className + ' ' : '') + 'staggered-menu-wrapper  relative w-full h-full z-40'}
         style={accentColor ? ({ ['--sm-accent' as any]: accentColor } as React.CSSProperties) : undefined}
@@ -439,7 +443,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-[12px]"
+            className="staggered-menu-panel absolute top-0 right-0 h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-[12px] pointer-events-auto"  // ✅ added pointer-events-auto
           style={{ WebkitBackdropFilter: 'blur(12px)' }}
           aria-hidden={!open}
         >
