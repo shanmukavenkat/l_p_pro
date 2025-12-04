@@ -63,9 +63,10 @@ export default function GJPIRPage() {
                 GJPIR provides a trusted academic space for innovative, interdisciplinary research fostering scientific and societal progress.
               </Section>
 
-              <Buttons />
+             
             </div>
           </div>
+           <Buttons />
         </div>
       </section>
       <FooterSection />
@@ -93,7 +94,7 @@ function ListSection({ title, items }: any) {
 }
 function Buttons() {
   return (
-    <div className="flex flex-wrap gap-4 pt-6">
+    <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
       <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700">Editorial Board</button>
       <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500">Journal Submission</button>
       <Link href="/publications/explore">

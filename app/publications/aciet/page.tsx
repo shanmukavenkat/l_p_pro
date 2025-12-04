@@ -3,12 +3,12 @@ import React from "react";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function ACIETPage() {
   return (
     <>
       <NavigationPage />
-      <section className="py-20 px-6 bg-gradient-to-b from-neutral-50 to-white border-b border-gray-300">
+      <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-2">
             Advanced Computational Intelligence & Emerging Technologies (ACIET)
@@ -19,7 +19,12 @@ export default function ACIETPage() {
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-[0.6] flex justify-center">
-              <img src="/Aciet.png" alt="ACIET Cover" className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border"/>
+              <Image src="/Aciet.png" alt="Journal cover for Advanced Computational Intelligence & Emerging Technologies, ACIET. The cover features an abstract design with interconnected lines and glowing nodes set against a dark background, conveying themes of advanced technology and digital networks."
+          width={300}
+          height={400}
+          className="object-cover rounded-lg shadow-xl border"
+          priority
+          />
             </div>
 
             <div className="flex-[1.5] bg-white p-6 md:p-8 rounded-xl shadow-inner border max-h-[550px] overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
@@ -49,10 +54,10 @@ export default function ACIETPage() {
               <Section title="Editorial Message">
                 ACIET is dedicated to research that advances AI and intelligent technologies driving the future of automation and digital systems.
               </Section>
-              <Buttons/>
             </div>
           </div>
         </div>
+            <Buttons/>
       </section>
       <FooterSection />
     </>
@@ -65,7 +70,7 @@ const ListSection = ({ title, items }: any) => (
   <div><h2 className="text-2xl font-semibold text-gray-900 mb-2">{title}</h2><ul className="list-decimal list-inside text-gray-700 leading-relaxed space-y-1">{items.map((i: string, idx: number) => <li key={idx}>{i}</li>)}</ul></div>
 );
 const Buttons = () => (
-  <div className="flex flex-wrap gap-4 pt-6">
+  <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
     <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700">Editorial Board</button>
     <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500">Journal Submission</button>
     <Link href="/publications/explore">

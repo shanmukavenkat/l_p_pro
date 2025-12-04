@@ -14,7 +14,7 @@ export default function ExploreJournalsPage() {
         "Explore the diverse research and innovative studies published under GJPIR.",
       color: "bg-sky-600",
       path: "/publications/gjpir",
-      image:"Gjpir.png"
+      image:"/Gjpir.png"
     },
     {
       Id: 2,
@@ -23,7 +23,7 @@ export default function ExploreJournalsPage() {
         "Dive into advanced studies and innovations in computing and information technologies.",
       color: "bg-purple-600",
       path: "/publications/aciet",
-      image:"Aciet.png"
+      image:"/Aciet.png"
     },
     {
       Id: 3,
@@ -32,7 +32,7 @@ export default function ExploreJournalsPage() {
         "Discover pioneering research in management, leadership, and innovation strategies.",
       color: "bg-yellow-500",
       path: "/publications/cims",
-      image:"Cimms.png"
+      image:"/Cimms.png"
     },
     {
       Id: 4,
@@ -41,7 +41,7 @@ export default function ExploreJournalsPage() {
         "Engage with impactful research and insights in economics and social sciences.",
       color: "bg-emerald-600",
       path: "/publications/aress",
-      image:"Aress.png"
+      image:"/Aress.png"
     },
     {
       Id: 5,
@@ -50,7 +50,7 @@ export default function ExploreJournalsPage() {
         "Explore advancements and applied research in electrical and electronics engineering.",
       color: "bg-indigo-600",
       path: "/publications/iaees",
-      image:"iaees.png"
+      image:"/iaees.png"
     },
   ];
 
@@ -78,10 +78,10 @@ export default function ExploreJournalsPage() {
                   <img
                     src={journal.image}
                     alt={journal.title}
-                    className="w-full h-60 object-cover"
+                    className="w-full h-full object-cover"
                   />
                   <div className="p-4">
-                   
+                   {journal.description && <p className="text-gray-700 mb-4">{journal.description}</p>}
                    
                   </div>
                 </div>

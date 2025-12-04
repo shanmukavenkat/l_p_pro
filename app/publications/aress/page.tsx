@@ -3,7 +3,7 @@ import React from "react";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function ARESSPage() {
   return (
     <>
@@ -20,10 +20,12 @@ export default function ARESSPage() {
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Left Image */}
             <div className="flex-[0.6] flex justify-center">
-              <img
-                src="./Aress.png"
+              <Image
+                src="/Aress.png"
                 alt="ARESS Cover"
-                className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border border-gray-200"
+                width={240}
+                height={320}
+                className="object-cover rounded-lg shadow-md border border-gray-200"
               />
             </div>
 
@@ -62,9 +64,10 @@ export default function ARESSPage() {
                 ARESS fosters research that contributes to sustainable economic development and equitable societal growth.
               </Section>
 
-              <Buttons />
             </div>
           </div>
+              <Buttons />
+
         </div>
       </section>
       <FooterSection />
@@ -89,7 +92,7 @@ const ListSection = ({ title, items }: any) => (
   </div>
 );
 const Buttons = () => (
-  <div className="flex flex-wrap gap-4 pt-6">
+  <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
     <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all">
       Editorial Board
     </button>

@@ -4,7 +4,7 @@ import React from "react";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function PublicationsPage() {
   return (
     <>
@@ -15,15 +15,17 @@ export default function PublicationsPage() {
           <div className="flex flex-col lg:flex-row items-center gap-12 mb-1">
             {/* Left Image */}
             <div className="flex-1 flex justify-center">
-              <img
-                src="/journals/publication-main.jpg"
+              <Image
+                src="/Logo.png"
                 alt="Lurnexa Publications"
+                width={400}
+                height={300}
                 className="w-full max-w-sm rounded-md shadow-md border object-cover"
               />
             </div>
 
             {/* Right Text */}
-            <div className="flex-1 text-center lg:text-left space-y-6">
+            <div className="flex-1 text-start lg:text-left space-y-6">
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
                 Lurnexa Publications
               </h1>

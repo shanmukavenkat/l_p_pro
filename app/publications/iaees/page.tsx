@@ -62,9 +62,10 @@ export default function IAEESPage() {
                 IAEES drives research excellence in electrical and electronic innovation fostering smarter and sustainable engineering solutions.
               </Section>
 
-              <Buttons />
+             
             </div>
           </div>
+           <Buttons />
         </div>
       </section>
       <FooterSection />
@@ -89,7 +90,7 @@ const ListSection = ({ title, items }: any) => (
   </div>
 );
 const Buttons = () => (
-  <div className="flex flex-wrap gap-4 pt-6">
+  <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
     <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all">
       Editorial Board
     </button>

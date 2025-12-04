@@ -19,7 +19,7 @@ export default function CIMSPage() {
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-[0.6] flex justify-center">
-              <img src="/Cims.png" alt="CIMS Cover" className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border"/>
+              <img src="/Cimms.png" alt="CIMS Cover" className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border"/>
             </div>
 
             <div className="flex-[1.5] bg-white p-6 md:p-8 rounded-xl shadow-inner border max-h-[550px] overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
@@ -49,9 +49,10 @@ export default function CIMSPage() {
               <Section title="Editorial Message">
                 CIMS encourages data-driven, ethical, and strategic management research contributing to leadership excellence.
               </Section>
-              <Buttons/>
+             
             </div>
           </div>
+           <Buttons/>
         </div>
       </section>
       <FooterSection />
@@ -65,7 +66,7 @@ const ListSection = ({ title, items }: any) => (
   <div><h2 className="text-2xl font-semibold text-gray-900 mb-2">{title}</h2><ul className="list-decimal list-inside text-gray-700 leading-relaxed space-y-1">{items.map((i: string, idx: number) => <li key={idx}>{i}</li>)}</ul></div>
 );
 const Buttons = () => (
-  <div className="flex flex-wrap gap-4 pt-6">
+  <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
     <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700">Editorial Board</button>
     <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500">Journal Submission</button>
     <Link href="/publications/explore">
