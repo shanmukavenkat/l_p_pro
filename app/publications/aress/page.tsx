@@ -8,7 +8,7 @@ export default function ARESSPage() {
   return (
     <>
       <NavigationPage />
-      <section className="py-20 px-6 bg-gradient-to-b from-neutral-50 to-white border-b border-gray-300">
+      <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-2">
             Advanced Research in Economics & Social Sciences (ARESS)
