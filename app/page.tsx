@@ -22,14 +22,14 @@ export default function Home() {
 
   const [activeSection, setActiveSection] = useState<string>("hero");
 
-  // ✅ Smooth scroll (optional — for future nav use)
+  // Smooth scroll (optional — for future nav use)
   const handleNavClick = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // ✅ Intersection Observer for active section tracking
+  //  Intersection Observer for active section tracking
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -59,7 +59,7 @@ export default function Home() {
     });
 
     return () => observer.disconnect();
-  }, []); // ✅ no dependency on activeSection to prevent re-observing each update
+  }, []); //  no dependency on activeSection to prevent re-observing each update
 
   return (
     <>

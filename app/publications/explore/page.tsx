@@ -8,49 +8,40 @@ import Link from "next/link";
 export default function ExploreJournalsPage() {
   const journals = [
     {
-        Id: 1,
-      title: "Global Journal for Progressive Innovation & Research (GJPIR)",
-      description:
-        "Explore the diverse research and innovative studies published under GJPIR.",
-      color: "bg-sky-600",
-      path: "/publications/gjpir",
-      image:"/Gjpir.png"
-    },
-    {
-      Id: 2,
+      Id: 1,
       title: "Advances in Computer & Information Engineering Technology (ACIET)",
       description:
         "Dive into advanced studies and innovations in computing and information technologies.",
       color: "bg-purple-600",
       path: "/publications/aciet",
-      image:"/Aciet.png"
+      image: "/Aciet.png",
     },
     {
-      Id: 3,
+      Id: 2,
       title: "Center for Innovative Management Studies (CIMS)",
       description:
         "Discover pioneering research in management, leadership, and innovation strategies.",
       color: "bg-yellow-500",
       path: "/publications/cims",
-      image:"/Cimms.png"
+      image: "/Cimms.png",
     },
     {
-      Id: 4,
+      Id: 3,
       title: "Advanced Research in Economics & Social Sciences (ARESS)",
       description:
         "Engage with impactful research and insights in economics and social sciences.",
       color: "bg-emerald-600",
       path: "/publications/aress",
-      image:"/Aress.png"
+      image: "/Aress.png",
     },
     {
-      Id: 5,
+      Id: 4,
       title: "Institute of Advanced Electrical & Electronics Studies (IAEES)",
       description:
         "Explore advancements and applied research in electrical and electronics engineering.",
       color: "bg-indigo-600",
       path: "/publications/iaees",
-      image:"/iaees.png"
+      image: "/iaees.png",
     },
   ];
 
@@ -58,31 +49,40 @@ export default function ExploreJournalsPage() {
     <>
       <NavigationPage />
       <section className="py-20 px-6 bg-neutral-50 border-b border-gray-300">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-8 text-gray-900">
-            Our Journals
-          </h1>
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl font-bold mb-8 text-gray-900">Our Journals</h1>
           <p className="text-lg text-gray-700 mb-12">
             Explore our peer-reviewed open-access journals in techno-management
             and social sciences.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+          {/* Responsive grid */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 justify-center">
             {journals.map((journal) => (
-                
               <Link key={journal.Id} href={journal.path}>
-                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="cursor-pointer bg-white shadow-md rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+                  
+                  {/* Title at the top */}
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-900  text-center">
                       {journal.title}
                     </h3>
-                <div className="cursor-pointer bg-white shadow-md rounded-xl  hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <img
-                    src={journal.image}
-                    alt={journal.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="p-4">
-                   {journal.description && <p className="text-gray-700 mb-4">{journal.description}</p>}
-                   
+                  </div>
+
+                  {/* Image section */}
+                  <div className="w-full aspect-3/4 overflow-hidden rounded-none">
+                    <img
+                      src={journal.image}
+                      alt={journal.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+
+                  {/* Description below image */}
+                  <div className="p-4 mt-auto">
+                    {journal.description && (
+                      <p className="text-gray-700 text-left">{journal.description}</p>
+                    )}
                   </div>
                 </div>
               </Link>

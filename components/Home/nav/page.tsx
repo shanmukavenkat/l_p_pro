@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import StaggeredMenu from "@/components/StaggeredMenu";
-
 const SECTION_IDS = [
   "hero",
   "vision",
@@ -30,18 +29,18 @@ const menuItems = [
   { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/" },
 ];
 
-export default function NavigationPage() {
-  // ✅ Track which section is currently visible
+export default function NavigationPage({ showLogoName = false, logoName = "" }: { showLogoName?: boolean; logoName?: string }) {
+  //  Track which section is currently visible
   const [activeSection, setActiveSection] = useState<string>("hero");
 
-  // ✅ Smooth scroll on nav click
+  //  Smooth scroll on nav click
   const handleNavClick = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // ✅ Track visible sections via IntersectionObserver
+  //  Track visible sections via IntersectionObserver
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -86,8 +85,10 @@ export default function NavigationPage() {
         logoUrl="/Logo.png"
         accentColor="#ff6b6b"
         isFixed={true}
-      
+        showLogoName={true}
+        logoName="Lurnexa"
       />
+     
     </main>
   );
 }

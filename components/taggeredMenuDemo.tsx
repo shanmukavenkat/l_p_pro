@@ -16,6 +16,8 @@ const socialItems = [
 ];
 
 <div style={{ height: '100vh', background: '#1a1a1a' }}>
+      
+        
   <StaggeredMenu
         position="right"
         items={menuItems}
@@ -27,5 +29,7 @@ const socialItems = [
         changeMenuColorOnOpen={true}
         colors={['#B19EEF', '#5227FF']}
         onMenuOpen={() => console.log('Menu opened')}
-        onMenuClose={() => console.log('Menu closed')} isFixed={false}  />
+        onMenuClose={() => console.log('Menu closed')} isFixed={true}
+          /> 
+            
 </div>

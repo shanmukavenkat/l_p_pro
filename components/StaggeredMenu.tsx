@@ -26,6 +26,9 @@ export interface StaggeredMenuProps {
   changeMenuColorOnOpen?: boolean;
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
+  showLogoName?: boolean;     // 👈 Added
+  logoName?: string; 
+  
 }
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
@@ -43,7 +46,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   accentColor = '#5227FF',
   isFixed = false,
   onMenuOpen,
-  onMenuClose
+  onMenuClose,
+   showLogoName = false,      // 👈 Added
+  logoName = '',  
 }: StaggeredMenuProps) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
@@ -349,11 +354,11 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     className={`sm-scope z-40 ${
       isFixed
         ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden pointer-events-none'  // ✅ added pointer-events-none
-        : 'w-full h-full'
+        : 'relative w-full h-full'
     }`}
   >
       <div
-        className={(className ? className + ' ' : '') + 'staggered-menu-wrapper  relative w-full h-full z-40'}
+        className={(className ? className + ' ' : '') + 'staggered-menu-wrapper  relative w-full h-full z-1'}
         style={accentColor ? ({ ['--sm-accent' as any]: accentColor } as React.CSSProperties) : undefined}
         data-position={position}
         data-open={open || undefined}
@@ -384,18 +389,22 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em]  pointer-events-none z-20 bg-white"
           aria-label="Main navigation header"
         >
-          <div className="sm-logo flex items-center select-none pointer-events-auto" aria-label="Logo">
-          <a href="/">
-          <img
-              src="/Logo.png"
-              alt="Lurnexa Logo"
-              className="sm-logo-img block  mix-blend-multiply   object-contain  opacity-100%"
+         <div className="sm-logo flex items-center gap-3 select-none pointer-events-auto" aria-label="Logo">
+          <a href="/" className="flex items-center gap-2 no-underline">
+            <img
+              src={logoUrl}
+              alt={logoName || "Logo"}
+              className="sm-logo-img block mix-blend-multiply object-contain opacity-100%"
               draggable={false}
-              width={440}
-            height={440}
-      
+              width={50}
+              height={50}
             />
-            </a>
+            {showLogoName && (
+              <span className="text-lg font-semibold text-black tracking-tight">
+                {logoName}
+              </span>
+            )}
+          </a>
           </div>
 
           <button
@@ -506,8 +515,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       </div>
 
       <style suppressHydrationWarning>{`
-.sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 40; }
-.sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index: 20; }
+.sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 9999; }
+.sm-scope .staggered-menu-header {  position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index:  z-index: 9999;; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
 .sm-scope .sm-logo-img { display: block; height: 32px; width: auto; object-fit: contain; }

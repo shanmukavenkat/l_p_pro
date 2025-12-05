@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center min-h-screen overflow-hidden bg-[#FFF0E6] px-4 sm:px-6 lg:px-8"
+      className="flex items-center justify-center min-h-screen overflow-hidden bg-[#FFF0E6] px-4 sm:px-6 lg:px-8 relative z-10"
     >
       {/* ✅ Everything centered both horizontally & vertically */}
       <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-16 sm:py-20 md:py-28 text-center">
