@@ -21,7 +21,7 @@ export default function IAEESPage() {
             {/* Left Image */}
             <div className="flex-[0.6] flex justify-center">
               <img
-                src="/Iaees.png"
+                src="/iaees.png"
                 alt="IAEES Cover"
                 className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border border-gray-200"
               />
