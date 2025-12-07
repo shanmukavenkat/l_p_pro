@@ -51,9 +51,7 @@ export default function ACIETPage() {
               <Section title="Scope">
                 AI, ML, Deep Learning, Data Science, Computer Vision, NLP, IoT, Cloud, Edge, Cybersecurity, Quantum Computing.
               </Section>
-              <Section title="Editorial Message">
-                ACIET is dedicated to research that advances AI and intelligent technologies driving the future of automation and digital systems.
-              </Section>
+              
             </div>
           </div>
         </div>

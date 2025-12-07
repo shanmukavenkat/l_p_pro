@@ -84,7 +84,7 @@ export default function NavigationPage({ showLogoName = false, logoName = "" }: 
         colors={["#B19EEF", "#5227FF"]}
         logoUrl="/Logo.png"
         accentColor="#ff6b6b"
-        isFixed={true}
+        isFixed={false}
         showLogoName={true}
         logoName="Lurnexa"
       />

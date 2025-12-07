@@ -351,10 +351,10 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
      <div
-    className={`sm-scope z-40 ${
+    className={`sm-scope   ${
       isFixed
-        ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden pointer-events-none'  // ✅ added pointer-events-none
-        : 'relative w-full h-full'
+          ? "fixed inset-0 z-[9999] overflow-hidden"  // ✅ ensures it's above all
+          : "absolute inset-0 z-[9999] overflow-hidden"
     }`}
   >
       <div
@@ -389,18 +389,22 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           className="staggered-menu-header absolute top-0 left-0 w-full flex items-center justify-between p-[2em]  pointer-events-none z-20 bg-white"
           aria-label="Main navigation header"
         >
-         <div className="sm-logo flex items-center gap-3 select-none pointer-events-auto" aria-label="Logo">
+         <div className=" flex items-center gap-3 select-none pointer-events-auto" aria-label="Logo">
           <a href="/" className="flex items-center gap-2 no-underline">
             <img
               src={logoUrl}
               alt={logoName || "Logo"}
-              className="sm-logo-img block mix-blend-multiply object-contain opacity-100%"
+              className=" block mix-blend-multiply object-contain opacity-100%"
               draggable={false}
-              width={50}
-              height={50}
+              width={80}
+              height={80}
+               style={{
+                width: "clamp(40px, 6vw, 80px)",
+                height: "clamp(40px, 6vw, 80px)",
+      }}
             />
             {showLogoName && (
-              <span className="text-lg font-semibold text-black tracking-tight">
+              <span className="text-[20px] sm:text-[28px] md:text-[32px] lg:text-[35px] font-semibold text-black tracking-tight">
                 {logoName}
               </span>
             )}

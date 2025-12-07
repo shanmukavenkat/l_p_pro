@@ -46,9 +46,7 @@ export default function CIMSPage() {
               <Section title="Scope">
                 Strategic Management, Operations, Analytics, Entrepreneurship, Governance, Finance, FinTech, Sustainability.
               </Section>
-              <Section title="Editorial Message">
-                CIMS encourages data-driven, ethical, and strategic management research contributing to leadership excellence.
-              </Section>
+             
              
             </div>
           </div>

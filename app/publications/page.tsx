@@ -23,7 +23,7 @@ export default function PublicationsPage() {
                    <img
                      src="/Gjpir.png"
                      alt="GJPIR Cover"
-                     className="w-[520px] h-[500px] object-cover rounded-lg shadow-md border"
+                     className="w-[520px] h-[500px] object-contain rounded-lg shadow-md border bg-white p-2"
                    />
                  </div>
      
@@ -60,10 +60,7 @@ export default function PublicationsPage() {
                      Technology, Management, Economics, Social Sciences, Electrical and Electronics Engineering.
                    </Section>
      
-                   <Section title="Editorial Message">
-                     GJPIR provides a trusted academic space for innovative, interdisciplinary research fostering scientific and societal progress.
-                   </Section>
-     
+  
                   
                  </div>
                </div>
@@ -71,7 +68,7 @@ export default function PublicationsPage() {
              </div>
                 <Link href="/publications/explore">
                 <button className="mt-6 bg-blue-600   hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition">
-                  Explore Journals
+                 Article / Case Study Submission
                 </button>
               </Link>
            </section>

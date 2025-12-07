@@ -78,7 +78,7 @@ export default function FeaturesSectionDemo() {
             </p>
           </div>
           <span className="rounded-full  px-4 py-1 text-xs font-semibold uppercase tracking-wide text-grey-700 bg-sky-500/15 ">
-            7 Key Focus Areas
+            8 Key Focus Areas
           </span>
         </div>
       </div>

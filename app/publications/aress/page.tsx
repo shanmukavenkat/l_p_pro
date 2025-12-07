@@ -60,9 +60,7 @@ export default function ARESSPage() {
                 Microeconomics, Macroeconomics, Development Studies, Policy, Sociology, Psychology, Education, Health, Sustainability.
               </Section>
 
-              <Section title="Editorial Message">
-                ARESS fosters research that contributes to sustainable economic development and equitable societal growth.
-              </Section>
+             
 
             </div>
           </div>
