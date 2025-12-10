@@ -1,4 +1,3 @@
- import Lenis from '@studio-freight/lenis';
  import { ReactLenis } from '@studio-freight/react-lenis';
  import { useTransform, motion, useScroll, MotionValue } from 'motion/react';
  import { useRef } from 'react';

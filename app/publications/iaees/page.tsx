@@ -10,7 +10,7 @@ export default function IAEESPage() {
       <NavigationPage />
       <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-2">
+          <h1 className="mt-3 text-2xl md:text-2xl font-bold text-center text-gray-900 mb-2">
             Institute of Advanced Electrical & Electronics Studies (IAEES)
           </h1>
           <p className="text-center text-lg text-gray-600 italic mb-12">
@@ -30,38 +30,51 @@ export default function IAEESPage() {
             {/* Right Content */}
             <div className="flex-[1.5] bg-white p-6 md:p-8 rounded-xl shadow-inner border border-gray-200 max-h-[550px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 space-y-6">
               <Section title="About Us">
-                IAEES promotes innovation in electrical and electronics engineering focusing on power systems, automation, embedded technologies, and energy-efficient systems.
+               IAEES is committed to promoting innovation in electrical and electronics engineering.
+We focus on research that enhances power systems, electronics, automation, and intelligent technologies.
+The section encourages studies that support sustainable and efficient engineering solutions.
+We connect researchers and engineers working on next-generation electrical and electronic advancements.
+IAEES aims to contribute to global technological progress through high-quality engineering research.
               </Section>
 
               <Section title="Vision">
-                To be a globally recognized hub for pioneering research in EEE driving intelligent, sustainable, and high-performance solutions.
+                To be a globally recognized hub for pioneering research and innovation in electrical and electronics engineering, driving the next generation of intelligent, sustainable, and high-performance technological solutions.
               </Section>
 
               <ListSection title="Mission" items={[
-                "Publish research advancing power, electronics, and automation.",
-                "Encourage innovation for energy-efficient and intelligent systems.",
-                "Promote collaboration between researchers and industry experts.",
+               "To publish cutting-edge research advancing power systems, electronics, embedded systems, automation, and communication technologies",
+"To support innovation that contributes to smarter, safer, and more efficient electrical and electronic systems.",
+"To connect researchers, industry experts, and academicians for collaborative technological advancement.",
+" To promote sustainable and energy-efficient engineering practices that address global challenges.",
+"To encourage futuristic research in semiconductor technology, microelectronics, signal processing, and intelligent control systems."
               ]}/>
 
               <ListSection title="Objectives" items={[
-                "Support research in EEE, circuits, automation, and IoT.",
-                "Promote standards of originality and technical rigor.",
-                "Facilitate interdisciplinary integration with AI and robotics.",
+               " Promote high-quality innovations in electrical engineering, electronics, circuits, power generation, and emerging EEE technologies.",
+" Support research advancements in automation, VLSI, IoT devices, renewable energy systems, and embedded technologies.",
+" Provide a platform for global knowledge exchange through publications, expert reviews, and academic-industry collaboration.",
+" Encourage young engineers and researchers to contribute novel ideas addressing real-world technological challenges.",
+" Uphold international scientific standardsensuring originality, technical rigor, and impactful engineering research.",
+" Facilitate interdisciplinary applications, integrating electronics with AI, robotics, smart grids, and communication systems.",
+" Contribute to sustainable development through research in green technologies, efficient energy systems, and eco-friendly engineering innovations."
               ]}/>
 
               <ListSection title="Aims" items={[
-                "Advance intelligent and sustainable EEE innovations.",
-                "Promote global collaboration in electrical and electronic research.",
+              " To support research advancing electrical and electronic engineering innovations",
+              " To promote sustainable, intelligent and efficient engineering solutions",
+              " To integrate modern engineering with emerging technologies"
               ]}/>
 
               <Section title="Scope">
-                Power Systems, Renewable Energy, VLSI, Embedded Systems, Automation, IoT, Control Systems, Smart Grids, Semiconductors.
+              Electrical Engineering, Power Systems & Power Electronics,
+              Renewable Energy, Smart Grids & Energy Systems,
+              Electronics, VLSI, Embedded & Digital Systems,
+              Communication Systems, Signal Processing & Networks,
+              Control Systems, Automation & Instrumentation,
+              Robotics, IoT Devices & Cyber-Physical Systems,
+              Semiconductor Devices & Sensor Technologies
+                          
               </Section>
-
-              <Section title="Editorial Message">
-                IAEES drives research excellence in electrical and electronic innovation fostering smarter and sustainable engineering solutions.
-              </Section>
-
              
             </div>
           </div>
@@ -90,17 +103,23 @@ const ListSection = ({ title, items }: any) => (
   </div>
 );
 const Buttons = () => (
-  <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
-    <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all">
+ <div className="flex flex-wrap justify-center gap-4 pt-6 px-4 sm:px-8 md:px-20">
+  <Link href="/EditorialBoard">
+    <button className="w-48 sm:w-56 md:w-60 bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all duration-200">
       Editorial Board
     </button>
-    <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all">
-      Journal Submission
+  </Link>
+
+  <button className="w-48 sm:w-56 md:w-60 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all duration-200">
+    Article / Case Submission
+  </button>
+
+  <Link href="/publications/explore">
+    <button className="w-48 sm:w-56 md:w-60 bg-gray-200 text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 transition-all duration-200">
+      ← Back to Journals
     </button>
-    <Link href="/publications/explore">
-      <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 transition-all">
-        ← Back to Journals
-      </button>
-    </Link>
-  </div>
+  </Link>
+</div>
+
+
 );

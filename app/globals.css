@@ -3,6 +3,11 @@
 
 @custom-variant white (&:is(.white *));
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

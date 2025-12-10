@@ -127,7 +127,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     const socialTitle = panel.querySelector('.sm-socials-title') as HTMLElement | null;
     const socialLinks = Array.from(panel.querySelectorAll('.sm-socials-link')) as HTMLElement[];
 
-    const layerStates = layers.map(el => ({ el, start: Number(gsap.getProperty(el, 'xPercent')) }));
+    const layerStates = layers.map((el: HTMLElement) => ({ el, start: Number(gsap.getProperty(el, 'xPercent')) }));
     const panelStart = Number(gsap.getProperty(panel, 'xPercent'));
 
     if (itemEls.length) gsap.set(itemEls, { yPercent: 140, rotate: 10 });
@@ -137,7 +137,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
     const tl = gsap.timeline({ paused: true });
 
-    layerStates.forEach((ls, i) => {
+    layerStates.forEach((ls: { el: HTMLElement; start: number }, i: number) => {
       tl.fromTo(ls.el, { xPercent: ls.start }, { xPercent: 0, duration: 0.5, ease: 'power4.out' }, i * 0.07);
     });
 
@@ -350,15 +350,18 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   }, [playOpen, playClose, animateIcon, animateColor, animateText, onMenuOpen, onMenuClose]);
 
   return (
-     <div
-    className={`sm-scope   ${
-      isFixed
-          ? "fixed inset-0 z-[9999] overflow-hidden"  // ✅ ensures it's above all
-          : "absolute inset-0 z-[9999] overflow-hidden"
-    }`}
-  >
+    
+  <div
+      className={`sm-scope ${
+        open
+          ? (isFixed
+              ? "fixed inset-0 z-[9999] overflow-hidden"
+              : "absolute inset-0 z-[9999] overflow-hidden")
+          : "absolute top-0 left-0 w-full z-[9999] pointer-events-none"
+      }`}
+    >
       <div
-        className={(className ? className + ' ' : '') + 'staggered-menu-wrapper  relative w-full h-full z-1'}
+        className={(className ? className + ' ' : '') + 'staggered-menu-wrapper relative w-full h-full z-1'}
         style={accentColor ? ({ ['--sm-accent' as any]: accentColor } as React.CSSProperties) : undefined}
         data-position={position}
         data-open={open || undefined}
@@ -428,7 +431,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               aria-hidden="true"
             >
               <span ref={textInnerRef} className="sm-toggle-textInner flex flex-col text-end leading-none">
-                {textLines.map((l, i) => (
+                {textLines.map((l: string, i: number) => (
                   <span className="sm-toggle-line block h-[1em] leading-none  " key={i}>
                     {l}
                   </span>
@@ -519,7 +522,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       </div>
 
       <style suppressHydrationWarning>{`
-.sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 9999; }
+.sm-scope .staggered-menu-wrapper { position: relative; width: 100%; height: 100%; z-index: 9999;  overflow-x: hidden !important;
+  position: relative;}
 .sm-scope .staggered-menu-header {  position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index:  z-index: 9999;; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }

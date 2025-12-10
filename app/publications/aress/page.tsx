@@ -10,11 +10,13 @@ export default function ARESSPage() {
       <NavigationPage />
       <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-2">
+          <h1 className="text-2xl md:text-2xl font-bold text-center text-gray-900 mb-2">
             Advanced Research in Economics & Social Sciences (ARESS)
           </h1>
           <p className="text-center text-lg text-gray-600 italic mb-12">
             “Empowering Socio-Economic Transformation”
+             <br />
+            ISSN:
           </p>
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
@@ -32,32 +34,47 @@ export default function ARESSPage() {
             {/* Right Content */}
             <div className="flex-[1.5] bg-white p-6 md:p-8 rounded-xl shadow-inner border border-gray-200 max-h-[550px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 space-y-6">
               <Section title="About Us">
-                ARESS focuses on promoting high-quality research in economics and social sciences addressing global socio-economic development and evidence-based policymaking.
+              
+ARESS publishes scholarly work that deepens understanding of economic systems and social development.
+We provide a platform for evidence-based research that informs policy and societal progress.
+The section encourages interdisciplinary studies across economics, governance, and social sciences.
+We support research addressing real-world issues such as inequality, growth, and public welfare.
+ARESS aims to contribute to meaningful development through high-impact academic insights.
               </Section>
 
               <Section title="Vision">
-                To emerge as a leading platform empowering high-quality research advancing policy, development, and societal well-being.
+               To emerge as a leading platform empowering high-quality research in economics and social sciences, advancing evidence-based policy, development, and societal well-being.
               </Section>
 
               <ListSection title="Mission" items={[
-                "Foster interdisciplinary research addressing socio-economic challenges.",
-                "Support research contributing to policy and governance.",
-                "Promote equitable, human-centric transformation.",
+               " To foster interdisciplinary research addressing economic, social, and developmental challenges.",
+" To encourage publications that contribute to policymaking, societal progress, and socio-economic innovation.",
+" To support scholars in producing research that drives equitable growth and human-centric transformation.",
+" To promote global dialogue on socio-economic systems and emerging societal trends."
               ]}/>
 
               <ListSection title="Objectives" items={[
-                "Publish studies in economics, policy, and behavioural sciences.",
-                "Encourage empirical research supporting social innovation.",
-                "Support collaboration among economists, social scientists, and policymakers.",
+                " Publish scholarly work in microeconomics, macroeconomics, development studies, public policy, sociology, and behavioural sciences.",
+" Encourage comparative and empirical research that supports data-driven decision-making.",
+" Provide a platform for studies contributing to inclusive growth, governance, and social innovation.",
+"Support young researchers working on social impact, inequality, public systems, and economic transformation.",
+" Facilitate global collaboration among economists, social scientists, and policymakers."
+
               ]}/>
 
               <ListSection title="Aims" items={[
-                "Publish research advancing economic and social development.",
-                "Support policy-relevant, data-driven studies.",
+                "To publish research that advances economic understanding and social development.",
+" To support policy-relevant studies addressing societal and developmental issues.",
+" To encourage interdisciplinary dialogue on economic and social systems",
               ]}/>
 
               <Section title="Scope">
-                Microeconomics, Macroeconomics, Development Studies, Policy, Sociology, Psychology, Education, Health, Sustainability.
+               Microeconomics, Macroeconomics & Econometrics
+Development Economics, Public Policy & Governance
+International Economics & Trade
+Sociology, Psychology & Social Behaviour
+Education, Health & Social Development
+Environmental Economics & Sustainable Development
               </Section>
 
              
@@ -90,17 +107,22 @@ const ListSection = ({ title, items }: any) => (
   </div>
 );
 const Buttons = () => (
-  <div className="flex flex-wrap pl-20 justify-center gap-4 pt-6">
-    <button className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all">
+ <div className="flex flex-wrap justify-center gap-4 pt-6 px-4 sm:px-8 md:px-20">
+  <Link href="/EditorialBoard">
+    <button className="w-48 sm:w-56 md:w-60 bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all duration-200">
       Editorial Board
     </button>
-    <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all">
-      Journal Submission
+  </Link>
+
+  <button className="w-48 sm:w-56 md:w-60 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all duration-200">
+    Article / Case Submission
+  </button>
+
+  <Link href="/publications/explore">
+    <button className="w-48 sm:w-56 md:w-60 bg-gray-200 text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 transition-all duration-200">
+      ← Back to Journals
     </button>
-    <Link href="/publications/explore">
-      <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 transition-all">
-        ← Back to Journals
-      </button>
-    </Link>
-  </div>
+  </Link>
+</div>
+
 );

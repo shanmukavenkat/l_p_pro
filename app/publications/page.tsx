@@ -11,11 +11,13 @@ export default function PublicationsPage() {
       logoName="Lurnexa" />
           <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300 text-center">
              <div className="max-w-7xl mx-auto">
-               <h1 className="text-2xl md:text-2xl font-bold text-center text-gray-900 mb-2">
+               <h1 className="mt-3 text-2xl md:text-2xl font-bold text-center text-gray-900 mb-2">
                  Global Journal for Progressive Innovation & Research (GJPIR)
                </h1>
                <p className="text-center text-lg text-gray-600 italic mb-12">
                  “Integrating Knowledge, Inspiring Progress”
+                  <br />
+                  ISSN:
                </p>
      
                <div className="flex flex-col lg:flex-row gap-10 items-start">
@@ -29,7 +31,10 @@ export default function PublicationsPage() {
      
                  <div className="flex-[1.5] bg-white p-6 md:p-8 rounded-xl shadow-inner border max-h-[550px] overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 text-start">
                    <Section title="About Us">
-                     The Global Journal for Progressive Innovation & Research (GJPIR) unites researchers from technology, management, economics, social sciences, and engineering through its four divisions: ACIET, CIMS, ARESS, and IAEES. It promotes interdisciplinary excellence and sustainable innovation through peer-reviewed research.
+                     The Global Journal for Progressive Innovation & Research (GJPIR) is established as a common platform for researchers working across technology, management, economics, social sciences, and engineering. The journal brings together four focused sections that collectively support a wide spectrum of academic inquiry.
+We aim to publish work that carries clarity, relevance, and long-term value to the research community. Our approach encourages both disciplinary and cross-disciplinary studies, especially those that address current challenges and future possibilities.
+GJPIR maintains a transparent review process and follows strong academic ethics to ensure the reliability of the research it publishes. We welcome contributions from scholars, professionals, and practitioners who seek to share knowledge that can benefit institutions, industries, and society.
+Through this journal, we hope to strengthen research culture, promote meaningful dialogue, and support new ideas that contribute to advancement in various fields.
                    </Section>
      
                    <Section title="Vision">
@@ -51,13 +56,32 @@ export default function PublicationsPage() {
                    ]}/>
      
                    <ListSection title="Aims" items={[
-                     "Unite impactful research that drives innovation and societal progress.",
-                     "Encourage studies connecting diverse disciplines with real-world application.",
-                     "Publish evidence-based, forward-looking studies.",
+                      "To bring together research that contributes to innovation, scientific understanding, and societal progress",
+                      " To encourage studies that connect multiple disciplines and offer practical insights.",
+                      " To support work that is thoughtful, evidence-based, and useful for academic and professional communities.",
+                      " To publish research aligned with emerging trends and long-term developmental needs."
+
                    ]}/>
      
                    <Section title="Scope">
-                     Technology, Management, Economics, Social Sciences, Electrical and Electronics Engineering.
+                    
+<b>Computational and Emerging Technologies : </b>
+
+Artificial intelligence, machine learning, data-driven modelling, robotics, automation, cybersecurity, IoT, and upcoming digital technologies.
+<br/>
+<b>Management Studies : </b>
+
+Strategic management, operations, supply chain systems, analytics, entrepreneurship, governance, sustainability, and financial systems.
+<br/>
+<b>Economics and Social Sciences : </b>
+
+Economic theory and practice, development studies, policy, governance, behavioural sciences, social development, and environmental economics.
+<br/>
+<b>Electrical and Electronics Engineering : </b>
+
+Power systems, renewable energy, smart grids, electronics, VLSI, embedded technologies, communication systems, automation, and intelligent hardware systems.
+<br/>
+The journal welcomes full-length research papers, review articles, case studies, conceptual studies, and analytical reports.
                    </Section>
      
   
@@ -66,11 +90,19 @@ export default function PublicationsPage() {
                </div>
               
              </div>
-                <Link href="/publications/explore">
-                <button className="mt-6 bg-blue-600   hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition">
-                 Article / Case Study Submission
-                </button>
-              </Link>
+               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+          <Link href="/publications/explore" className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition">
+              Explore Journals
+            </button>
+          </Link>
+
+          <Link href="/EditorialBoard"  className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition-all">
+              Editorial Board
+            </button>
+          </Link>
+        </div>
            </section>
           
            <FooterSection />
@@ -110,9 +142,5 @@ export default function PublicationsPage() {
                 impactful research.
               </p>
 
-              <Link href="/publications/explore">
-                <button className="mt-6 bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition">
-                  Explore Journals
-                </button>
-              </Link>
+              
             </div> */

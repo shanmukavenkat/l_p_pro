@@ -26,7 +26,7 @@ const menuItems = [
     link: "/",
   },
   { label: "Contact", ariaLabel: "Get in touch with us", link: "/" },
-  { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/" },
+  { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/signup" },
 ];
 
 export default function NavigationPage({ showLogoName = false, logoName = "" }: { showLogoName?: boolean; logoName?: string }) {

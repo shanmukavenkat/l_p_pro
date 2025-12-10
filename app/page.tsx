@@ -65,8 +65,9 @@ export default function Home() {
     <>
       <div className="min-h-screen text-slate-900">
         {/* Fixed navigation */}
+        <section>
         <NavigationPage />
-
+        </section>
         {/* Sections with proper IDs for observer tracking */}
         <section id="hero">
           <HeroSection />
@@ -76,10 +77,11 @@ export default function Home() {
           <WhoWeAre />
         </section>
 
-        <section id="vision">
+        <section id="vision" >
+  
           <VisionMission />
         </section>
-
+        
         <section id="objectives">
           <FeaturesSectionDemo />
         </section>
@@ -87,10 +89,14 @@ export default function Home() {
         <section id="leadership">
           <LeadershipSection />
         </section>
+      
+
 
         <section id="contact">
           <FooterSection />
         </section>
+        
+                    
       </div>
     </>
   );
