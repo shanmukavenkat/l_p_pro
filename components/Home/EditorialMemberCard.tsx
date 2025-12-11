@@ -19,7 +19,7 @@ const EditorialMemberCard: React.FC<ProfileCardProps> = ({
   collegeUrl,
 }) => {
   return (
-    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-white group">
+    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300  group">
       {/* Background Image */}
       <div className="relative p-3">
         <img

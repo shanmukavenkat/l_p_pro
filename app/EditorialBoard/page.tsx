@@ -1,6 +1,6 @@
-import EditorialMemberCard from '@/components/Home/EditorialMemberCard'
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
 import NavigationPage from '@/components/Home/nav/page'
+import ProfileCard from '@/components/Home/ProfileCard'
 
 const page = () => {
 
@@ -11,7 +11,7 @@ const page = () => {
         "Role": "Sub Division-Editor in Chief",
         "Designation/College Name": "Associate Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/dr-kameshwar-rao-modekurti-45145223/",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/Mq5sTPjgSkn8J4jPjlnscFWYy0p5MvTXrigIGJsvcPDF5qOn1r3b6nnL3Ne6KVk.pdf"
     },
     {   
         Id:2,
@@ -20,7 +20,7 @@ const page = () => {
         "Role": "Deputy Editor in Chief",
         "Designation/College Name": "Assistant Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf"
     },
     {
         Id:3,
@@ -29,7 +29,7 @@ const page = () => {
         "Role": "Sr Associate Editor",
         "Designation/College Name": "Professor/ Centurion University",
         "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in"
     },
     {  Id:4,
        "image": "/editorial-images/Dr.Muhammed Shafi M K.jpg",
@@ -37,7 +37,7 @@ const page = () => {
         "Role": "Associate Editor",
         "Designation/College Name": "Assistant Professor/ NIT Warangal",
         "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk"
     },
     {    Id:5,
       "image": "/editorial-images/Dr. Manisha Kumari.jpg",
@@ -45,7 +45,7 @@ const page = () => {
         "Role": "Managing Editor",
         "Designation/College Name": "Associate Faculty Member/ (ni-msme)",
         "linkedinUrl": "https://www.linkedin.com/in/manishakumari-ba344857/",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://www.nimsme.gov.in/employee/a7b4a35465d9853607aaa02f9ea4f0a3"
     },
     {
         Id:6,
@@ -54,7 +54,7 @@ const page = () => {
         "Role": "Sr Review Editor",
         "Designation/College Name": "Associate Professor/ Indian Institute of Information Technology",
        "linkedinUrl": "https://www.linkedin.com/in/dr-sandeep-kumar-kesarwani-48023755/?originalSubdomain=in",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://imparc.org/dr-sandeep-kumar-kesarwani/"
     },
     {   
         Id:7,
@@ -63,7 +63,7 @@ const page = () => {
         "Role": "Review Editor",
         "Designation/College Name": "Assistant Professor/ Geetam Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/dr-ch-shankar-30881a3b/",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://www.gitam.edu/faculty/chanagala-shankar"
     },
     {   Id:8,
       "image": "/editorial-images/Dr. Kumaraswamy Manepalli.jpg",
@@ -71,7 +71,7 @@ const page = () => {
         "Role": "Domain Editor",
         "Designation/College Name": "Assistant Professor/Vignan's University, Vadlamudi",
        "linkedinUrl": "https://www.linkedin.com/in/manepalli-kumaraswamy-71b310126/?originalSubdomain=in",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://vignan.ac.in/newvignan/departments/deptpeople.php?deptid=sch5_dept1&school=sch5&deptnm=MG"
     },
     {
       Id:9,
@@ -80,7 +80,7 @@ const page = () => {
         "Role": "Assistant Editor",
         "Designation/College Name": "Assistant Professor / Rajagiri Business School",
        "linkedinUrl": "https://www.linkedin.com/in/rintu-anthony-8b2bb124/?originalSubdomain=in",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://www.rajagiribusinessschool.edu.in/faculty-details/rintu-anthony"
     },
     {   Id:10,
       "image": "/editorial-images/Dr.Saravanan Vellaiyan.jpg",
@@ -88,7 +88,7 @@ const page = () => {
         "Role": "Copy Editor",
         "Designation/College Name": "Assistant Professor / Christ University",
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
     },
     {
       Id:11,
@@ -97,7 +97,7 @@ const page = () => {
         "Role": "Editorial Member",
         "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
        "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-       "collegeUrl":"https://www.ibshyderabad.org/"
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
     }
 ]
   return (
@@ -138,27 +138,29 @@ const page = () => {
 </section>
 
   <section className="py-10 px-6 ">
-
+   <div className=" flex-1 text-start lg:text-left space-y-2">
+      {/* Centered title */}
+      <div className="w-full flex justify-center">
+        <span className="text-2xl font-bold text-center">
+          Editorial Board Members (CIMS) - Finance Management
+        </span>
+      </div>
+</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
 
       {Editorial_members.map((member)=>(
-        <EditorialMemberCard
+        <ProfileCard
           key ={member.Id}
           image={member.image || ''}
           name={member.Name}
           role={member.Role}
+          Desgination={member['Designation/College Name']}
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
-           collegeUrl="https://www.ibshyderabad.org/"
+           collegeUrl={member.collegeUrl}
         />
 
       ))}
-
-
-        
-
-       
-
       </div>
     </section>
  

@@ -81,7 +81,7 @@ export default function Home() {
   
           <VisionMission />
         </section>
-        
+     
         <section id="objectives">
           <FeaturesSectionDemo />
         </section>
