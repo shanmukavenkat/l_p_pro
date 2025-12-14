@@ -1,0 +1,169 @@
+import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
+import NavigationPage from '@/components/Home/nav/page'
+import ProfileCard from '@/components/Home/ProfileCard'
+
+const page = () => {
+
+  const Editorial_members = [
+  {
+    Id:1,
+    "image": "/editorial-images/gjpir/Dr.Badri Narayanan Gopalakrishnan.jpg",
+    "Name": "Dr. Badri Narayanan Gopalakrishnan",
+    "Role": "Editor-in-Chief",
+   "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
+    "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
+    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html"
+  },
+  {
+    Id:2,
+    "image": "/editorial-images/gjpir/Dr. Anand Shukla .jpeg",
+    "Name": "Dr. Anand Shukla",
+    "Role": "Co - Editor-in-Chief",
+    "Designation/College Name": "Dean / Lovely Professional University",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-anand-shukla-59342838/",
+    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898"
+  },
+  {
+    Id:3,
+    "image": "/editorial-images/gjpir/Untitled-1.png",
+    "Name": "Dr. Amitava Mukherjee",
+    "Role": "Sr.Associate Editor",
+    "Designation/College Name": "Professor / XLRI - Xavier School of Management",
+    "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
+    "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
+  },
+  {
+    Id:4,
+    "image": "/editorial-images/gjpir/Dr. Aruna Kumar Dash.jpg",
+    "Name": "Dr. Aruna Kumar Dash",
+    "Role": "Associate Editor",
+    "Designation/College Name": "Associate Professor / IBS Hyderabad",
+    "linkedinUrl": "https://www.linkedin.com/in/aruna-dash-62a74a19/",
+    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf"
+  },
+  {
+    Id:5,
+    "image": "/editorial-images/gjpir/Dr. Umesh Chandra Pati.jpg",
+    "Name": "Dr. Umesh Chandra Pati",
+    "Role": "Sr.Managing Editor",
+    "Designation/College Name": "Professor / National Institute of Technology Rourkela",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-umesh-c-pati-13034a20/",
+    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
+  },
+  {
+    Id:6,
+    "image": "/editorial-images/gjpir/Dr. Kapil Manohar Gumte.jpg",
+    "Name": "Dr. Kapil Manohar Gumte",
+    "Role": "Managing Editor",
+    "Designation/College Name": "Assistant Professor / Indian Institute of Management Jammu",
+    "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
+    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
+  },
+  {
+    Id:7,
+    "image": "/editorial-images/gjpir/Dr Susanta K Mishra.jpg",
+    "Name": "Dr. Susanta K Mishra",
+    "Role": "Assistant Editor",
+    "Designation/College Name": "Professor / Centurion University",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
+    "collegeUrl": "https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in"
+  },
+  {
+    Id:8,
+    "image": "/editorial-images/gjpir/Dr.Srikanth Potharla.jpeg",
+    "Name": "Dr. Srikanth Potharla",
+    "Role": "Section Editor",
+    "Designation/College Name": "Assistant Professor / IBS Hyderabad",
+    "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf"
+  },
+  {
+    Id:9,
+    "image": "/editorial-images/gjpir/Dr. Chinmaya Kumar Swain.jpg",
+    "Name": "Dr. Chinmaya Kumar Swain",
+    "Role": "Review Editor",
+    "Designation/College Name": "Assistant Professor / IIM Jammu",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-chinmaya-kumar-swain-77b358128/",
+    "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0"
+  },
+  {
+    Id:10,
+    "image": "/editorial-images/gjpir/Dr.D. Srilatha.jpg",
+    "Name": "Dr. D. Srilatha",
+    "Role": "Advisory Member",
+    "Designation/College Name": "Professor / VVIT Guntur",
+    "linkedinUrl": "https://www.linkedin.com/in/srilatha-dande-86a62937b/",
+    "collegeUrl": "https://www.vvitguntur.com/drsrilatha-profile"
+  }
+
+]
+  return (
+    <>
+    
+   <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
+    <NavigationPage />
+
+    <div className=" flex-1 text-start lg:text-left space-y-2">
+      {/* Centered title */}
+      <div className="w-full flex justify-center">
+        <span className="text-2xl font-bold text-center">
+          Editorial Board Members
+        </span>
+      </div>
+
+      <br />
+
+      <p className="text-lg text-gray-700 leading-relaxed">
+        The Global Journal for Progressive Innovation & Research was created
+        with the intention of providing a reliable academic space where
+        meaningful research can be shared and preserved. Each of our four
+        sections represents an important area of study, yet together they
+        reflect a broader purpose supporting knowledge that contributes to
+        technological growth, organizational improvement, economic stability,
+        and social development. We believe that responsible research plays an
+        important role in shaping future progress. Our editorial process is
+        designed to maintain fairness and quality, while giving authors the
+        opportunity to present their work with clarity and confidence. We
+        welcome contributions that are thoughtful, well-structured, and
+        grounded in genuine academic effort. It is our hope that this journal
+        becomes a useful resource for scholars, educators, professionals, and
+        institutions who value knowledge that makes a difference.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <section className="py-10 px-6 ">
+   <div className=" flex-1 text-start lg:text-left space-y-2">
+      {/* Centered title */}
+      <div className="w-full flex justify-center">
+        <span className="text-2xl font-bold text-center">
+          Editorial Board Members (CIMS) - Finance Management
+        </span>
+      </div>
+</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+
+      {Editorial_members.map((member)=>(
+        <ProfileCard
+          key ={member.Id}
+          image={member.image || ''}
+          name={member.Name}
+          role={member.Role}
+          Desgination={member['Designation/College Name']}
+         college={member['Designation/College Name']}
+          linkedinUrl={member.linkedinUrl}
+           collegeUrl={member.collegeUrl}
+        />
+
+      ))}
+      </div>
+    </section>
+ 
+    <FooterSection />
+    </>
+  )
+}
+
+export default page
