@@ -1,17 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Tailwind 'theme' belongs in tailwind.config.js; removed from NextConfig.
-   images: {
+  // ✅ Image configuration
+  images: {
     remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: "https", hostname: "images.unsplash.com" },
     ],
-    domains: [
-      "api.microlink.io", // Microlink Image Preview
-    ],
+    domains: ["api.microlink.io"], // Microlink Image Preview
   },
-  
-  /* config options here */
+  turbopack:{},
+
+  // ✅ Webpack fallback for crypto-browserify (for Cognito SECRET_HASH)
+  webpack: (config) => {
+    config.resolve.fallback = {
+      ...(config.resolve.fallback || {}),
+      crypto: require.resolve("crypto-browserify"),
+    };
+    return config;
+  },
 };
 
 export default nextConfig;

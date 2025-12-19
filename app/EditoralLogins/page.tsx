@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 // import { useAuth } from "@/components/AuthProvider";
 import { buildLoginUrl } from "@/lib/cognito"; // ✅ Cognito login URL builder
 import { LoginForm } from "@/components/login-form";
+import { LoginCopy } from "@/components/login-form copy";
 
 export default function LoginPage() {
   // const { user, loading } = useAuth();
@@ -56,7 +57,7 @@ export default function LoginPage() {
           </h2>
 
           {/* 👇 Your local LoginForm (optional custom login UI) */}
-          <LoginForm />
+          <LoginCopy />
 
           {/* OR Hosted UI login button */}
          

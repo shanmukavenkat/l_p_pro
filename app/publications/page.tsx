@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
@@ -97,7 +96,7 @@ The journal welcomes full-length research papers, review articles, case studies,
             </button>
           </Link>
 
-          <Link href="/EditorialBoard"  className="w-full sm:w-auto">
+          <Link href="/EditorialBoard/GJPIR"  className="w-full sm:w-auto">
             <button className="w-full sm:w-auto bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition-all">
               Editorial Board
             </button>

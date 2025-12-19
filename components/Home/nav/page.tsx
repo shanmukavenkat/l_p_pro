@@ -12,21 +12,25 @@ const SECTION_IDS = [
   
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
-  { label: "About Us", ariaLabel: "Learn about us", link: "/" },
+  { label: "About Us", ariaLabel: "Learn about us", link: "/aboutus" },
   {
     label: "Publications",
     ariaLabel: "View our publications",
     link: "/publications",
   },
-  { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
-  { label: "Case Center", ariaLabel: "Browse our case center", link: "/" },
+  // { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
+  // { label: "Case Center", ariaLabel: "Browse our case center", link: "/" },
   {
     label: "Join Editorial Board",
     ariaLabel: "Apply to join the editorial board",
     link: "/",
   },
   { label: "Contact", ariaLabel: "Get in touch with us", link: "/" },
+   {label:"Editorial Login " ,
+    ariaLabel:"editorial Login ",
+    link:"/EditoralLogins"},
   { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/signup" },
+ 
 ];
 
 export default function NavigationPage({ showLogoName = false, logoName = "" }: { showLogoName?: boolean; logoName?: string }) {

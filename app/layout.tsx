@@ -13,10 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LURNEXA PUBLICATIONS ",
-  description: "A techno-management hub of knowledge and innovation, bridging technology, research, management, and publishing to create real-world impact.",
-   icons: {
-    icon: '/7.svg',
+  title: "LURNEXA PUBLICATIONS",
+  description:
+    "A techno-management hub of knowledge and innovation, bridging technology, research, management, and publishing to create real-world impact.",
+  icons: {
+    icon: "/7.svg",
   },
 };
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* ✅ Global Auth Context Wrapper */}
         {children}
       </body>
     </html>

@@ -63,15 +63,15 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <div className="flex-1 flex flex-col items-center justify-center  text-center">
             
             {/* Dynamic Name */}
-            <h1 className="text-[#D96C36] text-3xl mb-1 tracking-tight" style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 800 }}>
+            <h1 className="text-[#D96C36] text-xl mb-1 tracking-tight" style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 800 }}>
               {name}
             </h1>
             
             {/* Dynamic Role */}
-            <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-5" style={{ fontFamily: '"Montserrat", sans-serif' }}>
+            <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-2" style={{ fontFamily: '"Montserrat", sans-serif' }}>
               {role}
             </p>
-            <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-5" style={{ fontFamily: '"Montserrat", sans-serif' }}>
+            <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-2" style={{ fontFamily: '"Montserrat", sans-serif' }}>
               {Desgination}
             </p>
             {/* Icons Container */}

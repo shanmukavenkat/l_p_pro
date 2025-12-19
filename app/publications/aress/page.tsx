@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";

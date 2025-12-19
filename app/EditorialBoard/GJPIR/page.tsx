@@ -7,21 +7,22 @@ const page = () => {
   const Editorial_members = [
   {
     Id:1,
-    "image": "/editorial-images/gjpir/Dr.Badri Narayanan Gopalakrishnan.jpg",
-    "Name": "Dr. Badri Narayanan Gopalakrishnan",
-    "Role": "Editor-in-Chief",
-   "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
-    "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
-    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html"
-  },
-  {
-    Id:2,
     "image": "/editorial-images/gjpir/Dr. Anand Shukla .jpeg",
     "Name": "Dr. Anand Shukla",
-    "Role": "Co - Editor-in-Chief",
+    "Role": "Editor-in-Chief",
     "Designation/College Name": "Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-anand-shukla-59342838/",
     "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898"
+    
+  },
+  {
+   Id:2,
+    "image": "/editorial-images/gjpir/Dr.Badri Narayanan Gopalakrishnan.jpg",
+    "Name": "Dr. Badri Narayanan Gopalakrishnan",
+    "Role": " Co - Editor-in-Chief",
+   "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
+    "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
+    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" 
   },
   {
     Id:3,
@@ -139,7 +140,7 @@ const page = () => {
       {/* Centered title */}
       <div className="w-full flex justify-center">
         <span className="text-2xl font-bold text-center">
-          Editorial Board Members (CIMS) - Finance Management
+          Editorial Board Members (GJPIR)
         </span>
       </div>
 </div>
