@@ -8,6 +8,7 @@ import FooterSection from "@/components/Home/FooterSection";
 import FeaturesSectionDemo from "@/components/features-section-demo-2";
 import { LeadershipSection } from "@/components/Home/LeadershipSection";
 import NavigationPage from "@/components/Home/nav/page";
+import LurnexaAim from "@/components/Home/LurnexaAim";
 
 export default function Home() {
   // ✅ Section tracking
@@ -85,7 +86,7 @@ export default function Home() {
         <section id="objectives">
           <FeaturesSectionDemo />
         </section>
-
+<LurnexaAim />
         <section id="leadership">
           <LeadershipSection />
         </section>
