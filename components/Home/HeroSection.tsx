@@ -29,9 +29,11 @@ export default function HeroSection() {
           </TypingAnimation>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="/publications/explore">
             <button className="rounded-full bg-blue-600 px-8 py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-700 hover:shadow-blue-500/50">
               Explore Journals
             </button>
+            </a>
             <button className="rounded-full border border-slate-300 px-8 py-3 text-sm sm:text-base font-semibold text-slate-800 shadow-sm transition hover:border-blue-500 hover:text-blue-600 dark:hover:border-sky-400 dark:hover:text-sky-300">
               Submit Your Paper
             </button>

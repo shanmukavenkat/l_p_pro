@@ -124,7 +124,7 @@ export default function AboutUsPage() {
                 <Globe className="text-indigo-600 mb-2" size={24} />
                 <h4 className="font-bold text-sm uppercase tracking-tighter">Global Reach</h4>
               </div>
-              <div className="p-4 bg-slate-50 rounded-xl">
+              <div className="p-4 bg-indigo-50 rounded-xl">
                 <Microscope className="text-slate-600 mb-2" size={24} />
                 <h4 className="font-bold text-sm uppercase tracking-tighter">Scientific Rigor</h4>
               </div>

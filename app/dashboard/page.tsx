@@ -401,6 +401,7 @@ const handleResumeUpload = async (
 
       <h3 className="text-lg font-semibold">{formData.name}</h3>
       <p className="text-sm text-muted-foreground">{formData.email}</p>
+      <p className="text-sm text-muted-foreground mb-4">{formData.id}</p>
 
       <Button
         variant="outline"
@@ -421,7 +422,7 @@ const handleResumeUpload = async (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
           ["name", "Name"],
-          ["role", "Role"],
+          ["role", "Role"], 
           ["college_id", "College ID"],
           ["organization_name", "Organization Name"],
           ["contact_no", "Contact Number"],

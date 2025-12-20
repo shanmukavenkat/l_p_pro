@@ -108,27 +108,15 @@ const page = () => {
       {/* Centered title */}
       <div className="w-full flex justify-center">
         <span className="text-2xl font-bold text-center">
-          Editorial Board Members
+          Editorial Message - ACIET
         </span>
       </div>
 
       <br />
 
       <p className="text-lg text-gray-700 leading-relaxed">
-        The Global Journal for Progressive Innovation & Research was created
-        with the intention of providing a reliable academic space where
-        meaningful research can be shared and preserved. Each of our four
-        sections represents an important area of study, yet together they
-        reflect a broader purpose supporting knowledge that contributes to
-        technological growth, organizational improvement, economic stability,
-        and social development. We believe that responsible research plays an
-        important role in shaping future progress. Our editorial process is
-        designed to maintain fairness and quality, while giving authors the
-        opportunity to present their work with clarity and confidence. We
-        welcome contributions that are thoughtful, well-structured, and
-        grounded in genuine academic effort. It is our hope that this journal
-        becomes a useful resource for scholars, educators, professionals, and
-        institutions who value knowledge that makes a difference.
+        The ACIET section is dedicated to advancing research in artificial intelligence and cutting-edge computational technologies. As the world moves toward intelligent automation, our focus is to publish work that offers new methods, models, and solutions addressing real-world challenges. We welcome contributions that push the boundaries of AI, strengthen interdisciplinary collaboration, and support the global transformation toward smarter technologies.
+Our goal is to ensure that every published study adds meaningful value to the scientific community and contributes to the future of intelligent systems.
       </p>
     </div>
   </div>

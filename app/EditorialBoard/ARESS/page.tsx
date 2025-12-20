@@ -68,24 +68,24 @@ const page = () => {
     "linkedinUrl": "https://www.linkedin.com/in/pravin-jadhav-16314322/",
     "collegeUrl": "https://iitram.ac.in/empdetail/2015152"
   },
-  {
-    "Id": 8,
-    "image": "/editorial-images/null",
-    "Name": "",
-    "Role": "Review Editor",
-    "Designation/College Name": "",
-    "linkedinUrl": "",
-    "collegeUrl": ""
-  },
-  {
-    "Id": 9,
-    "image": "/editorial-images/null",
-    "Name": "",
-    "Role": "Domain Editor",
-    "Designation/College Name": "",
-    "linkedinUrl": "",
-    "collegeUrl": ""
-  },
+  // {
+  //   "Id": 8,
+  //   "image": "/editorial-images/null",
+  //   "Name": "",
+  //   "Role": "Review Editor",
+  //   "Designation/College Name": "",
+  //   "linkedinUrl": "",
+  //   "collegeUrl": ""
+  // },
+  // {
+  //   "Id": 9,
+  //   "image": "/editorial-images/null",
+  //   "Name": "",
+  //   "Role": "Domain Editor",
+  //   "Designation/College Name": "",
+  //   "linkedinUrl": "",
+  //   "collegeUrl": ""
+  // },
   {
     "Id": 10,
     "image": "/editorial-images/aress/Prof. P. Guru Prasad.jpg",
@@ -109,27 +109,15 @@ const page = () => {
       {/* Centered title */}
       <div className="w-full flex justify-center">
         <span className="text-2xl font-bold text-center">
-          Editorial Board Members
+          Editorial Message - ARESS
         </span>
       </div>
 
       <br />
 
       <p className="text-lg text-gray-700 leading-relaxed">
-        The Global Journal for Progressive Innovation & Research was created
-        with the intention of providing a reliable academic space where
-        meaningful research can be shared and preserved. Each of our four
-        sections represents an important area of study, yet together they
-        reflect a broader purpose supporting knowledge that contributes to
-        technological growth, organizational improvement, economic stability,
-        and social development. We believe that responsible research plays an
-        important role in shaping future progress. Our editorial process is
-        designed to maintain fairness and quality, while giving authors the
-        opportunity to present their work with clarity and confidence. We
-        welcome contributions that are thoughtful, well-structured, and
-        grounded in genuine academic effort. It is our hope that this journal
-        becomes a useful resource for scholars, educators, professionals, and
-        institutions who value knowledge that makes a difference.
+       The ARESS section is committed to publishing high-quality research that deepens the understanding of economic systems and social development. As societies face complex issues—ranging from inequality and policy reform to global economic shifts—we aim to provide a platform that encourages evidence-based, interdisciplinary inquiry.
+We welcome studies that offer clear insights, inform public policy, and contribute to societal progress. Our objective is to strengthen academic dialogue in economics and social sciences while promoting research that has a meaningful impact on communities and governance.
       </p>
     </div>
   </div>

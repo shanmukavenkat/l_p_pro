@@ -111,27 +111,16 @@ const page = () => {
       {/* Centered title */}
       <div className="w-full flex justify-center">
         <span className="text-2xl font-bold text-center">
-          Editorial Board Members
+           Editorial Message - CIMS
         </span>
       </div>
 
       <br />
 
       <p className="text-lg text-gray-700 leading-relaxed">
-        The Global Journal for Progressive Innovation & Research was created
-        with the intention of providing a reliable academic space where
-        meaningful research can be shared and preserved. Each of our four
-        sections represents an important area of study, yet together they
-        reflect a broader purpose supporting knowledge that contributes to
-        technological growth, organizational improvement, economic stability,
-        and social development. We believe that responsible research plays an
-        important role in shaping future progress. Our editorial process is
-        designed to maintain fairness and quality, while giving authors the
-        opportunity to present their work with clarity and confidence. We
-        welcome contributions that are thoughtful, well-structured, and
-        grounded in genuine academic effort. It is our hope that this journal
-        becomes a useful resource for scholars, educators, professionals, and
-        institutions who value knowledge that makes a difference.
+       The CIMS section aims to strengthen modern management scholarship by encouraging rigorous, practical, and forward-looking research. In a rapidly changing business landscape, effective strategic thinking, innovation, and data-driven decision-making have become essential.
+We invite research that enhances organizational performance, addresses contemporary managerial challenges, and promotes sustainable and ethical practices. Our focus is to support work that bridges academic insight with real-world managerial application, helping shape competent and future-ready leadership.
+
       </p>
     </div>
   </div>

@@ -107,12 +107,12 @@ const ListSection = ({ title, items }: any) => (
 );
 const Buttons = () => (
  <div className="flex flex-wrap justify-center gap-4 pt-6 px-4 sm:px-8 md:px-20">
-  <Link href="/EditorialBoard">
+  <Link href="/EditorialBoard/ARESS">
     <button className="w-48 sm:w-56 md:w-60 bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-700 transition-all duration-200">
       Editorial Board
     </button>
   </Link>
-
+  
   <button className="w-48 sm:w-56 md:w-60 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all duration-200">
     Article / Case Submission
   </button>
