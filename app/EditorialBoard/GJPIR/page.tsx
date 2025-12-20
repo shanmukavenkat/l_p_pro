@@ -7,7 +7,7 @@ const page = () => {
   const Editorial_members = [
   {
     Id:1,
-    "image": "/editorial-images/gjpir/Dr. Anand Shukla .jpeg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538a01.jpeg",
     "Name": "Dr. Anand Shukla",
     "Role": "Editor-in-Chief",
     "Designation/College Name": "Dean / Lovely Professional University",
@@ -17,7 +17,7 @@ const page = () => {
   },
   {
    Id:2,
-    "image": "/editorial-images/gjpir/Dr.Badri Narayanan Gopalakrishnan.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562b32.jpg",
     "Name": "Dr. Badri Narayanan Gopalakrishnan",
     "Role": " Co - Editor-in-Chief",
    "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
@@ -26,7 +26,7 @@ const page = () => {
   },
   {
     Id:3,
-    "image": "/editorial-images/gjpir/Untitled-1.png",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
     "Name": "Dr. Amitava Mukherjee",
     "Role": "Sr.Associate Editor",
     "Designation/College Name": "Professor / XLRI - Xavier School of Management",
@@ -35,7 +35,7 @@ const page = () => {
   },
   {
     Id:4,
-    "image": "/editorial-images/gjpir/Dr. Aruna Kumar Dash.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562a33.jpg",
     "Name": "Dr. Aruna Kumar Dash",
     "Role": "Associate Editor",
     "Designation/College Name": "Associate Professor / IBS Hyderabad",
@@ -44,7 +44,8 @@ const page = () => {
   },
   {
     Id:5,
-    "image": "/editorial-images/gjpir/Dr. Umesh Chandra Pati.jpg",
+    "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553u42.jpg",
+    // Lurnexa_2553u42.jpg
     "Name": "Dr. Umesh Chandra Pati",
     "Role": "Sr.Managing Editor",
     "Designation/College Name": "Professor / National Institute of Technology Rourkela",
@@ -53,7 +54,7 @@ const page = () => {
   },
   {
     Id:6,
-    "image": "/editorial-images/gjpir/Dr. Kapil Manohar Gumte.jpg",
+    "image":  "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ok23.jpg",
     "Name": "Dr. Kapil Manohar Gumte",
     "Role": "Managing Editor",
     "Designation/College Name": "Assistant Professor / Indian Institute of Management Jammu",
@@ -62,7 +63,7 @@ const page = () => {
   },
   {
     Id:7,
-    "image": "/editorial-images/gjpir/Dr Susanta K Mishra.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs13.jpg",
     "Name": "Dr. Susanta K Mishra",
     "Role": "Assistant Editor",
     "Designation/College Name": "Professor / Centurion University",
@@ -71,7 +72,7 @@ const page = () => {
   },
   {
     Id:8,
-    "image": "/editorial-images/gjpir/Dr.Srikanth Potharla.jpeg",
+    "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs12.jpg",
     "Name": "Dr. Srikanth Potharla",
     "Role": "Section Editor",
     "Designation/College Name": "Assistant Professor / IBS Hyderabad",
@@ -80,7 +81,7 @@ const page = () => {
   },
   {
     Id:9,
-    "image": "/editorial-images/gjpir/Dr. Chinmaya Kumar Swain.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538c04.jpg",
     "Name": "Dr. Chinmaya Kumar Swain",
     "Role": "Review Editor",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
@@ -89,12 +90,12 @@ const page = () => {
   },
   {
     Id:10,
-    "image": "/editorial-images/gjpir/Dr.D. Srilatha.jpg",
-    "Name": "Dr. D. Srilatha",
-    "Role": "Advisory Member",
-    "Designation/College Name": "Professor / VVIT Guntur",
-    "linkedinUrl": "https://www.linkedin.com/in/srilatha-dande-86a62937b/",
-    "collegeUrl": "https://www.vvitguntur.com/drsrilatha-profile"
+   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
+    "Name": "Dr. CH. Naga Sai Kalyan",
+    "Role": "Associate Editor",
+   "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
+    "linkedinUrl": "",
+    "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
   }
 
 ]

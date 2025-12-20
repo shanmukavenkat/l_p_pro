@@ -1,27 +1,6 @@
 "use client";
-
-// import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-// import { useAuth } from "@/components/AuthProvider";
-import { buildLoginUrl } from "@/lib/cognito"; // ✅ Cognito login URL builder
-import { LoginForm } from "@/components/login-form";
 import { LoginCopy } from "@/components/login-form copy";
-
 export default function LoginPage() {
-  // const { user, loading } = useAuth();
-  const router = useRouter();
-
-  // ✅ Redirect logged-in users directly to dashboard
-  // useEffect(() => {
-  //   if (!loading && user) {
-  //     router.replace("/dashboard");
-  //   }
-  // }, [user, loading, router]);
-
-  // ✅ Optionally auto-redirect to Cognito Hosted UI login
-  const handleCognitoLogin = () => {
-    window.location.href = buildLoginUrl();
-  };
 
   return (
     <>

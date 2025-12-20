@@ -7,7 +7,7 @@ const page = () => {
   const Editorial_members =[
   {
     "Id": 1,
-    "image": "/editorial-images/aress/picture12.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562b32.jpg",
     "Name": "Dr. Badri Narayanan Gopalakrishnan",
     "Role": "Sub Division-Editor in Chief",
     "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
@@ -16,7 +16,7 @@ const page = () => {
   },
   {
     "Id": 2,
-    "image": "/editorial-images/aress/Dr. Aruna Kumar Dash.jpg",
+    "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562a33.jpg",
     "Name": "Dr. Aruna Kumar Dash",
     "Role": "Deputy Editor in Chief",
     "Designation/College Name": "Associate Professor / IBS Hyderabad",
@@ -25,7 +25,7 @@ const page = () => {
   },
   {
     "Id": 3,
-    "image": "/editorial-images/aress/Dr.Sumeet Gupta.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562s34.jpg",
     "Name": "Dr. Sumeet Gupta",
     "Role": "Sr Associate Editor",
     "Designation/College Name": "Professor and Associate Dean - IQAC at UPES",
@@ -34,7 +34,7 @@ const page = () => {
   },
   {
     "Id": 4,
-    "image": "/editorial-images/aress/Dr.Krishna Raj.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562k35.jpg",
     "Name": "Dr. Krishna Raj",
     "Role": "Associate Editor",
     "Designation/College Name": "Professor and Head, Centre for Economic Studies and Policy (CESP)",
@@ -43,7 +43,7 @@ const page = () => {
   },
   {
     "Id": 5,
-    "image": "/editorial-images/aress/Dr.Minaketan Behara.jpg",
+    "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562m36.jpg",
     "Name": "Dr. Minaketan Behera",
     "Role": "Managing Editor",
     "Designation/College Name": "Professor / Jawaharlal Nehru University",
@@ -52,7 +52,7 @@ const page = () => {
   },
   {
     "Id": 6,
-    "image": "/editorial-images/aress/Dr.Debi Prasad Bal.jpg",
+    "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562d37.jpg",
     "Name": "Dr. Debi Prasad Bal",
     "Role": "Associate Managing Editor",
     "Designation/College Name": "Associate Professor / XLRI Jamshedpur",
@@ -61,7 +61,7 @@ const page = () => {
   },
   {
     "Id": 7,
-    "image": "/editorial-images/aress/Dr.Pravin Jadhav.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562p38.jpg",
     "Name": "Dr. Pravin Jadhav",
     "Role": "Sr Review Editor",
     "Designation/College Name": "Associate Professor and HoD / Institute of Infrastructure Technology Research and Management (IITRAM), Ahmedabad",
@@ -88,7 +88,7 @@ const page = () => {
   // },
   {
     "Id": 10,
-    "image": "/editorial-images/aress/Prof. P. Guru Prasad.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562g41.jpg",
     "Name": "Prof. P. Guru Prasad",
     "Role": "Editorial Executive",
     "Designation/College Name": "Assistant Professor / VVIT University",

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Eye, EyeOff } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -23,6 +24,8 @@ export function LoginCopy({ className, ...props }: React.ComponentProps<"div">) 
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false)
+
 
   // 🛡️ Terms
   const [showTermsModal, setShowTermsModal] = useState(false);
@@ -118,24 +121,37 @@ export function LoginCopy({ className, ...props }: React.ComponentProps<"div">) 
                 />
               </Field>
 
-              <Field>
-                <div className="flex items-center">
-                  <FieldLabel htmlFor="password">Password</FieldLabel>
-                  <a
-                    href="/forgot-password"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a>
-                </div>
-                <Input
-                  id="password"
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </Field>
+             <Field>
+  <div className="flex items-center">
+    <FieldLabel htmlFor="password">Password</FieldLabel>
+    <a
+      href="/forgot-password"
+      className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+    >
+      Forgot your password?
+    </a>
+  </div>
+
+  <div className="relative">
+    <Input
+      id="password"
+      type={showPassword ? "text" : "password"}
+      required
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      className="pr-10"
+    />
+
+    <button
+      type="button"
+      onClick={() => setShowPassword(!showPassword)}
+      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+    >
+      {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+    </button>
+  </div>
+</Field>
+
 
               {/* ✅ TERMS CHECKBOX */}
               <Field>

@@ -6,7 +6,7 @@ const page = () => {
 
   const Editorial_members = [
     {   Id:1,
-        "image":"/editorial-images/Dr.Modekurti Venkata Surya Kameshwar Rao.jpg",
+        "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm11.jpg",
         "Name": "Dr.Modekurti Venkata Surya Kameshwar Rao",
         "Role": "Sub Division-Editor in Chief",
         "Designation/College Name": "Associate Professor/IBS Hyderabad",
@@ -15,7 +15,7 @@ const page = () => {
     },
     {   
         Id:2,
-        "image":"/editorial-images/Dr.Srikanth Potharla.jpg",
+        "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs12.jpg",
         "Name": "Dr.Srikanth Potharla",
         "Role": "Deputy Editor in Chief",
         "Designation/College Name": "Assistant Professor/IBS Hyderabad",
@@ -24,7 +24,7 @@ const page = () => {
     },
     {
         Id:3,
-         "image": "/editorial-images/Dr Susanta K Mishra.jpg",
+         "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs13.jpg",
         "Name": "Dr Susanta K Mishra",
         "Role": "Sr Associate Editor",
         "Designation/College Name": "Professor/ Centurion University",
@@ -32,7 +32,7 @@ const page = () => {
        "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in"
     },
     {  Id:4,
-       "image": "/editorial-images/Dr.Muhammed Shafi M K.jpg",
+       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
         "Name": "Dr.Muhammed Shafi M K",
         "Role": "Associate Editor",
         "Designation/College Name": "Assistant Professor/ NIT Warangal",
@@ -40,7 +40,7 @@ const page = () => {
        "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk"
     },
     {    Id:5,
-      "image": "/editorial-images/Dr. Manisha Kumari.jpg",
+      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm15.jpg",
         "Name": "Dr. Manisha Kumari",
         "Role": "Managing Editor",
         "Designation/College Name": "Associate Faculty Member/ (ni-msme)",
@@ -49,7 +49,7 @@ const page = () => {
     },
     {
         Id:6,
-       "image": "/editorial-images/Dr. Sandeep Kumar Kesarwani.jpg",
+       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs16.jpg",
         "Name": "Dr. Sandeep Kumar Kesarwani",
         "Role": "Sr Review Editor",
         "Designation/College Name": "Associate Professor/ Indian Institute of Information Technology",
@@ -58,7 +58,7 @@ const page = () => {
     },
     {   
         Id:7,
-        "image": "/editorial-images/Dr.CH Shanker.jpg",
+        "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fc17.jpg",
         "Name": "Dr.CH Shanker",
         "Role": "Review Editor",
         "Designation/College Name": "Assistant Professor/ Geetam Hyderabad",
@@ -66,7 +66,7 @@ const page = () => {
        "collegeUrl":"https://www.gitam.edu/faculty/chanagala-shankar"
     },
     {   Id:8,
-      "image": "/editorial-images/Dr. Kumaraswamy Manepalli.jpg",
+      "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fk18.jpg",
         "Name": "Dr. Kumaraswamy Manepalli",
         "Role": "Domain Editor",
         "Designation/College Name": "Assistant Professor/Vignan's University, Vadlamudi",
@@ -75,7 +75,7 @@ const page = () => {
     },
     {
       Id:9,
-      "image": "/editorial-images/Dr.Rintu Anthony.jpg",
+      "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fr19.jpg",
         "Name": "Dr.Rintu Anthony",
         "Role": "Assistant Editor",
         "Designation/College Name": "Assistant Professor / Rajagiri Business School",
@@ -83,7 +83,7 @@ const page = () => {
        "collegeUrl":"https://www.rajagiribusinessschool.edu.in/faculty-details/rintu-anthony"
     },
     {   Id:10,
-      "image": "/editorial-images/Dr.Saravanan Vellaiyan.jpg",
+      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs20.jpg",
         "Name": "Dr.Saravanan Vellaiyan",
         "Role": "Copy Editor",
         "Designation/College Name": "Assistant Professor / Christ University",
@@ -92,7 +92,7 @@ const page = () => {
     },
     {
       Id:11,
-      "image": "/editorial-images/Dr. Mohammad Munawar Alam Sayyad.jpg",
+      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
         "Name": "Dr. Mohammad Munawar Alam Sayyad",
         "Role": "Editorial Member",
         "Designation/College Name": "Assistant Professor/ IBS Hyderabad",

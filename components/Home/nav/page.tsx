@@ -20,11 +20,11 @@ const menuItems = [
   },
   // { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
   // { label: "Case Center", ariaLabel: "Browse our case center", link: "/" },
-  {
-    label: "Join Editorial Board",
-    ariaLabel: "Apply to join the editorial board",
-    link: "/",
-  },
+  // {
+  //   label: "Join Editorial Board",
+  //   ariaLabel: "Apply to join the editorial board",
+  //   link: "/",
+  // },
   { label: "Contact", ariaLabel: "Get in touch with us", link: "/" },
    {label:"Editorial Login " ,
     ariaLabel:"editorial Login ",

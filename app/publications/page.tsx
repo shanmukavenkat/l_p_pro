@@ -101,6 +101,12 @@ The journal welcomes full-length research papers, review articles, case studies,
               Editorial Board
             </button>
           </Link>
+<Link href="/SUBMISSION GUIDELINES.pdf"  className="w-full sm:w-auto">
+          <button
+            className="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-md font-semibold transition" >
+            Submission Guidelines
+          </button>
+          </Link>
         </div>
            </section>
           

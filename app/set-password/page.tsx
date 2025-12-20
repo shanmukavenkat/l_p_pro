@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Eye, EyeOff } from "lucide-react";
+
 
 export default function SetPassword() {
   const [newPassword, setNewPassword] = useState("");
@@ -11,6 +13,8 @@ export default function SetPassword() {
   const [error, setError] = useState("");
   const [email, setEmail] = useState<string | null>(null);
   const [session, setSession] = useState<string | null>(null);
+  const [showNewPassword, setShowNewPassword] = useState(false)
+
 
   // 🔹 Load email & session from localStorage
   useEffect(() => {
@@ -85,37 +89,51 @@ export default function SetPassword() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="w-full max-w-md space-y-5 bg-white p-6 rounded-xl shadow">
-        <h2 className="text-xl font-semibold text-center">
-          Set New Password
-        </h2>
+   <div className="min-h-screen flex items-center justify-center bg-gray-50">
+  <div className="w-full max-w-md space-y-5 bg-white p-6 rounded-xl shadow">
+    <h2 className="text-xl font-semibold text-center">
+      Set New Password
+    </h2>
 
-        <div className="space-y-2">
-          <Label htmlFor="new-password">New Password</Label>
-          <Input
-            id="new-password"
-            type="password"
-            placeholder="Enter a strong password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
-        </div>
+    <div className="space-y-2">
+      <Label htmlFor="new-password">New Password</Label>
 
-        {error && (
-          <p className="text-red-600 text-sm text-center">
-            {error}
-          </p>
-        )}
+      {/* ONLY ADDITION: relative wrapper */}
+      <div className="relative">
+        <Input
+          id="new-password"
+          type={showNewPassword ? "text" : "password"}
+          placeholder="Enter a strong password"
+          value={newPassword}
+          onChange={(e) => setNewPassword(e.target.value)}
+          className="pr-10"
+        />
 
-        <Button
-          onClick={handleUpdate}
-          disabled={loading}
-          className="w-full"
+        <button
+          type="button"
+          onClick={() => setShowNewPassword(!showNewPassword)}
+          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
         >
-          {loading ? "Updating..." : "Update Password"}
-        </Button>
+          {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+        </button>
       </div>
     </div>
+
+    {error && (
+      <p className="text-red-600 text-sm text-center">
+        {error}
+      </p>
+    )}
+
+    <Button
+      onClick={handleUpdate}
+      disabled={loading}
+      className="w-full"
+    >
+      {loading ? "Updating..." : "Update Password"}
+    </Button>
+  </div>
+</div>
+
   );
 }

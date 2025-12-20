@@ -7,7 +7,7 @@ const page = () => {
   const Editorial_members =[
   {
     "Id": 1,
-    "image": "/editorial-images/aciet/Dr. Anand Shukla .jpeg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538a01.jpeg",
     "Name": "Dr. Anand Shukla",
     "Role": "Sub Division-Editor in Chief",
     "Designation/College Name": "Dean / Lovely Professional University",
@@ -16,7 +16,7 @@ const page = () => {
   },
   {
     "Id": 2,
-    "image": "/editorial-images/aciet/Dr.Chandrashekar Jatoth.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538c02.jpg",
     "Name": "Dr. Chandrashekar Jatoth",
     "Role": "Deputy Editor in Chief",
     "Designation/College Name": "Assistant Professor / National Institute of Technology, Raipur",
@@ -25,7 +25,7 @@ const page = () => {
   },
   {
     "Id": 3,
-    "image": "/editorial-images/aciet/Dr .Easwar krishna Iyer.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538e03.jpg",
     "Name": "Dr. Easwar Krishna Iyer",
     "Role": "Sr Associate Editor",
     "Designation/College Name": "Director / Indus Business Academy (IBA), Bengaluru",
@@ -34,7 +34,7 @@ const page = () => {
   },
   {
     "Id": 4,
-    "image": "/editorial-images/aciet/Dr. Chinmaya Kumar Swain.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538c04.jpg",
     "Name": "Dr. Chinmaya Kumar Swain",
     "Role": "Associate Editor",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
@@ -43,7 +43,7 @@ const page = () => {
   },
   {
     "Id": 5,
-    "image": "/editorial-images/aciet/Dr.Rishi Chopra.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538r05.jpg",
     "Name": "Dr. Rishi Chopra",
     "Role": "Managing Editor",
     "Designation/College Name": "Associate Professor & Asst. Dean / Lovely Professional University",
@@ -52,7 +52,7 @@ const page = () => {
   },
   {
     "Id": 6,
-    "image": "/editorial-images/aciet/Dr. T.V. Rajini Kanth.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538t06.jpg",
     "Name": "Dr. T.V. Rajini Kanth",
     "Role": "Associate Managing Editor",
     "Designation/College Name": "Professor & Convener RDC / MGIT Hyderabad",
@@ -61,7 +61,7 @@ const page = () => {
   },
   {
     "Id": 7,
-    "image": "/editorial-images/aciet/Dr. Shaik Mahaboob Basha.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538s07.jpg",
     "Name": "Dr. Shaik Mahaboob Basha",
     "Role": "Sr Review Editor",
     "Designation/College Name": "Professor & Head of Department (CSE) / Sree Dattha Institute of Engineering and Science, Hyderabad",
@@ -70,7 +70,7 @@ const page = () => {
   },
   {
     "Id": 8,
-    "image": "/editorial-images/aciet/Dr. Uma Rani Vanamala.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538u08.jpg",
     "Name": "Dr. Uma Rani Vanamala",
     "Role": "Review Editor",
     "Designation/College Name": "Head of the Department, IT / Jawaharlal Nehru Technological University Hyderabad (JNTUH)",
@@ -79,7 +79,7 @@ const page = () => {
   },
   {
     "Id": 9,
-    "image": "/editorial-images/aciet/Dr.Balaji Halavath.png",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538b09.png",
     "Name": "Dr. Balaji Halavath",
     "Role": "Domain Editor",
     "Designation/College Name": "Professor, CSE Department / Sreenidhi Institute of Science & Technology, Hyderabad",
@@ -88,7 +88,7 @@ const page = () => {
   },
   {
     "Id": 10,
-    "image": "/editorial-images/aciet/Dr.Kranthi Kumar Singamaneni.png",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538k10.png",
     "Name": "Dr. Kranthi Kumar Singamaneni",
     "Role": "Editorial Executive",
     "Designation/College Name": "Associate Professor & In-Charge / Symbiosis Institute of Technology, Hyderabad",

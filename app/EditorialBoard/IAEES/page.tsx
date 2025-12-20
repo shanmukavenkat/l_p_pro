@@ -7,7 +7,7 @@ const page = () => {
   const Editorial_members = [
   {
    "id": 1,
-   "image": "/editorial-images/iaees/Dr. Umesh Chandra Pati.jpg",
+   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553u42.jpg",
     "name": "Dr. Umesh Chandra Pati",
     "role": "Sub Division – Editor in Chief",
     "Designation/College Name": "Professor/National Institute of Technology Rourkela",
@@ -16,7 +16,7 @@ const page = () => {
   },
   {
    "id": 2,
-    "image": "/editorial-images/iaees/Dr.D. Srilatha.jpg",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553s43.jpg",
     "name": "Dr. D. Srilatha",
     "role": "Deputy Editor in Chief",
     "Designation/College Name": "Professor/VVIT Guntur",
@@ -33,15 +33,15 @@ const page = () => {
 //     "linkedinUrl": "",
 //     "collegeUrl": ""
 //   },
-//   {
-//    "id": 4,
-//     "image": "/editorial-images/Dr. CH. Naga Sai Kalyan.jpg",
-//     "name": "Dr. CH. Naga Sai Kalyan",
-//     "role": "Associate Editor",
-//    "Designation/College Name": "",
-//     "linkedinUrl": "",
-//     "collegeUrl": ""
-//   },
+  {
+   "id": 3,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
+    "name": "Dr. CH. Naga Sai Kalyan",
+    "role": "Associate Editor",
+   "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
+    "linkedinUrl": "",
+    "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
+  },
 //   {
 //    "id": 5,
 //     "image": "",
@@ -52,13 +52,13 @@ const page = () => {
 //     "collegeUrl": ""
 //   },
   {
-   "id": 6,
-    "image": "/editorial-images/Dr. Chandan Nayak.jpg",
+   "id": 4,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553c47.jpg",
     "name": "Dr. Chandan Nayak",
     "role": "Associate Managing Editor",
-    "Designation/College Name": "",
-    "linkedinUrl": "",
-    "collegeUrl": ""
+    "Designation/College Name": "asst professor/ vit-ap",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-chandan-nayak-143447128?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "collegeUrl": "https://share.google/EvGjVqhAixAA2uQdH"
   },
 //   {
 //    "id": 7,

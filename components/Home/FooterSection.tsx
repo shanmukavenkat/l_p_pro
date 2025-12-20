@@ -3,8 +3,8 @@ import { Github, Linkedin, Instagram, Twitter, Mail } from "lucide-react";
 export default function FooterSection() {
   const socialLinks = [
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/lurnexa-publications/?viewAsMember=true", label: "LinkedIn" },
   ];
 
   return (
