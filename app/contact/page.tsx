@@ -1,4 +1,3 @@
-import React from "react";
 import { Mail, Phone, User, MessageSquare, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,7 +29,7 @@ export default function ContactPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-400">
           Get in touch with us for more information
         </h1>
-        <p className="text-lg opacity-90 text-center max-w-2xl ext-black drop-shadow-lg">
+        <p className="text-lg opacity-90 text-center max-w-2xl text-black drop-shadow-lg " style={{backgroundColor:"white"}}>
           If you need help or have a question, we're here for you
         </p>
       </div>
@@ -83,31 +82,61 @@ export default function ContactPage() {
               </form>
             </div>
 
-            {/* Right Side: Info Cards */}
-            <div className="flex-1 p-8 md:p-12 bg-white border-l border-gray-100 flex flex-col gap-6">
-              
-              {/* Email/Phone Card */}
-              <div className="border rounded-2xl p-8 text-center space-y-4">
-                <h3 className="text-xl font-bold">Company Email/Phone</h3>
-                <div className="space-y-1 text-gray-600">
-                  <p>wewerwerw@gmail.com</p>
-                  <p>asfsfasd</p>
-                </div>
-              </div>
 
-              {/* HQ Card */}
-              <div className="border rounded-2xl p-8 text-center space-y-4">
-                <h3 className="text-xl font-bold">sadfas</h3>
-                <div className="space-y-1 text-gray-600 leading-relaxed">
-                  <p>asd</p>
-                  <p>asdfas</p>
-                  <p>asd</p>
-                  <p>Casdasd</p>
-                </div>
-              </div>
 
-             
-            </div>
+<div className="flex-1 p-8 md:p-12 bg-linear-to-br from-slate-50 to-white border-l border-slate-200 flex flex-col gap-6">
+
+  {/* Mail Us Card */}
+  <div className="group rounded-3xl p-8 bg-white shadow-sm ring-1 ring-slate-200/60 hover:shadow-lg transition-all duration-300">
+    
+    {/* Icon */}
+    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-700">
+      <Mail className="h-6 w-6" />
+    </div>
+
+    <h3 className="text-xl font-semibold text-slate-900 text-center">
+      Mail Us
+    </h3>
+
+    <p className="mt-2 text-sm text-slate-500 text-center">
+      We reply within 24 hours
+    </p>
+
+    <div className="mt-4 space-y-1 text-slate-600 text-sm text-center">
+      <p className="font-medium">
+        lurnexapublication@gmail.com
+      </p>
+    </div>
+  </div>
+
+  {/* Call Us Card */}
+  <div className="group rounded-3xl p-8 bg-white shadow-sm ring-1 ring-slate-200/60 hover:shadow-lg transition-all duration-300">
+
+    {/* Icon */}
+    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700">
+      <Phone className="h-6 w-6" />
+    </div>
+
+    <h3 className="text-xl font-semibold text-slate-900 text-center">
+      Call Us
+    </h3>
+
+    <p className="mt-2 text-sm text-slate-500 text-center">
+      Mon to Fri · 9am – 6pm
+    </p>
+
+    <div className="mt-4 space-y-1 text-slate-600 text-sm text-center">
+      <p className="font-medium tracking-wide">
+        +91 91335 21829
+      </p>
+      <p className="font-medium tracking-wide">
+        +91 93473 75817
+      </p>
+    </div>
+  </div>
+
+</div>
+
 
           </CardContent>
         </Card>

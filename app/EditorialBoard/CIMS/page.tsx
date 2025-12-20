@@ -1,9 +1,11 @@
+'use client';
+
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
-import NavigationPage from '@/components/Home/nav/page'
+import { useState } from 'react';
 import ProfileCard from '@/components/Home/ProfileCard'
-
-const page = () => {
-
+import NavigationPage from '@/components/Home/nav/page';
+const  page = () => {
+  const [activeSection, setActiveSection] = useState<"finance" | "operations">("finance");
   const Editorial_members = [
     {   Id:1,
         "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm11.jpg",
@@ -100,46 +102,150 @@ const page = () => {
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
     }
 ]
+const Operation_members = [
+  {
+    "id": 1,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
+    "name": "Dr. Amitava Mukherjee",
+    "role": "Sub Division Editor in Chief",
+    "Designation/College Name": "Professor/XLRI - Xavier School of Management",
+    "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
+    "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
+  },
+  {
+    "id": 2,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ok23.jpg",
+    "name": "Dr. Kapil Manohar Gumte",
+    "role": "Deputy Editor in Chief",
+    "Designation/College Name": "Assistant Professor/Indian Institute of Management Jammu",
+    "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
+    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
+  },
+  {
+    "id": 3,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544od24.jpg",
+    "name": "Dr. Debopam Chakrabarti",
+    "role": "Senior Associate Editor",
+    "Designation/College Name": "Professor of Practice/Mahindra University",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-debopam-chakarabarti-3352b97/",
+    "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/"
+  },
+  {
+    "id": 4,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ov25.jpg",
+    "name": "Dr. Vaibhav Mishra",
+    "role": "Associate Editor",
+    "Designation/College Name": "Associate Professor/IBS Hyderabad",
+    "linkedinUrl": null,
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf"
+  },
+  {
+    "id": 5,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544or26.jpg",
+    "name": "Dr. D. Ravindran",
+    "role": "Managing Editor",
+    "Designation/College Name": "Assistant Professor/Kristu Jayanti Institute of Management, Bengaluru",
+    "linkedinUrl": "https://www.linkedin.com/in/ravindran-d-b65b8416/?originalSubdomain=in",
+    "collegeUrl": "https://kristujayanti.irins.org/profile/168699"
+  },
+  // {
+  //   "id": 6,
+  //   "image": "",
+  //   "name": null,
+  //   "role": "Senior Review Editor",
+  //   "Designation/College Name": null,
+  //   "linkedinUrl": null,
+  //   "collegeUrl": null
+  // },
+  // {
+  //   "id": 7,
+  //   "image": "",
+  //   "name": null,
+  //   "role": "Review Editor",
+  //   "Designation/College Name": null,
+  //   "linkedinUrl": null,
+  //   "collegeUrl": null
+  // },
+  // {
+  //   "id": 8,
+  //   "image": "",
+  //   "name": null,
+  //   "role": "Domain Editor",
+  //   "Designation/College Name": null,
+  //   "linkedinUrl": null,
+  //   "collegeUrl": null
+  // },
+  {
+    "id": 9,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ob30.jpg",
+    "name": "Dr. Bijetha Shaw",
+    "role": "Assistant Editor",
+    "Designation/College Name": "Assistant Professor/IBS Hyderabad",
+    "linkedinUrl": "https://www.linkedin.com/in/bijeta-shaw-5576269b/?originalSubdomain=in",
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eUrjppP7DJtxe9oBQK2hBVp8Jv0UmNwKTMVPHPBp.pdf"
+  }
+]
+
   return (
-    <>
+
     
-   <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
-  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
-    <NavigationPage />
+   <>
+      <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
+          <NavigationPage />
 
-    <div className=" flex-1 text-start lg:text-left space-y-2">
-      {/* Centered title */}
-      <div className="w-full flex justify-center">
-        <span className="text-2xl font-bold text-center">
-           Editorial Message - CIMS
-        </span>
-      </div>
+          <div className="flex-1 space-y-4">
+            <div className="w-full flex justify-center">
+              <span className="text-2xl font-bold text-center">
+                Editorial Message - CIMS
+              </span>
+            </div>
 
-      <br />
-
-      <p className="text-lg text-gray-700 leading-relaxed">
-       The CIMS section aims to strengthen modern management scholarship by encouraging rigorous, practical, and forward-looking research. In a rapidly changing business landscape, effective strategic thinking, innovation, and data-driven decision-making have become essential.
+            <p className="text-lg text-gray-700 leading-relaxed">
+               The CIMS section aims to strengthen modern management scholarship by encouraging rigorous, practical, and forward-looking research. In a rapidly changing business landscape, effective strategic thinking, innovation, and data-driven decision-making have become essential.
 We invite research that enhances organizational performance, addresses contemporary managerial challenges, and promotes sustainable and ethical practices. Our focus is to support work that bridges academic insight with real-world managerial application, helping shape competent and future-ready leadership.
+            </p>
 
-      </p>
-    </div>
-  </div>
-</section>
+            {/* Toggle Buttons */}
+            <div className="flex justify-center gap-4 mt-6">
+              <button
+                onClick={() => setActiveSection("finance")}
+                className={`px-6 py-2 rounded-full font-medium ${
+                  activeSection === "finance"
+                    ? "bg-green-400 text-white"
+                    : "bg-gray-200"
+                }`}
+              >
+                Finance
+              </button>
 
-  <section className="py-10 px-6 ">
-   <div className=" flex-1 text-start lg:text-left space-y-2">
-      {/* Centered title */}
-      <div className="w-full flex justify-center">
+              <button
+                onClick={() => setActiveSection("operations")}
+                className={`px-6 py-2 rounded-full font-medium ${
+                  activeSection === "operations"
+                    ? "bg-blue-400 text-white"
+                    : "bg-gray-200"
+                }`}
+              >
+                Operations
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 px-6">
+          <div className="w-full flex justify-center">
         <span className="text-2xl font-bold text-center">
-          Editorial Board Members (CIMS) - Finance Management
+          Editorial Board Members {activeSection === "finance" ? " CIMS - Finance Management" : "CIMS - Operations Management"}
         </span>
-      </div>
-</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-
-      {Editorial_members.map((member)=>(
-        <ProfileCard
-          key ={member.Id}
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        
+          {activeSection === "finance" &&
+            Editorial_members.map((member) => (
+              <ProfileCard
+                key ={member.Id}
           image={member.image || ''}
           name={member.Name}
           role={member.Role}
@@ -147,15 +253,27 @@ We invite research that enhances organizational performance, addresses contempor
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
-        />
+              />
+            ))}
 
-      ))}
-      </div>
-    </section>
- 
-    <FooterSection />
+          {activeSection === "operations" &&
+            Operation_members.map((members) => (
+              <ProfileCard
+                key ={members.id}
+          image={members.image || ''}
+          name={members.name || ''}
+          role={members.role}
+          Desgination={members['Designation/College Name'] || ''}
+         college={members['Designation/College Name'] || ''}
+          linkedinUrl={members.linkedinUrl || undefined}
+           collegeUrl={members.collegeUrl || undefined}
+              />
+            ))}
+        </div>
+      </section>
+
+      <FooterSection />
     </>
-  )
-}
-
-export default page
+  );
+};
+export default page;

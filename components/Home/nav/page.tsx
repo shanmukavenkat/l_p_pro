@@ -25,7 +25,7 @@ const menuItems = [
   //   ariaLabel: "Apply to join the editorial board",
   //   link: "/",
   // },
-  { label: "Contact", ariaLabel: "Get in touch with us", link: "/" },
+  { label: "Contact", ariaLabel: "Get in touch with us", link: "/contact" },
    {label:"Editorial Login " ,
     ariaLabel:"editorial Login ",
     link:"/EditoralLogins"},

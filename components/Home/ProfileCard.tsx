@@ -45,7 +45,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         {/* --- TOP HALF: DYNAMIC IMAGE --- */}
         <div className="w-full h-[80%] relative z-0 bg-gray-300">
           <img 
-            src={image} 
+            src={image || ''} 
             alt={name} 
             className="w-full h-full object-cover object-top"
           />
