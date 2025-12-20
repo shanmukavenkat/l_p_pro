@@ -133,7 +133,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
               </Field>
 
               {error && (
-                <p className="text-red-600 text-sm text-center mt-2">
+                <p className="text-red-600 text-sm ">
                   {error}
                 </p>
               )}

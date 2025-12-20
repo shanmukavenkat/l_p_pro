@@ -2,7 +2,7 @@
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
 import { Upload, CreditCard, Send, Info, UserPlus } from 'lucide-react';
-export default function ACIETPage() {
+export default function Page() {
   return (
     <>
       <NavigationPage />
@@ -20,13 +20,13 @@ export default function ACIETPage() {
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
               <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Info size={20} className="text-blue-600" /> General Information
+                <Info size={20} className="" /> General Information
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">Full Name</label>
-                  <input type="text" placeholder="John Doe" className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none transition-all" />
+                  <input type="text" placeholder="Enter your name" className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none transition-all" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-700">Email Address</label>
@@ -57,11 +57,11 @@ export default function ACIETPage() {
             {/* Upload Section */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
               <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 text-slate-800">
-                <Upload size={20} className="text-blue-600" /> Article Upload
+                <Upload size={20} className="" /> Article Upload
               </h2>
               <div className="border-2 border-dashed border-slate-200 rounded-xl p-10 flex flex-col items-center justify-center bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer group">
                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
-                  <Upload className="text-blue-600" size={24} />
+                  <Upload className="" size={24} />
                 </div>
                 <p className="text-sm font-medium text-slate-700">Drop your article here or click to browse</p>
                 <p className="text-xs text-slate-500 mt-1">Supports PDF or Word documents (Max 10MB)</p>
@@ -75,7 +75,7 @@ export default function ACIETPage() {
             {/* Authors Info Card */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-slate-800">
-                <UserPlus size={18} className="text-blue-600" /> Authors Info
+                <UserPlus size={18} className="" /> Authors Info
               </h2>
               <textarea 
                 placeholder="Enter details for additional authors..." 
@@ -83,8 +83,11 @@ export default function ACIETPage() {
               />
             </div>
 
-            {/* Fee Structure Card */}
-            <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-lg">
+                        {/* Fee Structure Card */}
+
+
+
+              {/* <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-lg">
               <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <CreditCard size={18} className="text-blue-400" /> Payement Structure
               </h2>
@@ -92,23 +95,22 @@ export default function ACIETPage() {
                 <div className="border-b border-slate-700 pb-2">
                   <p className="text-slate-400 text-xs mb-1 uppercase tracking-wider">COMING SOON ...</p>
                   <div className="flex justify-between"><span></span>COMING SOON... <span className="font-mono text-blue-400">COMING SOON ...</span></div>
-                  
-{/* Economics/Mgmt */}
-                  <div className="flex justify-between"><span></span>COMING SOON ... <span className="font-mono text-blue-400">COMING SOON ...</span></div>
+              {/* Economics/Mgmt */}
+                  {/* <div className="flex justify-between"><span></span>COMING SOON ... <span className="font-mono text-blue-400">COMING SOON ...</span></div> */}
                   {/* CSE/Engineering */}
-                </div>
-                <div>
+                {/* </div> */}
+               {/* " <div>
                   <p className="text-slate-400 text-xs mb-1 uppercase tracking-wider">COMING SOON ......</p>
                   <div className="flex justify-between"><span></span>COMING SOON ... <span className="font-mono text-green-400">COMING SOON ...</span></div>
                   {/* CSE/Engineering */}
-                  <div className="flex justify-between"><span></span>COMING SOON ... <span className="font-mono text-green-400">COMING SOON ...</span></div>
+                  {/* <div className="flex justify-between"><span></span>COMING SOON ... <span className="font-mono text-green-400">COMING SOON ...</span></div> */}
                   {/* Economics/Mgmt */}
-                </div>
+                {/* </div>
               </div>
               <button type="button" className="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl transition-all shadow-md active:scale-95">
                 Proceed to Payment
               </button>
-            </div>
+            </div>" */} 
 
             {/* Remarks and Submit */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">

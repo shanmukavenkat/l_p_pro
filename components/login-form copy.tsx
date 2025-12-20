@@ -79,7 +79,7 @@ export function LoginCopy({ className, ...props }: React.ComponentProps<"div">) 
       }
       
     } catch (err: any) {
-      setError(err.message || "Login failed");
+      setError(err.message || "Please provide valid credentials.");
     } finally {
       setLoading(false);
     }

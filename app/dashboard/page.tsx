@@ -77,7 +77,7 @@ export default function DashboardPage() {
         );
 
         if (!response.ok) {
-          throw new Error("Failed to fetch image");
+          throw new Error("Please upload a valid image");
         }
 
         const blob = await response.blob();
