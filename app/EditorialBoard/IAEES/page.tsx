@@ -18,7 +18,7 @@ const page = () => {
    "id": 2,
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553s43.jpg",
     "name": "Dr. D. Srilatha",
-    "role": "Deputy Editor in Chief",
+    "role": "Associate Editor ",
     "Designation/College Name": "Professor/VVIT Guntur",
     "linkedinUrl": "https://www.linkedin.com/in/srilatha-dande-86a62937b/",
     "collegeUrl": "https://www.vvitguntur.com/drsrilatha-profile"
@@ -37,20 +37,20 @@ const page = () => {
    "id": 3,
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
     "name": "Dr. CH. Naga Sai Kalyan",
-    "role": "Associate Editor",
+    "role": "Deputy Editor in Chief",
    "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
     "linkedinUrl": "",
     "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
   },
-//   {
-//    "id": 5,
-//     "image": "",
-//     "name": "",
-//     "role": "Managing Editor",
-//     "Designation/College Name": "",
-//     "linkedinUrl": "",
-//     "collegeUrl": ""
-//   },
+  {
+   "id": 5,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562s39.png",
+    "name": "Dr. Subhash Chandra ",
+    "role": "Review Editor",
+    "Designation/College Name": "Assistant Professor/Tata Institute of Social Sciences",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-subhash-chandra-09274565/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/"
+  },
   {
    "id": 4,
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553c47.jpg",

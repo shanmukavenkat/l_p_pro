@@ -23,7 +23,7 @@ export default function WelcomeIntro() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#FFF0E6]"
+          className="fixed inset-0 z-9999 flex items-center justify-center bg-[#FFF0E6]"
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
         >
