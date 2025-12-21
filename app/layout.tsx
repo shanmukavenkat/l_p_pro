@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import WelcomeIntro from "@/components/Home/WelcomeIntro";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* ✅ Global Auth Context Wrapper */}
+        <WelcomeIntro />
         {children}
       </body>
     </html>
