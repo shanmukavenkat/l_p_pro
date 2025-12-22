@@ -42,15 +42,7 @@ const page = () => {
     "linkedinUrl": "",
     "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
   },
-  {
-   "id": 5,
-    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562s39.png",
-    "name": "Dr. Subhash Chandra ",
-    "role": "Review Editor",
-    "Designation/College Name": "Assistant Professor/Tata Institute of Social Sciences",
-    "linkedinUrl": "https://www.linkedin.com/in/dr-subhash-chandra-09274565/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/"
-  },
+  
   {
    "id": 4,
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553c47.jpg",

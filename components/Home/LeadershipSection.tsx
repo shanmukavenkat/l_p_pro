@@ -18,7 +18,7 @@ Thank you for being part of the Lurnexa journey. Together, let us build a future
 .
       `,
       name: "Narendra Kumar Kurakula",
-      designation: "Founder & Chairman — Lurnexa Publications",
+      designation: "Founder & Director — Lurnexa Publications",
       src: "/Founder.jpg",
     },
     {

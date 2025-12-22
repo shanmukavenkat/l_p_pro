@@ -51,6 +51,15 @@ const page = () => {
     "collegeUrl": "https://www.jnu.ac.in/content/minaketan"
   },
   {
+   "id": 5,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562s39.png",
+    "Name": "Dr. Subhash Chandra ",
+    "Role": "Review Editor",
+    "Designation/College Name": "Assistant Professor/Tata Institute of Social Sciences",
+    "linkedinUrl": "https://www.linkedin.com/in/dr-subhash-chandra-09274565/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/"
+  },
+  {
     "Id": 6,
     "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562d37.jpg",
     "Name": "Dr. Debi Prasad Bal",
@@ -68,6 +77,7 @@ const page = () => {
     "linkedinUrl": "https://www.linkedin.com/in/pravin-jadhav-16314322/",
     "collegeUrl": "https://iitram.ac.in/empdetail/2015152"
   },
+  
   // {
   //   "Id": 8,
   //   "image": "/editorial-images/null",
