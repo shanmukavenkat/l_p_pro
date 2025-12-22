@@ -19,7 +19,7 @@ Thank you for being part of the Lurnexa journey. Together, let us build a future
       `,
       name: "Narendra Kumar Kurakula",
       designation: "Founder & Director — Lurnexa Publications",
-      src: "/Founder.jpg",
+      src: ""
     },
     {
       quote:
@@ -33,10 +33,11 @@ We are expanding collaborations with experts, enhancing the quality of our acade
 As we move forward, we remain dedicated to transforming knowledge into impact—ensuring that every publication we deliver brings clarity, curiosity, and confidence to the academic community.
 
 Together, we are not just upholding a vision.
-We are driving it forward`,
+We are driving it forward`,
       name: "Rushik Burla",
       designation: "Chief Executive Officer — Lurnexa Publications",
-      src: "/ceo.jpg",
+      src: ""
+
     },
   ];
   return <AnimatedTestimonials testimonials={testimonials} autoplay={true}  />;
