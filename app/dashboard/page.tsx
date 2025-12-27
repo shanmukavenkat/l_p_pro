@@ -157,9 +157,7 @@ export default function DashboardPage() {
     router.push("/EditoralLogins");
   };
 /* ================= IMAGE UPLOAD ================= */
-const handleProfileImageUpload = async (
-  e: React.ChangeEvent<HTMLInputElement>
-) => {
+const handleProfileImageUpload = async ( e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0];
   if (!file || !formData.id) return;
 
@@ -179,7 +177,10 @@ const handleProfileImageUpload = async (
     e.target.value = ""; // reset file input
     return;
   }
-
+  // 2. OPTIMISTIC UPDATE: Show the image immediately
+  const localPreview = URL.createObjectURL(file);
+  setImageUrl(localPreview);
+  // 3. UPLOAD TO SERVER
   try {
     const token = localStorage.getItem("access_token");
 
@@ -199,18 +200,22 @@ const handleProfileImageUpload = async (
     );
 
     const result = await res.json();
+    console.log("Upload result:", result);
 
-    if (!res.ok) {
-      alert(result?.detail || "Image upload failed");
-      return;
-    }
+   if (!res.ok) throw new Error("Upload failed");
 
-    // 🔄 refresh image
-    setImageUrl(null);
+    // 3. CACHE BUSTING: Force the Avatar to refresh by adding a timestamp
+    const timestamp = new Date().getTime();
+    const newS3Url = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${formData.id}.jpg?t=${timestamp}`;
+    
+    // This tells the UI to use the new S3 link instead of the blob
+    setImageUrl(newS3Url); 
+    alert("Profile picture updated!");
 
   } catch (error) {
-    console.error("Image upload error:", error);
+    console.error("Upload error:", error);
     alert("Image upload failed");
+    setImageUrl(null); // Revert on error
   }
 };
 
@@ -377,10 +382,11 @@ const handleResumeUpload = async (
       <aside className="w-full lg:w-1/3 xl:w-1/4 h-fit bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-3xl p-8 text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-slate-900/5">
         <div className="relative w-fit mx-auto mb-6">
           <Avatar className="h-32 w-32 border-4 border-white shadow-xl ring-1 ring-slate-100">
-            <AvatarImage 
-              src={`https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${formData.id}.jpg`} 
-              className="object-cover"
-            />
+           <AvatarImage 
+    // Use the imageUrl from state if it exists, otherwise use default S3 path
+    src={imageUrl || `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${formData.id}.jpg`} 
+    className="object-cover"
+  />
             <AvatarFallback className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-2xl font-bold">
               {formData.name?.[0]?.toUpperCase()}
             </AvatarFallback>

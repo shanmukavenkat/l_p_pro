@@ -92,7 +92,7 @@ const page = () => {
     Id:10,
    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
     "Name": "Dr. CH. Naga Sai Kalyan",
-    "Role": "Associate Editor",
+    "Role": "Advisory Member",
    "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
     "linkedinUrl": "",
     "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"

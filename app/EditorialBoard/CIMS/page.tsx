@@ -87,7 +87,7 @@ const  page = () => {
     {   Id:10,
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs20.jpg",
         "Name": "Dr.Saravanan Vellaiyan",
-        "Role": "Copy Editor",
+        "Role": "Editorial Executive",
         "Designation/College Name": "Assistant Professor / Christ University",
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
@@ -96,7 +96,7 @@ const  page = () => {
       Id:11,
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
         "Name": "Dr. Mohammad Munawar Alam Sayyad",
-        "Role": "Editorial Member",
+        "Role": "Editorial Executive",
         "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
        "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
@@ -157,15 +157,15 @@ const Operation_members = [
   //   "linkedinUrl": null,
   //   "collegeUrl": null
   // },
-  // {
-  //   "id": 7,
-  //   "image": "",
-  //   "name": null,
-  //   "role": "Review Editor",
-  //   "Designation/College Name": null,
-  //   "linkedinUrl": null,
-  //   "collegeUrl": null
-  // },
+  {
+    "id": 7,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544os28.jpg",
+    "name": "Dr. Sourav Mondal",
+    "role": "Review Editor",
+    "Designation/College Name": "Assistant Professor / IIM Jammu",
+    "linkedinUrl": "https://www.linkedin.com/in/sourav-mondal-a13906a7/?originalSubdomain=in",
+    "collegeUrl": "https://iimj.ac.in/faculty-datad429.php?n=MTMy"
+  },
   // {
   //   "id": 8,
   //   "image": "",

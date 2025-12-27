@@ -16,6 +16,15 @@ const page = () => {
   },
   {
    "id": 2,
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
+    "name": "Dr. CH. Naga Sai Kalyan",
+    "role": "Deputy Editor in Chief",
+   "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
+    "linkedinUrl": "",
+    "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
+  },
+  {
+   "id": 3,
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553s43.jpg",
     "name": "Dr. D. Srilatha",
     "role": "Associate Editor ",
@@ -33,15 +42,6 @@ const page = () => {
 //     "linkedinUrl": "",
 //     "collegeUrl": ""
 //   },
-  {
-   "id": 3,
-    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
-    "name": "Dr. CH. Naga Sai Kalyan",
-    "role": "Deputy Editor in Chief",
-   "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
-    "linkedinUrl": "",
-    "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
-  },
   
   {
    "id": 4,
