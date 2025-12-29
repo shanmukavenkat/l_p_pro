@@ -1,12 +1,14 @@
+"use client";
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
 import NavigationPage from '@/components/Home/nav/page'
 import ProfileCard from '@/components/Home/ProfileCard'
+
 
 const page = () => {
 
   const Editorial_members =[
   {
-    "Id": 1,
+    "Id": "Lurnexa_2538a01",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538a01.jpeg",
     "Name": "Dr. Anand Shukla",
     "Role": "Sub Division-Editor in Chief",
@@ -15,7 +17,7 @@ const page = () => {
     "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898"
   },
   {
-    "Id": 2,
+    "Id": "Lurnexa_2538c02",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538c02.jpg",
     "Name": "Dr. Chandrashekar Jatoth",
     "Role": "Deputy Editor in Chief",
@@ -24,7 +26,7 @@ const page = () => {
     "collegeUrl": "https://nitrr.ac.in/viewdetails.php?q=it.jchandrashekar"
   },
   {
-    "Id": 3,
+    "Id": "Lurnexa_2538e03",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538e03.jpg",
     "Name": "Dr. Easwar Krishna Iyer",
     "Role": "Sr Associate Editor",
@@ -33,7 +35,7 @@ const page = () => {
     "collegeUrl": "https://iba.ac.in/about-iba/director-message"
   },
   {
-    "Id": 4,
+    "Id": "Lurnexa_2538c04",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538c04.jpg",
     "Name": "Dr. Chinmaya Kumar Swain",
     "Role": "Associate Editor",
@@ -42,7 +44,7 @@ const page = () => {
     "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0"
   },
   {
-    "Id": 5,
+    "Id": "Lurnexa_2538r05",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538r05.jpg",
     "Name": "Dr. Rishi Chopra",
     "Role": "Managing Editor",
@@ -51,7 +53,7 @@ const page = () => {
     "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=11111"
   },
   {
-    "Id": 6,
+    "Id": "Lurnexa_2538t06",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538t06.jpg",
     "Name": "Dr. T.V. Rajini Kanth",
     "Role": "Associate Managing Editor",
@@ -60,7 +62,7 @@ const page = () => {
     "collegeUrl": "https://mgit.ac.in/wp-content/uploads/2025/01/Dr.-TV-Rajini-Kanth.pdf"
   },
   {
-    "Id": 7,
+    "Id": "Lurnexa_2538s07",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538s07.jpg",
     "Name": "Dr. Shaik Mahaboob Basha",
     "Role": "Sr Review Editor",
@@ -69,7 +71,7 @@ const page = () => {
     "collegeUrl": "https://www.sreedattha.ac.in/sdes/departments/computer-science-engineering/about-cse-department/faculty-members"
   },
   {
-    "Id": 8,
+    "Id": "Lurnexa_2538u08",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538u08.jpg",
     "Name": "Dr. Uma Rani Vanamala",
     "Role": "Review Editor",
@@ -78,7 +80,7 @@ const page = () => {
     "collegeUrl": "https://jntuhceh.ac.in/faculty_portal/uploads/resumes/uma_rani_profile.pdf"
   },
   {
-    "Id": 9,
+    "Id": "Lurnexa_2538b09",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538b09.png",
     "Name": "Dr. Balaji Halavath",
     "Role": "Domain Editor",
@@ -87,7 +89,7 @@ const page = () => {
     "collegeUrl": "https://sreenidhi.edu.in/departments-faculty/dr-halavath-balaji-ph-d/"
   },
   {
-    "Id": 10,
+    "Id": "Lurnexa_2538k10",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538k10.png",
     "Name": "Dr. Kranthi Kumar Singamaneni",
     "Role": "Editorial Executive",
@@ -104,7 +106,7 @@ const page = () => {
   <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
     <NavigationPage />
 
-    <div className=" flex-1 text-start lg:text-left space-y-2">
+    <div className=" flex-1 text-start lg:text-left space-y-2 ">
       {/* Centered title */}
       <div className="w-full flex justify-center">
         <span className="text-2xl font-bold text-center">
@@ -135,6 +137,7 @@ Our goal is to ensure that every published study adds meaningful value to the sc
 
       {Editorial_members.map((member)=>(
         <ProfileCard
+        id ={member.Id}
           key ={member.Id}
           image={member.image || ''}
           name={member.Name}

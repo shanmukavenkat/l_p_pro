@@ -1,12 +1,15 @@
+"use client";
+
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
 import NavigationPage from '@/components/Home/nav/page'
 import ProfileCard from '@/components/Home/ProfileCard'
+import Link from 'next/link';
 
 const page = () => {
 
   const Editorial_members =[
   {
-    "Id": 1,
+    "Id": "Lurnexa_2562b32",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562b32.jpg",
     "Name": "Dr. Badri Narayanan Gopalakrishnan",
     "Role": "Sub Division-Editor in Chief",
@@ -15,7 +18,7 @@ const page = () => {
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html"
   },
   {
-    "Id": 2,
+    "Id": "Lurnexa_2562a33",
     "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562a33.jpg",
     "Name": "Dr. Aruna Kumar Dash",
     "Role": "Deputy Editor in Chief",
@@ -24,7 +27,7 @@ const page = () => {
     "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf"
   },
   {
-    "Id": 3,
+    "Id": "Lurnexa_2562s34",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562s34.jpg",
     "Name": "Dr. Sumeet Gupta",
     "Role": "Sr Associate Editor",
@@ -33,7 +36,7 @@ const page = () => {
     "collegeUrl": "https://www.upes.ac.in/faculty/school-of-business/prof-dr-sumeet-gupta"
   },
   {
-    "Id": 4,
+    "Id": "Lurnexa_2562k35",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562k35.jpg",
     "Name": "Dr. Krishna Raj",
     "Role": "Associate Editor",
@@ -42,7 +45,7 @@ const page = () => {
     "collegeUrl": "https://www.isec.ac.in/krishna-raj/"
   },
   {
-    "Id": 5,
+    "Id": "Lurnexa_2562m36",
     "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562m36.jpg",
     "Name": "Dr. Minaketan Behera",
     "Role": "Managing Editor",
@@ -52,7 +55,7 @@ const page = () => {
   },
 
   {
-    "Id": 6,
+    "Id": "Lurnexa_2562d37",
     "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562d37.jpg",
     "Name": "Dr. Debi Prasad Bal",
     "Role": "Associate Managing Editor",
@@ -61,7 +64,7 @@ const page = () => {
     "collegeUrl": "https://xlri.ac.in/about/full-time-faculty/debi-prasad"
   },
   {
-    "Id": 7,
+    "Id": "Lurnexa_2562p38",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562p38.jpg",
     "Name": "Dr. Pravin Jadhav",
     "Role": "Sr Review Editor",
@@ -70,7 +73,7 @@ const page = () => {
     "collegeUrl": "https://iitram.ac.in/empdetail/2015152"
   },
     {
-   "id": 8,
+   "Id": "Lurnexa_2562s39",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562s39.png",
     "Name": "Dr. Subhash Chandra ",
     "Role": "Review Editor",
@@ -97,7 +100,7 @@ const page = () => {
   //   "collegeUrl": ""
   // },
   {
-    "Id": 9,
+    "Id": "Lurnexa_2562g41",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562g41.jpg",
     "Name": "Prof. P. Guru Prasad",
     "Role": "Editorial Executive",
@@ -146,7 +149,8 @@ We welcome studies that offer clear insights, inform public policy, and contribu
 
       {Editorial_members.map((member)=>(
         <ProfileCard
-          key ={member.id }
+          id={member.Id ?? member.Id}
+          key ={member.Id ?? member.Id}
           image={member.image || ''}
           name={member.Name}
           role={member.Role}

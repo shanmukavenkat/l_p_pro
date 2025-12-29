@@ -7,7 +7,7 @@ import NavigationPage from '@/components/Home/nav/page';
 const  page = () => {
   const [activeSection, setActiveSection] = useState<"finance" | "operations">("finance");
   const Editorial_members = [
-    {   Id:1,
+    {   Id:"Lurnexa_2544fm11",
         "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm11.jpg",
         "Name": "Dr.Modekurti Venkata Surya Kameshwar Rao",
         "Role": "Sub Division-Editor in Chief",
@@ -16,7 +16,7 @@ const  page = () => {
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/Mq5sTPjgSkn8J4jPjlnscFWYy0p5MvTXrigIGJsvcPDF5qOn1r3b6nnL3Ne6KVk.pdf"
     },
     {   
-        Id:2,
+        Id:"Lurnexa_2544fs12",
         "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs12.jpg",
         "Name": "Dr.Srikanth Potharla",
         "Role": "Deputy Editor in Chief",
@@ -25,7 +25,7 @@ const  page = () => {
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf"
     },
     {
-        Id:3,
+        Id:"Lurnexa_2544fs13",
          "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs13.jpg",
         "Name": "Dr Susanta K Mishra",
         "Role": "Sr Associate Editor",
@@ -33,7 +33,7 @@ const  page = () => {
         "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
        "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in"
     },
-    {  Id:4,
+    {  Id:"Lurnexa_2544fm21",
        "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
         "Name": "Dr.Muhammed Shafi M K",
         "Role": "Associate Editor",
@@ -41,7 +41,7 @@ const  page = () => {
         "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
        "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk"
     },
-    {    Id:5,
+    {    Id:"Lurnexa_2544fm15",
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm15.jpg",
         "Name": "Dr. Manisha Kumari",
         "Role": "Managing Editor",
@@ -50,7 +50,7 @@ const  page = () => {
        "collegeUrl":"https://www.nimsme.gov.in/employee/a7b4a35465d9853607aaa02f9ea4f0a3"
     },
     {
-        Id:6,
+        Id:"Lurnexa_2544fs16",
        "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs16.jpg",
         "Name": "Dr. Sandeep Kumar Kesarwani",
         "Role": "Sr Review Editor",
@@ -59,7 +59,7 @@ const  page = () => {
        "collegeUrl":"https://imparc.org/dr-sandeep-kumar-kesarwani/"
     },
     {   
-        Id:7,
+        Id:"Lurnexa_2544fc17",
         "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fc17.jpg",
         "Name": "Dr.CH Shanker",
         "Role": "Review Editor",
@@ -67,7 +67,7 @@ const  page = () => {
         "linkedinUrl": "https://www.linkedin.com/in/dr-ch-shankar-30881a3b/",
        "collegeUrl":"https://www.gitam.edu/faculty/chanagala-shankar"
     },
-    {   Id:8,
+    {   Id:"Lurnexa_2544fk18",
       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fk18.jpg",
         "Name": "Dr. Kumaraswamy Manepalli",
         "Role": "Domain Editor",
@@ -76,7 +76,7 @@ const  page = () => {
        "collegeUrl":"https://vignan.ac.in/newvignan/departments/deptpeople.php?deptid=sch5_dept1&school=sch5&deptnm=MG"
     },
     {
-      Id:9,
+      Id:"Lurnexa_2544fr19",
       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fr19.jpg",
         "Name": "Dr.Rintu Anthony",
         "Role": "Assistant Editor",
@@ -84,7 +84,7 @@ const  page = () => {
        "linkedinUrl": "https://www.linkedin.com/in/rintu-anthony-8b2bb124/?originalSubdomain=in",
        "collegeUrl":"https://www.rajagiribusinessschool.edu.in/faculty-details/rintu-anthony"
     },
-    {   Id:10,
+    {   Id:"Lurnexa_2544fs20",
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs20.jpg",
         "Name": "Dr.Saravanan Vellaiyan",
         "Role": "Editorial Executive",
@@ -93,7 +93,7 @@ const  page = () => {
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
     },
     {
-      Id:11,
+      Id:"Lurnexa_2544fm14",
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
         "Name": "Dr. Mohammad Munawar Alam Sayyad",
         "Role": "Editorial Executive",
@@ -104,7 +104,7 @@ const  page = () => {
 ]
 const Operation_members = [
   {
-    "id": 1,
+    "id": "Lurnexa_2544oa22",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
     "name": "Dr. Amitava Mukherjee",
     "role": "Sub Division Editor in Chief",
@@ -113,7 +113,7 @@ const Operation_members = [
     "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
   },
   {
-    "id": 2,
+    "id": "Lurnexa_2544ok23",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ok23.jpg",
     "name": "Dr. Kapil Manohar Gumte",
     "role": "Deputy Editor in Chief",
@@ -122,7 +122,7 @@ const Operation_members = [
     "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
   },
   {
-    "id": 3,
+    "id": "Lurnexa_2544od24",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544od24.jpg",
     "name": "Dr. Debopam Chakrabarti",
     "role": "Senior Associate Editor",
@@ -131,7 +131,7 @@ const Operation_members = [
     "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/"
   },
   {
-    "id": 4,
+    "id": "Lurnexa_2544ov25",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ov25.jpg",
     "name": "Dr. Vaibhav Mishra",
     "role": "Associate Editor",
@@ -140,7 +140,7 @@ const Operation_members = [
     "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf"
   },
   {
-    "id": 5,
+    "id": "Lurnexa_2544or26",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544or26.jpg",
     "name": "Dr. D. Ravindran",
     "role": "Managing Editor",
@@ -158,7 +158,7 @@ const Operation_members = [
   //   "collegeUrl": null
   // },
   {
-    "id": 7,
+    "id": "Lurnexa_2544os28",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544os28.jpg",
     "name": "Dr. Sourav Mondal",
     "role": "Review Editor",
@@ -176,7 +176,7 @@ const Operation_members = [
   //   "collegeUrl": null
   // },
   {
-    "id": 9,
+    "id": "Lurnexa_2544ob30",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ob30.jpg",
     "name": "Dr. Bijetha Shaw",
     "role": "Assistant Editor",
@@ -246,6 +246,7 @@ We invite research that enhances organizational performance, addresses contempor
             Editorial_members.map((member) => (
               <ProfileCard
                 key ={member.Id}
+                id={member.Id}
           image={member.image || ''}
           name={member.Name}
           role={member.Role}
@@ -259,6 +260,7 @@ We invite research that enhances organizational performance, addresses contempor
           {activeSection === "operations" &&
             Operation_members.map((members) => (
               <ProfileCard
+              id={members.id}
                 key ={members.id}
           image={members.image || ''}
           name={members.name || ''}

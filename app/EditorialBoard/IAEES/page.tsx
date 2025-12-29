@@ -1,3 +1,4 @@
+"use client";
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
 import NavigationPage from '@/components/Home/nav/page'
 import ProfileCard from '@/components/Home/ProfileCard'
@@ -6,7 +7,7 @@ const page = () => {
 
   const Editorial_members = [
   {
-   "id": 1,
+   Id: "Lurnexa_2553u42",
    "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553u42.jpg",
     "name": "Dr. Umesh Chandra Pati",
     "role": "Sub Division – Editor in Chief",
@@ -15,7 +16,7 @@ const page = () => {
     "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
   },
   {
-   "id": 2,
+   Id: "Lurnexa_2553n45",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
     "name": "Dr. CH. Naga Sai Kalyan",
     "role": "Deputy Editor in Chief",
@@ -24,7 +25,7 @@ const page = () => {
     "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
   },
   {
-   "id": 3,
+   Id: "Lurnexa_2553s43",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553s43.jpg",
     "name": "Dr. D. Srilatha",
     "role": "Associate Editor ",
@@ -44,7 +45,7 @@ const page = () => {
 //   },
   
   {
-   "id": 4,
+   Id: "Lurnexa_2553c47",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553c47.jpg",
     "name": "Dr. Chandan Nayak",
     "role": "Associate Managing Editor",
@@ -130,7 +131,8 @@ We encourage submissions that propose new technologies, improve existing systems
 
       {Editorial_members.map((member)=>(
         <ProfileCard
-          key ={member.id}
+        id={member.Id}
+          key ={member.Id}
           image={member.image || ''}
           name={member.name}
           role={member.role}

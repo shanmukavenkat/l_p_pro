@@ -1,4 +1,4 @@
-import { ShieldCheck, BookOpen, Scale, Award, Search, Users, CheckCircle, Quote, Globe, Microscope, ScrollText } from "lucide-react";
+import { ShieldCheck, BookOpen, Scale, Users, CheckCircle, Quote, Globe, Microscope, ScrollText } from "lucide-react";
 import FooterSection from "@/components/Home/FooterSection";
 import NavigationPage from "@/components/Home/nav/page";
 

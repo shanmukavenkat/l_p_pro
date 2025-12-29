@@ -1,17 +1,20 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 interface ProfileCardProps {
+  id: number | string;
   image: string;
   name: string;
   role: string;
   college: string;
   linkedinUrl?: string;
-  Desgination:string;
+  Desgination: string;
   collegeUrl?: string;
 }
 
-
 const ProfileCard: React.FC<ProfileCardProps> = ({
+  id,
   image,
   name,
   role,
@@ -20,12 +23,15 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   Desgination,
   collegeUrl
 }) => {
+  // Prevent router errors by checking if the component is mounted
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="flex items-center justify-center p-4 font-sans bg-transparent">
-      
-      {/* Internal Styles for Fonts and Texture 
-         (You can move these to your global CSS file if you prefer)
-      */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto+Slab:wght@700;800&display=swap');
@@ -35,12 +41,17 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         `}
       </style>
 
-      {/* CARD CONTAINER 
-         - w-full: Responsive on mobile
-         - max-w-[350px]: Medium size on desktop
-      */}
-      <div className="relative w-full max-w-[350px] h-[580px] flex flex-col items-center shadow-xl rounded-lg overflow-hidden bg-transparent transition-transform duration-300 hover:scale-[1.01]">
+      <div className="relative w-full max-w-[350px] h-[580px] flex flex-col items-center shadow-xl rounded-lg overflow-hidden bg-transparent transition-transform duration-300 hover:scale-[1.02]">
         
+        {/* --- OVERLAY LINK --- */}
+        {/* Using the exact folder name from your directory: Editorial_profile */}
+        {mounted && (
+          <Link 
+          href={`/Editorial_profile/${id}`}
+            className="absolute inset-0 z-10"
+            aria-label={`View ${name}'s details`}
+          />
+        )}
 
         {/* --- TOP HALF: DYNAMIC IMAGE --- */}
         <div className="w-full h-[80%] relative z-0 bg-gray-300">
@@ -53,36 +64,33 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
         {/* --- BOTTOM HALF: CONTENT CARD --- */}
         <div 
-            className="absolute bottom-0 w-full h-[40%] bg-gray-50 z-10 texture-noise flex flex-col justify-between"
+            className="absolute bottom-0 w-full h-[40%] bg-gray-50 z-20 texture-noise flex flex-col justify-between pointer-events-none"
             style={{
-                clipPath: 'polygon(0 15%, 15% 0, 100% 0, 100% 100%, 0 100%)', // The diagonal cut
+                clipPath: 'polygon(0 15%, 15% 0, 100% 0, 100% 100%, 0 100%)',
                 backgroundColor: '#f9fafb' 
             }}
         >
-          {/* Center Content */}
-          <div className="flex-1 flex flex-col items-center justify-center  text-center">
+          <div className="flex-1 flex flex-col items-center justify-center text-center p-4">
             
-            {/* Dynamic Name */}
             <h1 className="text-[#D96C36] text-xl mb-1 tracking-tight" style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 800 }}>
               {name}
             </h1>
             
-            {/* Dynamic Role */}
             <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-2" style={{ fontFamily: '"Montserrat", sans-serif' }}>
               {role}
             </p>
             <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-2" style={{ fontFamily: '"Montserrat", sans-serif' }}>
               {Desgination}
             </p>
+
             {/* Icons Container */}
-            <div className="flex items-center gap-4 mb-2">
-                
-                {/* LinkedIn Button */}
+            <div className="flex items-center gap-4 mb-2 pointer-events-auto relative z-30">
                 {linkedinUrl && (
                   <a 
                     href={linkedinUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()} 
                     className="group p-2 rounded-full border border-gray-200 hover:border-[#D96C36] hover:bg-[#D96C36] transition-all duration-300"
                     aria-label="LinkedIn Profile"
                   >
@@ -92,13 +100,13 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
                   </a>
                 )}
                 
-                {/* College Button */}
                 {collegeUrl && (
                   <a 
                     href={collegeUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    title={college} // Hovering shows the college name!
+                    onClick={(e) => e.stopPropagation()} 
+                    title={college}
                     className="group p-2 rounded-full border border-gray-200 hover:border-[#D96C36] hover:bg-[#D96C36] transition-all duration-300"
                   >
                     <svg className="w-5 h-5 text-gray-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -109,8 +117,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
                 )}
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
