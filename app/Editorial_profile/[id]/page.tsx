@@ -1,150 +1,175 @@
-// app/Editorial_profile/[id]/page.tsx
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import NavigationPage from '@/components/Home/nav/page';
 import FooterSection from '@/components/Home/FooterSection';
 import { notFound } from 'next/navigation';
-import { User, Mail, Award, BookOpen,   } from 'lucide-react';
+import { User, Mail, Award, BookOpen } from 'lucide-react';
 
-export default async function ProfileDetail({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = await params;
+export default function ProfileDetail({ params }: { params: any }) {
+  const resolvedParams = React.use(params) as { id: string };
   const id = resolvedParams.id;
 
-  try {
-    const response = await fetch("https://api.lurnexa.in/user-dashboard", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: id }),
-      cache: 'no-store'
-    });
+  const [member, setMember] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  
+  // Logic to handle different image extensions
+  const [imgExtensionIndex, setImgExtensionIndex] = useState(0);
+  const extensions = ['jpg', 'png', 'jpeg'];
+  const [useFallback, setUseFallback] = useState(false);
 
-    if (!response.ok) return notFound();
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("https://api.lurnexa.in/user-dashboard", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: id }),
+        });
+        const result = await response.json();
+        if (result.data && result.data.length > 0) {
+          setMember(result.data[0]);
+        }
+      } catch (error) {
+        console.error("Fetch Error:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, [id]);
 
-    const result = await response.json();
-    const member = result.data && result.data.length > 0 ? result.data[0] : null;
+  if (loading) return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+    </div>
+  );
+  
+  if (!member) return notFound();
 
-    if (!member) return notFound();
+  // Constructing the URL dynamically (Notice: No spaces at the end)
+  const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}`;
+  const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=6366f1&color=fff&size=300`;
 
-    return (
-      <div className="min-h-screen bg-slate-50 flex flex-col">
-        <NavigationPage />
-        
-        {/* Hero Background Section */}
-        <div className="relative w-full h-[350px] bg-[#0f172a] overflow-hidden">
-          {/* Abstract background image with human/professional vibe */}
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" 
-            className="w-full h-full object-cover opacity-40"
-            alt="Professional Background"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50" />
-        </div>
+  const handleImageError = () => {
+    if (imgExtensionIndex < extensions.length - 1) {
+      // Try next extension: jpg -> png -> jpeg
+      setImgExtensionIndex(prev => prev + 1);
+    } else {
+      // If all extensions fail, use the UI Avatar
+      setUseFallback(true);
+    }
+  };
 
-        <main className="flex-grow -mt-40 px-4 pb-20 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Main Profile Card */}
-            <div className="bg-white/80 backdrop-blur-xl rounded-[2.5rem] shadow-2xl shadow-slate-200/60 border border-white overflow-hidden">
+  return (
+    <div className="min-h-screen bg-slate-50 flex flex-col">
+      <NavigationPage />
+      
+      {/* Hero Background Section */}
+      <div className="relative w-full h-[400px] bg-[#0f172a] overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" 
+          className="w-full h-full object-cover opacity-30"
+          alt="Professional Background"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-50" />
+      </div>
+
+      <main className="flex-grow -mt-52 px-4 pb-20 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white/90 backdrop-blur-md rounded-[3rem] shadow-2xl shadow-slate-200/60 border border-white overflow-visible">
+            <div className="p-8 md:p-14">
               
-              <div className="p-8 md:p-14">
-                {/* Header Info */}
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-                  <div className="flex-1">
-                   
-                    
-                    <h1 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight">
-                      {member.name}
-                    </h1>
-                    {/* <p className="text-xl text-slate-500 mt-2 flex items-center gap-2">
-                      <Briefcase size={20} className="text-slate-400" />
-                      {member.designation }
-                    </p> */}
-                     <div className="flex items-center gap-2 mb-4">
-  <div className="relative p-2  rounded-lg flex items-center justify-center">
-    
-    {/* 🔵 Outer ping (blink animation) */}
-    <span className="absolute inline-flex h-4 w-4 rounded-full bg-green-400 opacity-75 animate-ping"></span>
-
-    {/* 🟢 Solid online dot */}
-    <span className="relative inline-flex h-3 w-3 rounded-full bg-green-600"></span>
-  </div>
-
-  <span className="text-indigo-600 font-bold uppercase tracking-widest text-xs">
-    {member.role || "Board Member"}
-  </span>
-</div>
-
-                  </div>
-
-            
+              {/* Profile Image & Header */}
+              <div className="flex flex-col md:flex-row items-center md:items-end gap-8 -mt-24 md:-mt-32 mb-10">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-indigo-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                  <img 
+                    src={useFallback ? fallbackImage : s3ImageUrl}
+                    onError={handleImageError}
+                    className="relative w-40 h-40 md:w-52 md:h-52 object-cover rounded-full border-8 border-white shadow-xl bg-white transition-transform duration-300 group-hover:scale-[1.02]"
+                    alt={member.name}
+                  />
+                  <div className="absolute bottom-6 right-3 bg-green-500 w-5 h-5 rounded-full border-4 border-white shadow-sm animate-pulse"></div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-16">
-                  
-                  {/* Left Column - Professional Icons/Stats */}
-                  <div className="space-y-6">
-                    <div className="bg-indigo-50 p-6 rounded-3xl border border-slate-100">
-                      <h3 className="text-slate-900 font-bold mb-4 flex items-center gap-2">
-                         <User size={18} className="text-indigo-500" /> Identity Details
-                      </h3>
-                      <div className="space-y-4 ">
-                        <div className="flex flex-col">
-                          <span className="text-xs text-slate-400 font-bold uppercase">Official Email</span>
-                          <span className="text-slate-700 font-medium break-all">{member.email}</span>
+                <div className="flex-1 text-center md:text-left pb-2">
+                  <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">
+                    {member.name}
+                  </h1>
+                  <p className="text-xl text-slate-500 font-medium mt-1">
+                    {member.designation || "Editorial Board"}
+                  </p>
+                  <div className="flex items-center justify-center md:justify-start gap-2 mt-4">
+                    <span className="px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold uppercase tracking-widest">
+                      {member.role || "Board Member"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Grid Content */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 pt-8 ">
+                <div className="space-y-6 ">
+                  <div className="bg-blue-200/40 p-6 rounded-[2rem] border border-slate-100 ">
+                    <h3 className="text-slate-900 font-bold mb-5 flex items-center gap-2">
+                       <User size={18} className="text-indigo-500" /> Identity Details
+                    </h3>
+                    <div className="space-y-5 ">
+                      <div className="flex flex-col ">
+                        <span className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Official Email</span>
+                        <div className="flex items-center gap-2 mt-1">
+                          <Mail size={16} className="text-slate-400" />
+                          <span className="text-slate-700 font-semibold break-all text-sm">{member.email}</span>
                         </div>
-                        {/* <div className="flex flex-col">
-                          <span className="text-xs text-slate-400 font-bold uppercase">Affiliation</span>
-                          <span className="text-slate-700 font-medium">Lurnexa Academic Board</span>
-                        </div> */}
-                      </div>
-                    </div>
-
-                    <div className="bg-indigo-600 p-6 rounded-3xl text-white shadow-xl shadow-indigo-100">
-                      <Award size={32} className="mb-4 opacity-80" />
-                      <h4 className="font-bold text-lg leading-tight">Elite Editorial Status</h4>
-                      <p className="text-indigo-100 text-sm mt-2">Recognized for significant contributions to global research and academic excellence.</p>
-                    </div>
-                  </div>
-
-                  {/* Right Column - Bio & Expertise */}
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="h-[2px] w-12 bg-indigo-600"></div>
-                      <h3 className="text-2xl font-bold text-slate-900">Professional Bio</h3>
-                    </div>
-                    
-                    <div className="relative">
-                      <p className="text-slate-600 text-lg leading-relaxed bg-slate-50/50 p-8 rounded-3xl border border-dashed border-slate-200">
-                        {member.description || member.area_of_expertise || "This profile is currently under active update by the user. The information shown may change as updates are in progress."}
-                      </p>
-                    </div>
-
-                    <div className="mt-10">
-                      <h4 className="text-slate-900 font-bold mb-4 flex items-center gap-2">
-                        <BookOpen size={20} className="text-indigo-500" /> Core Expertise
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {Array.isArray(member.area_of_expertise) &&
-    member.area_of_expertise.map((skill: string, index: number) => (
-      <span
-        key={`${skill}-${index}`}
-        className="px-5 py-2 bg-white border border-slate-200 text-slate-600 rounded-full text-sm font-semibold hover:border-indigo-300 hover:text-indigo-600 transition-colors"
-      >
-        {skill.trim()}
-      </span>
-    ))}
                       </div>
                     </div>
                   </div>
 
+                  <div className="bg-gradient-to-br from-indigo-600 to-blue-700 p-8 rounded-[2rem] text-white shadow-xl shadow-indigo-200">
+                    <Award size={40} className="mb-4 text-indigo-200" />
+                    <h4 className="font-bold text-xl leading-tight">Editorial Excellence</h4>
+                    <p className="text-indigo-100/80 text-sm mt-3 leading-relaxed">
+                      Top-tier contributor specializing in academic governance and peer review.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-2">
+                  <h3 className="text-2xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                    <div className="h-1 w-10 bg-indigo-600 rounded-full"></div> Professional Bio
+                  </h3>
+                  <div className="prose prose-slate max-w-none">
+                    <p className="text-slate-600 text-lg leading-relaxed mb-10">
+                      {member.description || "This profile is currently under active update by the user. The information shown may change as updates are in progress."}
+                    </p>
+                  </div>
+
+                  <h4 className="text-slate-900 font-bold mb-6 flex items-center gap-2">
+                    <BookOpen size={20} className="text-indigo-500" /> Core Expertise
+                  </h4>
+                  <div className="flex flex-wrap gap-3">
+                    {member.area_of_expertise ? (
+                      (typeof member.area_of_expertise === 'string' 
+                        ? member.area_of_expertise.split(',') 
+                        : member.area_of_expertise
+                      ).map((skill: string, i: number) => (
+                        <span key={i} className="px-6 py-2 bg-white border border-slate-200 text-slate-600 rounded-xl text-sm font-semibold shadow-sm hover:border-indigo-300 transition-colors">
+                          {skill.trim()}
+                        </span>
+                      ))
+                    ) : (
+                      <span className="text-slate-400 italic">No expertise listed yet.</span>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </main>
+        </div>
+      </main>
 
-        <FooterSection />
-      </div>
-    );
-  } catch (error) {
-    console.error("Critical Fetch Error:", error);
-    return notFound();
-  }
+      <FooterSection />
+    </div>
+  );
 }
