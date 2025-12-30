@@ -72,10 +72,12 @@ export default function ProfileDetail({ params }: { params: any }) {
           className="w-full h-full object-cover opacity-30"
           alt="Professional Background"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-50" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-slate-900/50 to-slate-50" />
       </div>
 
-      <main className="flex-grow -mt-52 px-4 pb-20 relative z-10">
+
+
+      <main className="grow -mt-52 px-4 pb-20 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="bg-white/90 backdrop-blur-md rounded-[3rem] shadow-2xl shadow-slate-200/60 border border-white overflow-visible">
             <div className="p-8 md:p-14">
@@ -94,9 +96,11 @@ export default function ProfileDetail({ params }: { params: any }) {
                 </div>
 
                 <div className="flex-1 text-center md:text-left pb-2">
-                  <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">
-                    {member.name}
-                  </h1>
+                 
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 truncate">
+                  {member.name}
+                </h1>
+
                   <p className="text-xl text-slate-500 font-medium mt-1">
                     {member.designation || "Editorial Board"}
                   </p>
@@ -168,6 +172,9 @@ export default function ProfileDetail({ params }: { params: any }) {
           </div>
         </div>
       </main>
+
+
+
 
       <FooterSection />
     </div>
