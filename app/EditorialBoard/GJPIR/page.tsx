@@ -89,8 +89,8 @@ const page = () => {
     "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0"
   },
   {
-    Id:"Lurnexa_2553n45",
-   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
+    Id:"Lurnexa_2553n43",
+   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n43.jpeg",
     "Name": "Dr. CH. Naga Sai Kalyan",
     "Role": "Advisory Member",
    "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",

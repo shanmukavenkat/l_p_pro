@@ -16,8 +16,8 @@ const page = () => {
     "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
   },
   {
-   Id: "Lurnexa_2553n45",
-    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n45.jpeg",
+   Id: "Lurnexa_2553n43",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553n43.jpeg",
     "name": "Dr. CH. Naga Sai Kalyan",
     "role": "Deputy Editor in Chief",
    "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
@@ -25,8 +25,8 @@ const page = () => {
     "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
   },
   {
-   Id: "Lurnexa_2553s43",
-    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553s43.jpg",
+   Id: "Lurnexa_2553s45",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2553s45.jpg",
     "name": "Dr. D. Srilatha",
     "role": "Associate Editor ",
     "Designation/College Name": "Professor/VVIT Guntur",
