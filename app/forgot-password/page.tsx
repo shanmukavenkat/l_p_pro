@@ -36,7 +36,7 @@ const ForgotPassword = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: email }), // Correct payload from your image
+        body: JSON.stringify({ email: email }), // Correct payload 
       });
 
       if (response.ok) {
