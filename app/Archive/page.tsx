@@ -88,10 +88,29 @@ export default function ArchivePage() {
           <div className="group relative grid grid-cols-1 md:grid-cols-12 bg-blue-50 rounded-[40px] overflow-hidden hover:bg-slate-100 transition-all duration-700">
             
             <div className="md:col-span-4 bg-slate-200 relative overflow-hidden h-64 md:h-auto">
-                <div className="absolute inset-0 flex items-center justify-center text-slate-400">
-                    <span className="font-bold text-6xl opacity-20 -rotate-90 whitespace-nowrap">GJPIR VOLUME. 1</span>
+                <div className="absolute inset-0 flex items-center justify-center text-blue-600">
+                   <span className="font-bold 
+  text-2xl 
+  sm:text-3xl 
+  md:text-4xl 
+  lg:text-6xl 
+  xl:text-7xl
+  opacity-20 
+  -rotate-90 
+  whitespace-nowrap
+  leading-none
+  tracking-widest
+  block">
+  GJPIR
+  <span className="block text-3xl sm:text-lg md:text-lg lg:text-xl tracking-normal">
+    VOLUME. 1
+  </span>
+</span>
+
+
+
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-tr from-blue-600/20 to-transparent" />
             </div>
 
             <div className="md:col-span-8 p-10 md:p-16 flex flex-col justify-between">
