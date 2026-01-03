@@ -108,7 +108,7 @@ The journal welcomes full-length research papers, review articles, case studies,
           </button>
           </Link>
           <Link href="/Archive"  className="w-full sm:w-auto">
-            <button className="w-full sm:w-auto bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition-all">
+            <button className="w-full sm:w-auto bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition-all">
               Archive
             </button>
           </Link>
