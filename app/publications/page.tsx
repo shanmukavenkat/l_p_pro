@@ -11,7 +11,7 @@ export default function PublicationsPage() {
           <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300 text-center">
              <div className="max-w-7xl mx-auto">
                <h1 className="mt-3 text-2xl md:text-2xl font-bold text-center text-gray-900 mb-2">
-                 Global Journal for Progressive Innovation & Research (GJPIR)
+                 Global Journal for Progressive Innovation and Research (GJPIR)
                </h1>
                <p className="text-center text-lg text-gray-600 italic mb-12">
                  “Integrating Knowledge, Inspiring Progress”
@@ -106,6 +106,11 @@ The journal welcomes full-length research papers, review articles, case studies,
             className="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-md font-semibold transition" >
             Submission Guidelines
           </button>
+          </Link>
+          <Link href="/Archive"  className="w-full sm:w-auto">
+            <button className="w-full sm:w-auto bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition-all">
+              Archive
+            </button>
           </Link>
         </div>
            </section>

@@ -10,7 +10,7 @@ export default function ARESSPage() {
       <section className="py-20 px-6 bg-linear-to-b from-neutral-50 to-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-2xl md:text-2xl font-bold text-center text-gray-900 mb-2">
-            Advanced Research in Economics & Social Sciences (ARESS)
+            Advanced Research in Economics and Social Sciences (ARESS)
           </h1>
           <p className="text-center text-lg text-gray-600 italic mb-12">
             “Empowering Socio-Economic Transformation”
