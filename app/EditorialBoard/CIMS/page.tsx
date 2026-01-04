@@ -1,10 +1,19 @@
 'use client';
 
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import ProfileCard from '@/components/Home/ProfileCard'
 import NavigationPage from '@/components/Home/nav/page';
+
 const  page = () => {
+    // 1. Create a dynamic version state
+  const [version, setVersion] = useState("v1");
+
+  useEffect(() => {
+    // 2. Set version to current timestamp on load to bypass all caches
+    setVersion(`v=${Date.now()}`);
+  }, []);
+
   const [activeSection, setActiveSection] = useState<"finance" | "operations">("finance");
   const Editorial_members = [
     {   Id:"Lurnexa_2544fm11",
@@ -280,7 +289,8 @@ We invite research that enhances organizational performance, addresses contempor
               <ProfileCard
               id={members.id}
                 key ={members.id}
-          image={members.image || ''}
+                      image={members.image ? `${members.image}?${version}` : ''}
+
           name={members.name || ''}
           role={members.role}
           Desgination={members['Designation/College Name'] || ''}

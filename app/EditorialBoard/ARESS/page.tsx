@@ -3,9 +3,16 @@
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
 import NavigationPage from '@/components/Home/nav/page'
 import ProfileCard from '@/components/Home/ProfileCard'
-import Link from 'next/link';
+import { useEffect, useState } from 'react'; // Added these
 
 const page = () => {
+  // 1. Create a dynamic version state
+  const [version, setVersion] = useState("v1");
+
+  useEffect(() => {
+    // 2. Set version to current timestamp on load to bypass all caches
+    setVersion(`v=${Date.now()}`);
+  }, []);
 
   const Editorial_members =[
   {
@@ -160,7 +167,8 @@ We welcome studies that offer clear insights, inform public policy, and contribu
         <ProfileCard
           id={member.Id ?? member.Id}
           key ={member.Id ?? member.Id}
-          image={member.image || ''}
+           image={member.image ? `${member.image}?${version}` : ''}
+
           name={member.Name}
           role={member.Role}
           Desgination={member['Designation/College Name']}

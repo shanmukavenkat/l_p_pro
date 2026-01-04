@@ -292,23 +292,19 @@ const handleResumeUpload = async (
     return;
   }
 
-  try {
+ try {
     const token = localStorage.getItem("access_token");
-
     const fd = new FormData();
     fd.append("file", file);
     fd.append("id", formData.id);
 
-    const res = await fetch(
-      "https://api.lurnexa.in/upload-cv",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: fd,
-      }
-    );
+    const res = await fetch("https://api.lurnexa.in/upload-cv", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: fd,
+    });
 
     const result = await res.json();
 
@@ -316,6 +312,15 @@ const handleResumeUpload = async (
       alert(result?.detail || "Resume upload failed");
       return;
     }
+
+    // ✅ ADD THIS PART TO UPDATE THE UI IMMEDIATELY
+    // We create a local blob URL so the user can see it right away
+    const localPdfUrl = URL.createObjectURL(file);
+    
+    setFormData((prev) => ({
+      ...prev,
+      resume: localPdfUrl, // This updates the "View PDF" link instantly
+    }));
 
     alert("Resume uploaded successfully");
 
@@ -336,7 +341,7 @@ const handleResumeUpload = async (
   if (loading) return <div className="p-6">Loading...</div>;
 
   return (
-  <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-50 via-white to-blue-50/30 flex flex-col">
+  <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-slate-50 via-white to-blue-50/30 flex flex-col">
   {/* HEADER */}
   <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/75 border-b border-slate-200/60">
     <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
@@ -546,15 +551,18 @@ const handleResumeUpload = async (
                 </div>
                 
                 <div className="flex items-center gap-2">
-                   <a 
-                    href={typeof formData.resume === 'string' ? formData.resume : URL.createObjectURL(formData.resume)} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="ghost" size="sm" className="text-indigo-600 hover:bg-indigo-50">
-                      <ExternalLink size={16} className="mr-2" /> View PDF
-                    </Button>
-                  </a>
+                  <a href={
+                        typeof formData.resume === 'string' && formData.resume.includes('http')
+                          ? `${formData.resume}${formData.resume.includes('?') ? '&' : '?'}t=${new Date().getTime()}`
+                          : formData.resume
+                      } 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="ghost" size="sm" className="text-indigo-600 hover:bg-indigo-50">
+                        <ExternalLink size={16} className="mr-2" /> View PDF
+                      </Button>
+                    </a>
                 </div>
               </div>
             )}

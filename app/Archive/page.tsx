@@ -90,18 +90,17 @@ export default function ArchivePage() {
             <div className="md:col-span-4 bg-slate-200 relative overflow-hidden h-64 md:h-auto">
                 <div className="absolute inset-0 flex items-center justify-center text-blue-600">
                    <span className="font-bold 
-  text-2xl 
-  sm:text-3xl 
-  md:text-4xl 
-  lg:text-6xl 
-  xl:text-7xl
-  opacity-20 
-  -rotate-90 
-  whitespace-nowrap
-  leading-none
-  tracking-widest
-  block">
-  GJPIR
+                          text-2xl 
+                          sm:text-3xl 
+                          md:text-4xl 
+                          lg:text-6xl 
+                          xl:text-7xl
+                          opacity-20 
+                          -rotate-90 
+                          whitespace-nowrap
+                          leading-none
+                          tracking-widest
+                          block"> GJPIR
   <span className="block text-3xl sm:text-lg md:text-lg lg:text-xl tracking-normal">
     VOLUME. 1
   </span>

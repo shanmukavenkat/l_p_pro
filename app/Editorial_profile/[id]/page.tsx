@@ -649,7 +649,22 @@ export default function ProfileDetail({ params }: { params: any }) {
     </div>
   );
   
-  if (!member) return notFound();
+// Instead of return notFound(), show a custom message
+if (loading || !member) {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
+      <NavigationPage />
+      <h2 className="text-2xl font-bold mt-10">Profile Not Found</h2>
+      <p className="text-gray-500">We couldn't load this profile. Please try refreshing.</p>
+      <button 
+        onClick={() => window.location.reload()} 
+        className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-lg"
+      >
+        Refresh Page
+      </button>
+    </div>
+  );
+}
 
   const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}`;
   const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=6366f1&color=fff&size=300`;
