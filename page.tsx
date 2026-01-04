@@ -1,9 +1,9 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
 import NavigationPage from '@/components/Home/nav/page';
 import FooterSection from '@/components/Home/FooterSection';
-import { notFound } from 'next/navigation';
 import { User, Mail, Award, BookOpen } from 'lucide-react';
 
 // --- FRONTEND DATA: ALL BOARDS COMBINED ---
@@ -612,36 +612,37 @@ export default function ProfileDetail({ params }: { params: any }) {
   const [imgExtensionIndex, setImgExtensionIndex] = useState(0);
   const extensions = ['jpg', 'png', 'jpeg'];
   const [useFallback, setUseFallback] = useState(false);
+const [version] = useState(Date.now());
+ useEffect(() => {
+  async function fetchData() {
+    try {
+      const response = await fetch("https://api.lurnexa.in/user-dashboard", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: id }),
+      });
+      const result = await response.json();
+      
+      if (result.data && result.data.length > 0) {
+        const apiMember = result.data[0];
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch("https://api.lurnexa.in/user-dashboard", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id: id }),
+        // This ensures "8" matches 8 and catches both lowercase 'id' and uppercase 'Id'
+        const matchedRoles = All_Editorial_Boards.filter((m) => {
+          const entryId = m.Id || m.id;
+          return String(entryId) === String(id);
         });
-        const result = await response.json();
-        
-        if (result.data && result.data.length > 0) {
-          const apiMember = result.data[0];
 
-          // FIX: Check for both 'Id' and 'id' to be safe
-          const matched = All_Editorial_Boards.filter((m) => 
-            (m.Id === id || m.id === id)
-          );
-          setFrontendRoles(matched);
-
-          setMember(apiMember);
-        }
-      } catch (error) {
-        console.error("Fetch Error:", error);
-      } finally {
-        setLoading(false);
+        setFrontendRoles(matchedRoles);
+        setMember(apiMember);
       }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+    } finally {
+      setLoading(false);
     }
-    fetchData();
-  }, [id]);
+  }
+  if (id) fetchData();
+}, [id]);
 
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50">
@@ -649,10 +650,28 @@ export default function ProfileDetail({ params }: { params: any }) {
     </div>
   );
   
-  if (!member) return notFound();
+  if (loading) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+    </div>
+  );
+}
 
-  const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}`;
-  const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=6366f1&color=fff&size=300`;
+// Only show a message if loading is finished AND we definitely have no data
+if (!member) {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <NavigationPage />
+      <p className="mt-10 text-gray-500 font-medium">Profile data is syncing... please refresh.</p>
+      <button onClick={() => window.location.reload()} className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg">
+        Refresh Now
+      </button>
+    </div>
+  );
+}
+
+const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member?.Id || id}.${extensions[imgExtensionIndex]}?v=${version}`;  const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=6366f1&color=fff&size=300`;
 
   const handleImageError = () => {
     if (imgExtensionIndex < extensions.length - 1) {
