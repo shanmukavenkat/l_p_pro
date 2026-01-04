@@ -614,57 +614,53 @@ export default function ProfileDetail({ params }: { params: any }) {
   const extensions = ['jpg', 'png', 'jpeg'];
   const [useFallback, setUseFallback] = useState(false);
   const [version, setVersion] = useState("");
-  const [cacheVersion] = useState(Date.now());
 
   useEffect(() => {
     setVersion(`v=${Date.now()}`); // Generate on mount
   }, []);
   useEffect(() => {
-  async function fetchData() {
-    try {
-      const response = await fetch("https://api.lurnexa.in/user-dashboard", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: id }),
-      });
-      const result = await response.json();
-      
-      if (result.data && result.data.length > 0) {
-        const apiMember = result.data[0];
-
-        // This fix handles Id, id, and converts everything to String to prevent 404s
-        const matchedRoles = All_Editorial_Boards.filter((m) => {
-          const boardId = m.Id || m.id; 
-          return String(boardId) === String(id);
+    async function fetchData() {
+      try {
+        const response = await fetch("https://api.lurnexa.in/user-dashboard", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: id }),
         });
+        const result = await response.json();
         
-        setFrontendRoles(matchedRoles);
-        setMember(apiMember);
-      } else {
-        // If API returns no data, member stays null and notFound triggers correctly
-        setMember(null);
-      }
-    } catch (error) {
-      console.error("Fetch Error:", error);
-      setMember(null);
-    } finally {
-      setLoading(false);
-    }
-  }
-  if (id) fetchData();
-}, [id]);
+        if (result.data && result.data.length > 0) {
+          const apiMember = result.data[0];
 
- if (loading) return (
-  <div className="min-h-screen flex items-center justify-center bg-slate-50">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
-  </div>
-);
+        
+          // FIX: Check for both 'Id' and 'id' to be safe
+          const matchedRoles = All_Editorial_Boards.filter((m) => {
+            const boardId = m.Id || m.id;
+            return String(boardId) === String(id);
+          });
+          setFrontendRoles(matchedRoles);
+
+          setMember(apiMember);
+        }
+      } catch (error) {
+        console.error("Fetch Error:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, [id]);
+
+  if (loading) return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-50">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+    </div>
+  );
   
 if (!loading && !member) {
   return notFound();
 }
-  
-  const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}?${cacheVersion}`;
+
+  const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}?${version}`;
   const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=6366f1&color=fff&size=300`;
 
   const handleImageError = () => {
