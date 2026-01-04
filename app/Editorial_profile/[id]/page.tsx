@@ -8,7 +8,6 @@ import { User, Mail, Award, BookOpen } from 'lucide-react';
 
 // --- FRONTEND DATA: ALL BOARDS COMBINED ---
 const All_Editorial_Boards = [
-  
   // Example entries - Add all your board data here
   {
     "Id": "Lurnexa_2538a01",
@@ -613,11 +612,7 @@ export default function ProfileDetail({ params }: { params: any }) {
   const [imgExtensionIndex, setImgExtensionIndex] = useState(0);
   const extensions = ['jpg', 'png', 'jpeg'];
   const [useFallback, setUseFallback] = useState(false);
-  const [version, setVersion] = useState("");
 
-  useEffect(() => {
-    setVersion(`v=${Date.now()}`); // Generate on mount
-  }, []);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -631,12 +626,10 @@ export default function ProfileDetail({ params }: { params: any }) {
         if (result.data && result.data.length > 0) {
           const apiMember = result.data[0];
 
-        
           // FIX: Check for both 'Id' and 'id' to be safe
-          const matchedRoles = All_Editorial_Boards.filter((m) => {
-            const boardId = m.Id || m.id;
-            return String(boardId) === String(id);
-          });
+          const matchedRoles = All_Editorial_Boards.filter((m) => 
+            (m.Id === id || m.id === id)
+          );
           setFrontendRoles(matchedRoles);
 
           setMember(apiMember);
@@ -656,11 +649,9 @@ export default function ProfileDetail({ params }: { params: any }) {
     </div>
   );
   
-if (!loading && !member) {
-  return notFound();
-}
+  if (!member) return notFound();
 
-  const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}?${version}`;
+  const s3ImageUrl = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${member.Id || id}.${extensions[imgExtensionIndex]}`;
   const fallbackImage = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=6366f1&color=fff&size=300`;
 
   const handleImageError = () => {
