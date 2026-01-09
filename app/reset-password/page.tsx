@@ -50,7 +50,7 @@ function ResetPasswordForm() {
         setSuccess(true);
         // Password reset success
         setTimeout(() => {
-          router.push("/login");
+          router.push("/EditoralLogins");
         }, 2000);
       } else {
         const data = await response.json();
@@ -120,7 +120,7 @@ function ResetPasswordForm() {
           </div>
         </CardContent>
 
-        <CardFooter>
+        <CardFooter className="m-3">
           <Button 
             type="submit" 
             className="w-full h-11 text-base font-semibold" 
