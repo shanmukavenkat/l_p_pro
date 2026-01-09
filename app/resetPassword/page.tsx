@@ -1,61 +1,48 @@
 "use client";
 
 import React, { useState, Suspense } from "react";
-import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { 
-  Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle 
-} from "@/components/ui/card";
-import { Eye, EyeOff, Loader2, CheckCircle2 } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-// 1. Create a separate component for the form logic
-const ResetPasswordForm = () => {
-  const router = useRouter();
+function ResetForm() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   
-  const [showPassword, setShowPassword] = useState(false);
+  const [email] = useState(searchParams.get("email") || "");
+  const [otp, setOtp] = useState("");
+  const [newPassword, setNewPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
 
-  const [formData, setFormData] = useState({
-    email: searchParams.get("email") || "",
-    reset_code: searchParams.get("code") || "",
-    password: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const onSubmit = async (e: React.FormEvent) => {
+  const onResetSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
     try {
-      // Connects to your /reset-password API
-      const response = await fetch("https://api-lurnexa.in/reset-password", {
+      const response = await fetch("https://api.lurnexa.in/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData), 
+        body: JSON.stringify({ 
+          email: email,
+          otp: otp, 
+          new_password: newPassword 
+        }),
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         setSuccess(true);
+        // 3 seconds taruvata login ki redirect
         setTimeout(() => router.push("/login"), 3000);
       } else {
-        // Handles the 422 error detail structure from your image
-        const errorMsg = data.detail?.[0]?.msg || "Failed to reset password.";
-        setError(errorMsg);
+        const data = await response.json();
+        setError(data.detail || "Invalid OTP or request failed.");
       }
     } catch (err) {
       setError("Network error. Please try again.");
@@ -65,67 +52,59 @@ const ResetPasswordForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-[450px] shadow-lg border-none">
-      {!success ? (
-        <>
-          <CardHeader className="space-y-1 text-center">
-            <CardTitle className="text-2xl font-bold tracking-tight">Create New Password</CardTitle>
-            <CardDescription>Enter your reset code and new password below.</CardDescription>
-          </CardHeader>
-          <form onSubmit={onSubmit}>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" required value={formData.email} onChange={handleChange} />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="reset_code">Reset Code</Label>
-                <Input id="reset_code" type="text" placeholder="Enter code" required value={formData.reset_code} onChange={handleChange} />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="password">New Password</Label>
-                <div className="relative ">
-                  <Input id="password" type={showPassword ? "text" : "password"} required value={formData.password} onChange={handleChange} />
-                  <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-2.5 text-muted-foreground">
-                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </button>
-                </div>
-              </div>
-              {error && <div className="p-3 text-sm bg-destructive/10 text-destructive rounded-md">{error}</div>}
-            </CardContent>
-            <CardFooter className="flex flex-col gap-3 m-5">
-              <Button type="submit" className="w-full py-6 text-base" disabled={loading}>
-                {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Reset Password"}
-              </Button>
-              <Link href="/login" className="text-sm text-muted-foreground hover:underline">Back to Login</Link>
-            </CardFooter>
-          </form>
-        </>
-      ) : (
-        <CardContent className="py-12 text-center space-y-4">
-          <CheckCircle2 className="mx-auto h-16 w-16 text-green-500" />
-          <CardTitle>Success!</CardTitle>
-          <p className="text-muted-foreground">Redirecting you to login...</p>
+    <Card className="w-full max-w-md shadow-xl border-t-4 border-t-primary">
+      <CardHeader>
+        <CardTitle className="text-2xl font-bold">Verify OTP & Reset</CardTitle>
+        <CardDescription>Enter the code sent to your email and set a new password.</CardDescription>
+      </CardHeader>
+      
+      <form onSubmit={onResetSubmit}>
+        <CardContent className="space-y-4">
+          {success && <p className="p-3 bg-green-100 text-green-700 rounded text-sm font-medium">Reset successful! Redirecting to login...</p>}
+          {error && <p className="p-3 bg-red-100 text-red-700 rounded text-sm font-medium">{error}</p>}
+          
+          <div className="space-y-2">
+            <Label>Email Address</Label>
+            <Input value={email} disabled className="bg-slate-100" />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="otp">OTP Code</Label>
+            <Input 
+              id="otp" placeholder="6-digit code" required 
+              value={otp} onChange={(e) => setOtp(e.target.value)}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="password">New Password</Label>
+            <Input 
+              id="password" type="password" required 
+              value={newPassword} onChange={(e) => setNewPassword(e.target.value)}
+            />
+          </div>
         </CardContent>
-      )}
+
+        <CardFooter className="m-5">
+          <Button type="submit" className="w-full h-11 " disabled={loading || success}>
+            {loading ? "Verifying..." : "Update Password"}
+          </Button>
+        </CardFooter>
+      </form>
     </Card>
   );
-};
+}
 
-// 2. The main page component wraps the form in Suspense
-const ResetPasswordPage = () => {
+export default function ResetPasswordPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50/50">
+    <div className="min-h-screen flex flex-col bg-slate-50">
       <NavigationPage />
-      <main className="grow flex items-center justify-center p-4">
-        {/* This Suspense boundary fixes your build error! */}
-        <Suspense fallback={<div className="text-center italic">Loading reset form...</div>}>
-          <ResetPasswordForm />
+      <main className="grow flex items-center justify-center px-4 py-12 mt-12">
+        <Suspense fallback={<div>Loading...</div>}>
+          <ResetForm />
         </Suspense>
       </main>
       <FooterSection />
     </div>
   );
-};
-
-export default ResetPasswordPage;
+}
