@@ -121,7 +121,7 @@ function ResetPasswordForm() {
           </div>
         </CardContent>
 
-        <CardFooter className="flex flex-col gap-4">
+        <CardFooter className="flex flex-col gap-4 m-4">
           <Button 
             type="submit" 
             className="w-full h-11 text-base font-semibold" 
