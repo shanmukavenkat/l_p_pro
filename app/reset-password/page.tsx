@@ -34,8 +34,8 @@ function ResetPasswordForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
           email: emailFromUrl,
-          otp: otp, 
-          new_password: newPassword 
+          reset_code: otp, 
+          password: newPassword 
         }),
       });
 
