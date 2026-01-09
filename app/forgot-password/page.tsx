@@ -39,7 +39,7 @@ const ForgotPassword = () => {
        
         body: JSON.stringify({ 
           email: email,
-          redirect_url: "https://lurnexa.in/reset-password" //  link
+          redirect_url: "https://lurnexa.in/resetPassword" //  link
         }), 
       });
 
