@@ -25,7 +25,7 @@ const ForgotPassword = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const onSubmit = async (e: React.FormEvent) => {
+ const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -36,14 +36,18 @@ const ForgotPassword = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email: email }), // Correct payload 
+       
+        body: JSON.stringify({ 
+          email: email,
+          redirect_url: "https://lurnexa.in/reset-password" //  link
+        }), 
       });
 
       if (response.ok) {
+        // This shows your "Check your inbox" UI section
         setSubmitted(true);
       } else {
         const errorData = await response.json();
-        // Handling the 422 Validation Error structure from your image
         setError(errorData.detail?.[0]?.msg || "Something went wrong. Please try again.");
       }
     } catch (err) {
@@ -52,7 +56,6 @@ const ForgotPassword = () => {
       setLoading(false);
     }
   };
-
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       <NavigationPage />

@@ -84,7 +84,7 @@ const ResetPasswordForm = () => {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">New Password</Label>
-                <div className="relative">
+                <div className="relative ">
                   <Input id="password" type={showPassword ? "text" : "password"} required value={formData.password} onChange={handleChange} />
                   <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-2.5 text-muted-foreground">
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -93,7 +93,7 @@ const ResetPasswordForm = () => {
               </div>
               {error && <div className="p-3 text-sm bg-destructive/10 text-destructive rounded-md">{error}</div>}
             </CardContent>
-            <CardFooter className="flex flex-col gap-3">
+            <CardFooter className="flex flex-col gap-3 m-5">
               <Button type="submit" className="w-full py-6 text-base" disabled={loading}>
                 {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Reset Password"}
               </Button>
