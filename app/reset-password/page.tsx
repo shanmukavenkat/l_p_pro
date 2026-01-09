@@ -7,21 +7,14 @@ import FooterSection from "@/components/Home/FooterSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardFooter, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-// 1. Form component ni separate cheyali - ide main logic
+// --- STEP 1: The Form Logic (Nested inside the Page) ---
 function ResetPasswordForm() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
-  // URL nundi email teesukuntundi: ?email=example@gmail.com
+  // Safely get email
   const emailFromUrl = searchParams.get("email") || "";
 
   const [otp, setOtp] = useState("");
@@ -48,17 +41,16 @@ function ResetPasswordForm() {
 
       if (response.ok) {
         setSuccess(true);
-        // Password reset success
+        // Immediate visual feedback then redirect
         setTimeout(() => {
           router.push("/EditoralLogins");
         }, 2000);
       } else {
         const data = await response.json();
-        // API error message 
-        setError(data.detail || "Invalid OTP or request failed.");
+        setError(data.detail || "Invalid OTP or session expired.");
       }
     } catch (err) {
-      setError("Server connection failed. Please try again.");
+      setError("Connection failed. Check your internet.");
     } finally {
       setLoading(false);
     }
@@ -68,37 +60,32 @@ function ResetPasswordForm() {
     <Card className="w-full max-w-md shadow-xl border-t-4 border-t-primary">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold">Reset Password</CardTitle>
-        <CardDescription>Email ki vachina code ni enter chesi kotha password pettukondi.</CardDescription>
+        <CardDescription>Enter the OTP from your email and your new password.</CardDescription>
       </CardHeader>
       
       <form onSubmit={onResetSubmit}>
         <CardContent className="space-y-4">
           {success && (
-            <div className="p-3 bg-green-100 text-green-700 rounded-md text-sm font-medium text-center">
-              Password Reset Successfully! Redirecting to login...
+            <div className="p-3 bg-green-50 text-green-600 border border-green-200 rounded text-center text-sm font-bold">
+              Success! Redirecting to login...
             </div>
           )}
-          
           {error && (
-            <div className="p-3 bg-red-100 text-red-700 rounded-md text-sm font-medium">
+            <div className="p-3 bg-red-50 text-red-600 border border-red-200 rounded text-sm font-medium">
               {error}
             </div>
           )}
 
-          <div className="space-y-2">
-            <Label>Email Address</Label>
-            <Input 
-              value={emailFromUrl} 
-              disabled 
-              className="bg-slate-100 font-medium cursor-not-allowed" 
-            />
+          <div className="space-y-1">
+            <Label className="text-slate-600">Account Email</Label>
+            <Input value={emailFromUrl} disabled className="bg-slate-50 opacity-70" />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1">
             <Label htmlFor="otp">OTP Code</Label>
             <Input 
               id="otp" 
-              placeholder="Enter Code" 
+              placeholder="6-digit code" 
               required 
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
@@ -106,12 +93,12 @@ function ResetPasswordForm() {
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1">
             <Label htmlFor="password">New Password</Label>
             <Input 
               id="password" 
               type="password" 
-              placeholder="New Password"
+              placeholder="Enter new password"
               required 
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
@@ -120,13 +107,9 @@ function ResetPasswordForm() {
           </div>
         </CardContent>
 
-        <CardFooter className="m-3">
-          <Button 
-            type="submit" 
-            className="w-full h-11 text-base font-semibold" 
-            disabled={loading || success}
-          >
-            {loading ? "Verifying..." : "Update & Go to Login"}
+        <CardFooter>
+          <Button type="submit" className="w-full h-11" disabled={loading || success}>
+            {loading ? "Verifying..." : "Reset & Login"}
           </Button>
         </CardFooter>
       </form>
@@ -134,18 +117,14 @@ function ResetPasswordForm() {
   );
 }
 
-// 2. Ikkada <Suspense> boundary mandatory - ide error ni fix chestundi
+// --- STEP 2: The Main Export (Wrapped in Suspense) ---
 export default function ResetPasswordPage() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       <NavigationPage />
-      <main className="grow flex items-center justify-center px-4 py-12 mt-12">
-        <Suspense fallback={
-          <div className="flex flex-col items-center gap-2">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-            <p className="text-sm text-muted-foreground">Loading form...</p>
-          </div>
-        }>
+      <main className="grow flex items-center justify-center px-4 py-12">
+        {/* THIS SUSPENSE TAG IS THE FIX FOR ERROR #317 */}
+        <Suspense fallback={<div className="text-slate-500 italic">Loading secure form...</div>}>
           <ResetPasswordForm />
         </Suspense>
       </main>
