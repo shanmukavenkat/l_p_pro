@@ -54,7 +54,7 @@ const Page = () => {
       "Designation/College Name": "asst professor/ vit-ap",
       "linkedinUrl": "https://www.linkedin.com/in/dr-chandan-nayak-143447128?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       "collegeUrl": "https://share.google/EvGjVqhAixAA2uQdH"
-    },
+    }
   // {
     //  Id: "8", // Changed to string for consistency
     //  "image": `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/qwertyuiop.jpg`,
