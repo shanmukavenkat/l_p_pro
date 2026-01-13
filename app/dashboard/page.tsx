@@ -302,6 +302,9 @@ const handleResumeUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     alert("Resume upload failed");
   }
 };
+
+/* ================= THE CONTEXT API IS UPDATING DASHBOARD COMPLETED ================= */
+
 /* ================= FETCH RESUME PDF ================= */
 //* ================= FETCH CV (WITH CACHE BUST) ================= */
 useEffect(() => {
