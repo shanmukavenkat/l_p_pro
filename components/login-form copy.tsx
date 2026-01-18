@@ -4,6 +4,9 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { useAuth } from "@/app/providers/AuthProvider";
+
 import {
   Card,
   CardContent,
@@ -11,75 +14,45 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
 
-export function LoginCopy({ className, ...props }: React.ComponentProps<"div">) {
+export function LoginCopy({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  const { login } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [showPassword, setShowPassword] = useState(false)
-
-
-  // 🛡️ Terms
-  const [showTermsModal, setShowTermsModal] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [agreeTerms, setAgreeTerms] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
-  // 🔐 LOGIN USING BACKEND API
   const startAuth = async () => {
-    setError("");
     setLoading(true);
+    setError("");
 
     try {
-      const response = await fetch("https://api.lurnexa.in/auth/login", {
+      const res = await fetch("https://api.lurnexa.in/auth/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
-      const new_data =  (!response.ok) ? data : data.data;
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Login failed");
 
-      console.log("Login Response:", new_data);
-
-      if (!response.ok) {
-        throw new Error(data.message || "Invalid email or password");
-      } else if (data.status === "NEW_PASSWORD_REQUIRED") {
-        localStorage.setItem("email", email);
-        localStorage.setItem("session", data.session);
-        window.location.href = "/set-password";
-      }else{
-      
-      localStorage.setItem("access_token", data.access_token);
-      localStorage.setItem("id_token", data.id_token);
-      localStorage.setItem("refresh_token", data.refresh_token);
-      
-
-      // Optional expiry tracking
-      if (data.expires_in) {
-        localStorage.setItem(
-          "token_expiry",
-          (Date.now() + data.expires_in * 1000).toString()
-        );
-      }
-
-        window.location.href = "/dashboard";
-
-      }
-      
+      login(data); // ✅ CONTEXT HANDLES LOGIN
     } catch (err: any) {
-      setError(err.message || "Please provide valid credentials.");
+      setError(err.message || "Login failed");
     } finally {
       setLoading(false);
     }
@@ -121,39 +94,38 @@ export function LoginCopy({ className, ...props }: React.ComponentProps<"div">) 
                 />
               </Field>
 
-             <Field>
-  <div className="flex items-center">
-    <FieldLabel htmlFor="password">Password</FieldLabel>
-    <a
-      href="/forgot-password"
-      className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-    >
-      Forgot your password?
-    </a>
-  </div>
+              <Field>
+                <div className="flex items-center">
+                  <FieldLabel htmlFor="password">Password</FieldLabel>
+                  <a
+                    href="/forgot-password"
+                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+                  >
+                    Forgot your password?
+                  </a>
+                </div>
 
-  <div className="relative">
-    <Input
-      id="password"
-      type={showPassword ? "text" : "password"}
-      required
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      className="pr-10"
-    />
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="pr-10"
+                  />
 
-    <button
-      type="button"
-      onClick={() => setShowPassword(!showPassword)}
-      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-    >
-      {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-    </button>
-  </div>
-</Field>
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </div>
+              </Field>
 
-
-              {/* ✅ TERMS CHECKBOX */}
+              {/* TERMS */}
               <Field>
                 <label className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
                   <input
@@ -298,6 +270,5 @@ export function LoginCopy({ className, ...props }: React.ComponentProps<"div">) 
           </div>
         </div>
       )}
-    </div>
-  );
+      </div>  );
 }

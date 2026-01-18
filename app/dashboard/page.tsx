@@ -1,352 +1,273 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/providers/AuthProvider";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
-  Pencil,
-  Save,
-  XCircle,
-  LogOut,
-  Upload,
-  User,
-  ExternalLink,
-  FileText,
+  Pencil,
+  Save,
+  LogOut,
+  Upload,
+  User,
+  ExternalLink,
+  FileText,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 export default function DashboardPage() {
-  
-  const router = useRouter();
-  const SUB_ID = "21634dda-10d1-70a2-c1ab-07a0a7b8d721";
+  const router = useRouter();
+  const { accessToken, logout, isAuthenticated } = useAuth();
 
-  const accessToken =
-    typeof window !== "undefined"
-      ? localStorage.getItem("access_token")
-      : null;
+  const SUB_ID = "21634dda-10d1-70a2-c1ab-07a0a7b8d721";
 
-  const [isEditing, setIsEditing] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const resumeInputRef = useRef<HTMLInputElement>(null);
+  /* 🔐 ROUTE PROTECTION */
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.replace("/EditoralLogins");
+    }
+  }, [isAuthenticated, router]);
 
+  const [isEditing, setIsEditing] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  // ✅ FIX 1: image state INSIDE component
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const resumeInputRef = useRef<HTMLInputElement>(null);
 
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
 
-  const [formData, setFormData] = useState({
-    subid: "",
-    id: "",
-    email: "",
-    name: "",
-    role: "",
-    created_at: "",
-    college_id: "",
-    organization_name: "",
-    contact_no: "",
-    list_of_items: "",
-    recent_work: "",
-    ongoing_work: "",
-    description: "",
-    resume: "",
-  });
+  const [formData, setFormData] = useState({
+    subid: "",
+    id: "",
+    email: "",
+    name: "",
+    role: "",
+    created_at: "",
+    college_id: "",
+    organization_name: "",
+    contact_no: "",
+    list_of_items: "",
+    recent_work: "",
+    ongoing_work: "",
+    description: "",
+    resume: "",
+  });
 
-  const [preview, setPreview] = useState("");
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  /* ================= FETCH PROFILE ================= */
+  useEffect(() => {
+    if (!accessToken) return;
 
-  /* ================= FETCH PROFILE IMAGE ================= */
-  useEffect(() => {
-    if (!formData.id) return;
+    const loadProfile = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/get_users`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${accessToken}`,
+            },
+            body: JSON.stringify({ subid: SUB_ID }),
+          }
+        );
 
-    const fetchImage = async () => {
-      try {
-        const token = localStorage.getItem("access_token");
+        const result = await res.json();
+        if (result?.data?.length > 0) {
+          const user = result.data[0];
+          setFormData({
+            subid: user.subid || "",
+            id: user.id || "",
+            email: user.email || "",
+            name: user.name || "",
+            role: user.role || "",
+            created_at: user.created_at || "",
+            college_id: user.college_id || "",
+            organization_name: user.organisation_name || "",
+            contact_no: user.contact_no || "",
+            list_of_items: user.area_of_expertise?.[0] || "",
+            recent_work: user.recent_work || "",
+            ongoing_work: user.ongoing_work || "",
+            description: user.description || "",
+            resume: user.resume || "",
+          });
+        }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-        const response = await fetch(
-          "https://api.lurnexa.in/get-image",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({ id: formData.id }), // ✅ correct id
-          }
-        );
+    loadProfile();
+  }, [accessToken]);
 
-        if (!response.ok) {
-          throw new Error("Please upload a valid image");
-        }
+  /* ================= FETCH IMAGE ================= */
+  useEffect(() => {
+    if (!formData.id || !accessToken) return;
 
-        const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
-        setImageUrl(url);
-      } catch (error) {
-        console.error("Image fetch error:", error);
-      }
-    };
+    const fetchImage = async () => {
+      try {
+        const res = await fetch("https://api.lurnexa.in/get-image", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({ id: formData.id }),
+        });
 
-    fetchImage();
+        if (!res.ok) return;
+        const blob = await res.blob();
+        setImageUrl(URL.createObjectURL(blob));
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
-    return () => {
-      if (imageUrl) URL.revokeObjectURL(imageUrl);
-    };
-  }, [formData.id]);
+    fetchImage();
+  }, [formData.id, accessToken]);
 
-  /* ================= FETCH PROFILE ================= */
-  useEffect(() => {
-    const loadProfile = async () => {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/get_users`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              ...(accessToken
-                ? { Authorization: `Bearer ${accessToken}` }
-                : {}),
-            },
-            body: JSON.stringify({ subid: SUB_ID }),
-          }
-        );
+  /* ================= INPUT ================= */
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((p) => ({ ...p, [name]: value }));
+  };
 
-        const result = await res.json();
+  /* ================= LOGOUT ================= */
+  const handleLogout = () => {
+    logout(); // ✅ CONTEXT LOGOUT
+  };
 
-        if (result?.data?.length > 0) {
-          const user = result.data[0];
+  /* ================= IMAGE UPLOAD ================= */
+  const handleProfileImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !formData.id) return;
 
-          setFormData({
-            subid: user.subid || "",
-            id: user.id || "",
-            email: user.email || "",
-            name: user.name || "",
-            role: user.role || "",
-            created_at: user.created_at || "",
-            college_id: user.college_id || "",
-            organization_name: user.organisation_name || "",
-            contact_no: user.contact_no || "",
-            list_of_items: user.area_of_expertise?.[0] || "",
-            recent_work: user.recent_work || "",
-            ongoing_work: user.ongoing_work || "",
-            description: user.description || "",
-            resume: user.resume || "",
-          });
-        }
-      } catch (err) {
-        console.error("Fetch failed:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadProfile();
-  }, [accessToken]);
-
-  /* ================= INPUT ================= */
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((p) => ({ ...p, [name]: value }));
-  };
-
-  /* ================= LOGOUT ================= */
-  const handleLogout = () => {
-    localStorage.clear();
-    router.push("/EditoralLogins");
-  };
-/* ================= IMAGE UPLOAD ================= */
-const handleProfileImageUpload = async ( e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0];
-  if (!file || !formData.id) return;
-
-  // ✅ FRONTEND VALIDATION
-  const allowedTypes = ["image/jpeg", "image/jpg"];
-  const allowedExtensions = ["jpg", "jpeg"];
-
-  const fileType = file.type;
-  const fileExtension = file.name.split(".").pop()?.toLowerCase();
-
-  if (
-    !allowedTypes.includes(fileType) ||
-    !fileExtension ||
-    !allowedExtensions.includes(fileExtension)
-  ) {
-    alert("Please upload a JPG or JPEG image only");
-    e.target.value = ""; // reset file input
-    return;
-  }
-  // 2. OPTIMISTIC UPDATE: Show the image immediately
-  const localPreview = URL.createObjectURL(file);
-  setImageUrl(localPreview);
-  // 3. UPLOAD TO SERVER
-  try {
-    const token = localStorage.getItem("access_token");
-
-    const fd = new FormData();
-    fd.append("file", file);
-    fd.append("id", formData.id);
-
-    const res = await fetch(
-      "https://api.lurnexa.in/upload-image",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: fd,
-      }
-    );
-
-    const result = await res.json();
-    console.log("Upload result:", result);
-
-   if (!res.ok) throw new Error("Upload failed");
-
-    // 3. CACHE BUSTING: Force the Avatar to refresh by adding a timestamp
-    const timestamp = new Date().getTime();
-    const newS3Url = `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${formData.id}.jpg?t=${timestamp}`;
-    
-    // This tells the UI to use the new S3 link instead of the blob
-    setImageUrl(newS3Url); 
-    alert("Profile picture updated!");
-
-  } catch (error) {
-    console.error("Upload error:", error);
-    alert("Image upload failed");
-    setImageUrl(null); // Revert on error
-  }
-};
-
-
-  /* ================= SAVE PROFILE ================= */
-  const handleSave = async () => {
-    try {
-      const payload = {
-        data: {
-          college_id: formData.college_id || "",
-          organisation_name: formData.organization_name || "",
-          contact_no: formData.contact_no || "",
-          area_of_expertise: formData.list_of_items
-            ? [formData.list_of_items]
-            : [],
-          recent_work: formData.recent_work || "",
-          ongoing_work: formData.ongoing_work || "",
-          description: formData.description || "",
-        },
-      };
-
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/update_users`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            ...(accessToken
-              ? { Authorization: `Bearer ${accessToken}` }
-              : {}),
-          },
-          body: JSON.stringify(payload),
-        }
-      );
-
-      const result = await res.json();
-
-      if (!res.ok) {
-        alert(result?.message || "Failed to update profile");
-        return;
-      }
-
-      alert("Profile updated successfully");
-      setIsEditing(false);
-    } catch (error) {
-      console.error("Update failed:", error);
-      alert("Something went wrong");
-    }
-  };
-
-
-/* ================= RESUME UPLOAD (WITH CACHE BUST) ================= */
-const handleResumeUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0];
-  if (!file || !formData.id) return;
-
-  try {
-    const token = localStorage.getItem("access_token");
     const fd = new FormData();
-    
-    // Rename to [id].pdf as requested
-    const renamedFile = new File([file], `${formData.id}.pdf`, { type: "application/pdf" });
-    fd.append("file", renamedFile);
+    fd.append("file", file);
     fd.append("id", formData.id);
 
-    const res = await fetch("https://api.lurnexa.in/upload-cv", {
-      method: "POST",
-      headers: { Authorization: `Bearer ${token}` },
-      body: fd,
-    });
-
-    if (!res.ok) throw new Error("Upload failed");
-
-    // ✅ FIX: Force the frontend to show the new file immediately
-    const localUrl = URL.createObjectURL(file);
-    const cacheBusterUrl = `${localUrl}#t=${new Date().getTime()}`; // Adds unique time
-    
-    setResumeUrl(cacheBusterUrl);
-    setFormData((prev) => ({ ...prev, resume: "uploaded" }));
-    
-    alert("Resume updated successfully!");
-  } catch (error) {
-    console.error("Upload error:", error);
-    alert("Resume upload failed");
-  }
-};
-/// the updating the code
-
-/* ================= THE CONTEXT API IS UPDATING DASHBOARD COMPLETED...... ================= */
-
-/* ================= FETCH RESUME PDF ================= */
-//* ================= FETCH CV (WITH CACHE BUST) ================= */
-useEffect(() => {
-  if (!formData.id) return;
-
-  const fetchResume = async () => {
     try {
-      const token = localStorage.getItem("access_token");
-      const response = await fetch("https://api.lurnexa.in/get-cv", {
+      const res = await fetch("https://api.lurnexa.in/upload-image", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ id: formData.id }), // Required parameter
+        headers: { Authorization: `Bearer ${accessToken}` },
+        body: fd,
       });
 
-      if (response.ok) {
-        const blob = await response.blob();
-        const baseDocUrl = URL.createObjectURL(blob);
-        
-        // ✅ Add timestamp to the Blob URL so the browser sees it as 'new'
-        const freshUrl = `${baseDocUrl}#t=${new Date().getTime()}`;
-        
-        setResumeUrl(freshUrl);
-        setFormData((prev) => ({ ...prev, resume: "uploaded" }));
-      }
-    } catch (error) {
-      console.error("Error fetching CV:", error);
+      if (!res.ok) throw new Error();
+
+      setImageUrl(
+        `https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/${formData.id}.jpg?t=${Date.now()}`
+      );
+      alert("Profile picture updated!");
+    } catch {
+      alert("Image upload failed");
     }
   };
 
-  fetchResume();
-}, [formData.id]);
+  /* ================= SAVE PROFILE ================= */
+  const handleSave = async () => {
+    try {
+      const payload = {
+        data: {
+          college_id: formData.college_id,
+          organisation_name: formData.organization_name,
+          contact_no: formData.contact_no,
+          area_of_expertise: formData.list_of_items
+            ? [formData.list_of_items]
+            : [],
+          recent_work: formData.recent_work,
+          ongoing_work: formData.ongoing_work,
+          description: formData.description,
+        },
+      };
 
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/update_users`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
+      if (!res.ok) throw new Error();
+      alert("Profile updated successfully");
+      setIsEditing(false);
+    } catch {
+      alert("Update failed");
+    }
+  };
 
-  if (loading) return <div className="p-6">Loading...</div>;
+  /* ================= RESUME UPLOAD ================= */
+  const handleResumeUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !formData.id) return;
 
-  return (
-  <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-50 via-white to-blue-50/30 flex flex-col">
+    try {
+      const fd = new FormData();
+      const renamed = new File([file], `${formData.id}.pdf`, {
+        type: "application/pdf",
+      });
+
+      fd.append("file", renamed);
+      fd.append("id", formData.id);
+
+      const res = await fetch("https://api.lurnexa.in/upload-cv", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${accessToken}` },
+        body: fd,
+      });
+
+      if (!res.ok) throw new Error();
+
+      setResumeUrl(URL.createObjectURL(file));
+      setFormData((p) => ({ ...p, resume: "uploaded" }));
+      alert("Resume uploaded successfully!");
+    } catch {
+      alert("Resume upload failed");
+    }
+  };
+
+  /* ================= FETCH RESUME ================= */
+  useEffect(() => {
+    if (!formData.id || !accessToken) return;
+
+    const fetchResume = async () => {
+      try {
+        const res = await fetch("https://api.lurnexa.in/get-cv", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({ id: formData.id }),
+        });
+
+        if (res.ok) {
+          const blob = await res.blob();
+          setResumeUrl(URL.createObjectURL(blob));
+          setFormData((p) => ({ ...p, resume: "uploaded" }));
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchResume();
+  }, [formData.id, accessToken]);
+
+  if (loading) return <div className="p-6">Loading...</div>;
+
+  /* ================= UI (UNCHANGED) ================= */
+  return (
+   <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-slate-50 via-white to-blue-50/30 flex flex-col">
       <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/75 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
           <div className="flex items-center gap-2 select-none transition-opacity hover:opacity-80">
@@ -477,7 +398,6 @@ useEffect(() => {
         </main>
       </div>
     </div>
-  );
+      );
 
 }
- 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import WelcomeIntro from "@/components/Home/WelcomeIntro";
+import { AuthProvider } from "./providers/AuthProvider";
 
 import "./globals.css";
 
@@ -35,7 +36,9 @@ export default function RootLayout({
       >
         {/* ✅ Global Auth Context Wrapper */}
         <WelcomeIntro />
+        <AuthProvider>
         {children}
+     </AuthProvider>
       </body>
     </html>
   );
