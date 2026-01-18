@@ -302,6 +302,7 @@ const handleResumeUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     alert("Resume upload failed");
   }
 };
+/// the updating the code
 
 /* ================= THE CONTEXT API IS UPDATING DASHBOARD COMPLETED...... ================= */
 
