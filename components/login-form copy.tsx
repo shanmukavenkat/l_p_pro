@@ -36,6 +36,7 @@ export function LoginCopy({
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [showTermsModal, setShowTermsModal] = useState(false);
 
+  // ✅ AUTH FUNCTION (CORRECT)
   const startAuth = async () => {
     setLoading(true);
     setError("");
@@ -48,9 +49,33 @@ export function LoginCopy({
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.message || "Login failed");
+      console.log("LOGIN RESPONSE 👉", data);
 
-      login(data); // ✅ CONTEXT HANDLES LOGIN
+      // 🔴 TEMP PASSWORD → SET PASSWORD PAGE
+      if (data.status === "NEW_PASSWORD_REQUIRED") {
+        localStorage.setItem("email", email);
+        localStorage.setItem("session", data.session);
+        window.location.href = "/set-password";
+        return;
+      }
+
+      // ❌ WRONG PASSWORD
+      if (data.status === "Failed") {
+        throw new Error(data.message || "Invalid email or password");
+      }
+
+      // ✅ NORMAL LOGIN
+      if (data.status === "OK") {
+        login({
+          access_token: data.access_token,
+          id_token: data.id_token,
+          refresh_token: data.refresh_token,
+          expires_in: data.expires_in,
+        });
+        return;
+      }
+
+      throw new Error("Unexpected login response");
     } catch (err: any) {
       setError(err.message || "Login failed");
     } finally {
@@ -58,12 +83,19 @@ export function LoginCopy({
     }
   };
 
+  // ✅ MISSING HANDLER 1 (FIXED)
   const handleLoginClick = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!agreeTerms) return;
+
+    if (!agreeTerms) {
+      setError("Please accept Terms & Conditions");
+      return;
+    }
+
     setShowTermsModal(true);
   };
 
+  // ✅ MISSING HANDLER 2 (FIXED)
   const handleAcceptTerms = () => {
     setShowTermsModal(false);
     startAuth();
@@ -83,11 +115,9 @@ export function LoginCopy({
           <form onSubmit={handleLoginClick}>
             <FieldGroup>
               <Field>
-                <FieldLabel htmlFor="email">Email</FieldLabel>
+                <FieldLabel>Email</FieldLabel>
                 <Input
-                  id="email"
                   type="email"
-                  placeholder="m@example.com"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -95,79 +125,47 @@ export function LoginCopy({
               </Field>
 
               <Field>
-                <div className="flex items-center">
-                  <FieldLabel htmlFor="password">Password</FieldLabel>
-                  <a
-                    href="/forgot-password"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a>
-                </div>
-
+                <FieldLabel>Password</FieldLabel>
                 <div className="relative">
                   <Input
-                    id="password"
                     type={showPassword ? "text" : "password"}
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="pr-10"
                   />
-
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    className="absolute right-3 top-1/2 -translate-y-1/2"
                   >
                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
                 </div>
               </Field>
 
-              {/* TERMS */}
               <Field>
-                <label className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
+                <label className="flex items-center gap-2 text-sm">
                   <input
                     type="checkbox"
                     checked={agreeTerms}
                     onChange={(e) => setAgreeTerms(e.target.checked)}
-                    className="accent-blue-600"
                   />
-                  <span>
-                    I have read and agree to the website{" "}
-                    <span
-                      className="text-blue-600 underline cursor-pointer"
-                      onClick={() => setShowTermsModal(true)}
-                    >
-                      terms and conditions
-                    </span>
-                  </span>
+                  I agree to Terms & Conditions
                 </label>
               </Field>
 
               {error && (
-                <p className="text-red-600 text-sm text-center mt-2">
-                  {error}
-                </p>
+                <p className="text-red-600 text-sm text-center">{error}</p>
               )}
 
-              <Field>
-                <Button
-                  type="submit"
-                  disabled={loading || !agreeTerms}
-                  className="w-full mt-4"
-                >
-                  {loading ? "Processing..." : "Login"}
-                </Button>
-
-                <FieldDescription className="text-center mt-3">
-                  Don&apos;t have an account?{" "}
-                  <a href="/signup" className="text-blue-600 hover:underline">
-                    Sign up
-                  </a>
-                </FieldDescription>
-              </Field>
+              <Button
+                type="submit"
+                disabled={loading || !agreeTerms}
+                className="w-full"
+              >
+                {loading ? "Processing..." : "Login"}
+              </Button>
             </FieldGroup>
           </form>
         </CardContent>
