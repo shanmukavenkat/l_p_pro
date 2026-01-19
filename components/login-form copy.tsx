@@ -185,10 +185,7 @@ export function LoginCopy({
             </div>
 
             <div className="p-6 overflow-y-auto text-sm text-gray-600 leading-relaxed">
-              <p className="mb-4 font-medium italic">
-                By clicking "I Accept", you agree to the following:
-              </p>
-
+          
               <div className="space-y-3 text-start">
                 <div className="p-6 overflow-y-auto text-sm text-gray-600 leading-relaxed">
               <p className="mb-4 font-medium italic">By clicking "I Accept", you agree to the following Editorial Login Access terms:</p>
