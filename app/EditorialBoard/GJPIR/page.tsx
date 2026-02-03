@@ -35,16 +35,16 @@ const page = () => {
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" 
   },
-  {
-    Id:"Lurnexa_2544oa22",
-    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
-    "Name": "Dr. Amitava Mukherjee",
-    "Board": "GJPIR",
-    "Role": "Sr.Associate Editor",
-    "Designation/College Name": "Professor / XLRI - Xavier School of Management",
-    "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
-    "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
-  },
+  // {
+  //   Id:"Lurnexa_2544oa22",
+  //   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
+  //   "Name": "Dr. Amitava Mukherjee",
+  //   "Board": "GJPIR",
+  //   "Role": "Sr.Associate Editor",
+  //   "Designation/College Name": "Professor / XLRI - Xavier School of Management",
+  //   "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
+  //   "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
+  // },
   {
     Id:"Lurnexa_2562a33",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562a33.jpg",
