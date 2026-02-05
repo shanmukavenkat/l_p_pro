@@ -111,6 +111,9 @@ const  page = () => {
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
     },
+
+
+    
     // {
     //   Id:"Lurnexa_2544fm14",
     //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
