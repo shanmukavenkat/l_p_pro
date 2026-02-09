@@ -111,31 +111,28 @@ const  page = () => {
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
     },
-
-
-    
-    // {
-    //   Id:"Lurnexa_2544fm14",
-    //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
-    //     "Name": "Dr. Mohammad Munawar Alam Sayyad",
-    //     "Board": "CIMS-Finance Management",
-    //     "Role": "Editorial Executive",
-    //     "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
-    //    "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-    //    "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
-    // }
+    {
+      Id:"Lurnexa_2544fm14",
+      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
+        "Name": "Dr. Mohammad Munawar Alam Sayyad",
+        "Board": "CIMS-Finance Management",
+        "Role": "Editorial Executive",
+        "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
+       "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
+    }
 ]
 const Operation_members = [
-  // {
-  //   "id": "Lurnexa_2544oa22",
-  //   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
-  //   "name": "Dr. Amitava Mukherjee",
-  //     "Board": "CIMS-Operation Management",
-  //   "role": "Sub Division Editor in Chief",
-  //   "Designation/College Name": "Professor/XLRI - Xavier School of Management",
-  //   "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
-  //   "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
-  // },
+  {
+    "id": "Lurnexa_2544oa22",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
+    "name": "Dr. Amitava Mukherjee",
+      "Board": "CIMS-Operation Management",
+    "role": "Sub Division Editor in Chief",
+    "Designation/College Name": "Professor/XLRI - Xavier School of Management",
+    "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
+    "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
+  },
   {
     "id": "Lurnexa_2544ok23",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ok23.jpg",

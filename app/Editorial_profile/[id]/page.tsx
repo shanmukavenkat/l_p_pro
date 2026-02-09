@@ -219,16 +219,16 @@ const All_Editorial_Boards = [
     "linkedinUrl": "https://www.linkedin.com/in/puttu-guru-prasad-569014136/",
     "collegeUrl": "https://www.vvitguntur.com/pgp-profile"
   },
-  // {
-  //   "id": "Lurnexa_2544oa22",
-  //   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
-  //   "name": "Dr. Amitava Mukherjee",
-  //     "Board": "CIMS-Operation Management",
-  //   "role": "Sub Division Editor in Chief",
-  //   "Designation/College Name": "Professor/XLRI - Xavier School of Management",
-  //   "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
-  //   "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
-  // },
+  {
+    "id": "Lurnexa_2544oa22",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
+    "name": "Dr. Amitava Mukherjee",
+      "Board": "CIMS-Operation Management",
+    "role": "Sub Division Editor in Chief",
+    "Designation/College Name": "Professor/XLRI - Xavier School of Management",
+    "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
+    "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
+  },
   {
     "id": "Lurnexa_2544ok23",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ok23.jpg",
@@ -402,17 +402,16 @@ const All_Editorial_Boards = [
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
     },
-    // {
-    //   Id:"Lurnexa_2544fm14",
-    //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
-    //     "Name": "Dr. Mohammad Munawar Alam Sayyad",
-    //     "Board": "CIMS-Finance Management",
-    //     "Role": "Editorial Executive",
-    //     "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
-    //    "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-    //    "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
-    // },
-     {
+    {
+      Id:"Lurnexa_2544fm14",
+      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
+        "Name": "Dr. Mohammad Munawar Alam Sayyad",
+        "Board": "CIMS-Finance Management",
+        "Role": "Editorial Executive",
+        "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
+       "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
+    }, {
     Id:"Lurnexa_2538a01",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538a01.jpeg",
     "Name": "Dr. Anand Shukla",
@@ -433,16 +432,16 @@ const All_Editorial_Boards = [
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" 
   },
-  // {
-  //   Id:"Lurnexa_2544oa22",
-  //   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
-  //   "Name": "Dr. Amitava Mukherjee",
-  //   "Board": "GJPIR",
-  //   "Role": "Sr.Associate Editor",
-  //   "Designation/College Name": "Professor / XLRI - Xavier School of Management",
-  //   "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
-  //   "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
-  // },
+  {
+    Id:"Lurnexa_2544oa22",
+    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
+    "Name": "Dr. Amitava Mukherjee",
+    "Board": "GJPIR",
+    "Role": "Sr.Associate Editor",
+    "Designation/College Name": "Professor / XLRI - Xavier School of Management",
+    "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
+    "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
+  },
   {
     Id:"Lurnexa_2562a33",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562a33.jpg",
@@ -615,50 +614,53 @@ export default function ProfileDetail({ params }: { params: Promise<{ id: string
   const extensions = ['jpg', 'png', 'jpeg'];
   const [useFallback, setUseFallback] = useState(false);
 
-  useEffect(() => {
-    async function fetchData() {
-      if (!id) return; // Guard clause
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     if (!id) return; // Guard clause
 
-      try {
-        const response = await fetch("https://api.lurnexa.in/user-dashboard", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id: id }),
-        });
-        const result = await response.json();
+  //     try {
+  //       const response = await fetch("https://api.lurnexa.in/user-dashboard", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({ id: id }),
+  //       });
+  //       const result = await response.json();
         
-        if (result.data && result.data.length > 0) {
-          const apiMember = result.data[0];
+  //       if (result.data && result.data.length > 0) {
+  //         const apiMember = result.data[0];
 
-          // 2. FILTER LOCAL DATA: Ensure we handle case sensitivity
-          const matched = All_Editorial_Boards.filter((m: any) => 
-            (m.Id === id || m.id === id)
-          );
+  //         // 2. FILTER LOCAL DATA: Ensure we handle case sensitivity
+  //         const matched = All_Editorial_Boards.filter((m: any) => 
+  //           (m.Id === id || m.id === id)
+  //         );
           
-          setFrontendRoles(matched);
-          setMember(apiMember);
-        } else {
-          // If database doesn't have the user, check if they exist only in frontend list
-          const localOnly = All_Editorial_Boards.find((m: any) => (m.Id === id || m.id === id));
-          if (localOnly) {
-            setMember({ name: localOnly.Name || (localOnly as any).name, email: 'N/A' });
-            setFrontendRoles(All_Editorial_Boards.filter((m: any) => (m.Id === id || m.id === id)));
-          }
-        }
-      } catch (error) {
-        console.error("Fetch Error:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, [id]);
+  //         setFrontendRoles(matched);
+  //         setMember(apiMember);
+  //       } else {
+  //         // If database doesn't have the user, check if they exist only in frontend list
+  //         const localOnly = All_Editorial_Boards.find((m: any) => (m.Id === id || m.id === id));
+  //         if (localOnly) {
+  //           setMember({ name: localOnly.Name || (localOnly as any).name, email: 'N/A' });
+  //           setFrontendRoles(All_Editorial_Boards.filter((m: any) => (m.Id === id || m.id === id)));
+  //         }
+  //       }
+  //     } catch (error) {
+  //       console.error("Fetch Error:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+  //   fetchData();
+  // }, [id]);
 
-  if (loading) return (
+ if (loading) return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+      <div className="ml-4 text-indigo-600 font-semibold">currently we are working on this page ...</div>
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+
     </div>
-  );
+ );
   
   if (!member) return notFound();
 

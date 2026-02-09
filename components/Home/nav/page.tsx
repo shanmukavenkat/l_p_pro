@@ -18,7 +18,7 @@ const menuItems = [
     ariaLabel: "View our publications",
     link: "/publications",
   },
-  // { label: "Text Books", ariaLabel: "Explore our text books", link: "/" },
+  { label: "Text Books", ariaLabel: "Explore our text books", link: "/textbooks" },
   // { label: "Case Center", ariaLabel: "Browse our case center", link: "/" },
   // {
   //   label: "Join Editorial Board",
