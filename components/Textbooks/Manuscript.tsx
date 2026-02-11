@@ -437,7 +437,7 @@
 "use client";
 import NavigationPage from "@/components/Home/nav/page";
 import FooterSection from "@/components/Home/FooterSection";
-import { Upload, CreditCard, Send, Info, UserPlus } from 'lucide-react';
+import { Upload, Send, Info, UserPlus } from 'lucide-react';
 import React, { useState } from "react";
 import { FileUpload } from "@/components/ui/file-upload";
 export default function Page() {
@@ -446,8 +446,6 @@ export default function Page() {
     setFiles(files);
     console.log(files);
   };
- 
-  
   return (
     <>
       <NavigationPage />
@@ -456,7 +454,7 @@ export default function Page() {
         {/* Header Section */}
         <div className="mb-10 text-center">
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Article Submission Portal</h1>
-          <p className="mt-2 text-slate-600">Please fill in the details below to submit your research paper.</p>
+          {/* <p className="mt-2 text-slate-600">Please fill in the details below to submit your research paper.</p> */}
         </div>
 
         <form className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -500,12 +498,10 @@ export default function Page() {
             </div>
 
             {/* Upload Section */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-         
-          <div className="w-full max-w-4xl mx-auto min-h-96 border border-dashed bg-white dark:bg-amber border-neutral-200 dark:ark:bg-amber rounded-lg">
-                <FileUpload onChange={handleFileUpload} />
-              </div>
-            </div>
+          <div className="w-full max-w-4xl mx-auto min-h-96 border border-dashed bg-gray-100  rounded-lg">
+      <FileUpload onChange={handleFileUpload} />
+    </div>
+
           </div>
 
           {/* Right Column: Sidebar (Author Info & Payment) */}
@@ -566,7 +562,6 @@ export default function Page() {
       </div>
     </div>
 
-      <FooterSection />
       </>
      
   

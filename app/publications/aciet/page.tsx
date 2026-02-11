@@ -92,7 +92,7 @@ const Buttons = () => (
     </button>
   </Link>
 
-  <button className="w-48 sm:w-56 md:w-60 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all duration-200">
+  <button className="w-48 sm:w-56 md:w-60 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-500 transition-all duration-200"  onClick={() => alert("Article / Case submission functionality coming soon!")}>
     Article / Case Submission
   </button>
 
