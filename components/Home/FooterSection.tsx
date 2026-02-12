@@ -1,3 +1,4 @@
+"use client";
 import { Github, Linkedin, Instagram, Twitter, Mail } from "lucide-react";
 
 export default function FooterSection() {
@@ -53,22 +54,22 @@ export default function FooterSection() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("https://lurnexa.in/aboutus", "_blank")}>
                   About
                 </button>
               </li>
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("/company", "_blank")}>
                   Company
                 </button>
               </li>
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("/services", "_blank")}>
                   Services
                 </button>
               </li>
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("/testimonials", "_blank")}>
                   Testimonials
                 </button>
               </li>
@@ -82,22 +83,22 @@ export default function FooterSection() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("/privacy-policy", "_blank")}>
                   Privacy Policy
                 </button>
               </li>
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("/terms-of-service", "_blank")}>
                   Terms of Service
                 </button>
               </li>
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("https://lurnexa.in/contact", "_blank")}>
                   Contact Us
                 </button>
               </li>
               <li>
-                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors">
+                <button className="text-xs text-slate-600 hover:text-slate-800 transition-colors" onClick={() => window.open("/sitemap", "_blank")}>
                   Sitemap
                 </button>
               </li>
