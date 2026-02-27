@@ -183,7 +183,7 @@ We welcome studies that offer clear insights, inform public policy, and contribu
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
-              // mail={member.mail}
+             mail={member.email}
         />
 
       ))}

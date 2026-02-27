@@ -111,6 +111,7 @@ We encourage submissions that propose new technologies, improve existing systems
               college={member['Designation/College Name']}
               linkedinUrl={member.linkedinUrl}
               collegeUrl={member.collegeUrl}
+              mail={member.email}
             />
           ))}
         </div>

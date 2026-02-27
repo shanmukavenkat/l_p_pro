@@ -311,8 +311,9 @@ We invite research that enhances organizational performance, addresses contempor
           role={members.role}
           Desgination={members['Designation/College Name'] || ''}
          college={members['Designation/College Name'] || ''}
-          linkedinUrl={members.linkedinUrl || undefined}
+          linkedinUrl={members.linkedinUrl || undefined }
            collegeUrl={members.collegeUrl || undefined}
+              mail={members.email || undefined}
               />
             ))}
         </div>

@@ -23,7 +23,7 @@ const page = () => {
     "Designation/College Name": "Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-anand-shukla-59342838/",
     "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898",
-    "mail": "anand.shukla@lpu.co.in"
+    "email": "anand.shukla@lpu.co.in"
     
   },
   {
@@ -35,7 +35,7 @@ const page = () => {
    "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
-    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu" 
+    "email":"badrinarayanang@gmail.com" 
   },
   // {
   //   Id:"Lurnexa_2544oa22",
@@ -89,7 +89,7 @@ const page = () => {
     "Designation/College Name": "Professor / Centurion University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
     "collegeUrl": "https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in",
-       "mail":"susanta65@gmail.com"
+       "email":"susanta65@gmail.com"
   },
   {
     Id:"Lurnexa_2544fs12",
@@ -100,7 +100,7 @@ const page = () => {
     "Designation/College Name": "Assistant Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
     "collegeUrl": "https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
-       "mail":"srikanthyadav444p@gmail.com"
+       "email":"srikanthyadav444p@gmail.com"
   },
   {
     Id:"Lurnexa_2538c04",
@@ -111,7 +111,7 @@ const page = () => {
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/dr-chinmaya-kumar-swain-77b358128/",
     "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0",
-    "mail":"chinmaya@iimj.ac.in"
+    "email":"chinmaya@iimj.ac.in"
   },
   {
     Id:"Lurnexa_2553n43",
@@ -184,7 +184,7 @@ const page = () => {
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
-            mail={member.mail}
+            mail={member.email}
            
         />
 
