@@ -23,7 +23,8 @@ const page = () => {
     "Role": "Sub Division-Editor in Chief",
     "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
-    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html"
+    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
+    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu"
   },
   {
     "Id": "Lurnexa_2562a33",
@@ -33,7 +34,8 @@ const page = () => {
     "Role": "Deputy Editor in Chief",
     "Designation/College Name": "Associate Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/aruna-dash-62a74a19/",
-    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf"
+    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf",
+    "email":"akdash@ibsindia.org "
   },
   {
     "Id": "Lurnexa_2562s34",
@@ -43,7 +45,8 @@ const page = () => {
     "Role": "Sr Associate Editor",
     "Designation/College Name": "Professor and Associate Dean - IQAC at UPES",
     "linkedinUrl": "https://www.linkedin.com/search/results/all/?keywords=Dr.Sumeet%20Gupta&origin=GLOBAL_SEARCH_HEADER&sid=-dZ",
-    "collegeUrl": "https://www.upes.ac.in/faculty/school-of-business/prof-dr-sumeet-gupta"
+    "collegeUrl": "https://www.upes.ac.in/faculty/school-of-business/prof-dr-sumeet-gupta",
+    "email":"sumeetbgh2007@gmail.com"
   },
   {
     "Id": "Lurnexa_2562k35",
@@ -53,7 +56,8 @@ const page = () => {
     "Role": "Associate Editor",
     "Designation/College Name": "Professor and Head, Centre for Economic Studies and Policy (CESP)",
     "linkedinUrl": "https://www.linkedin.com/in/krishna-raj-71098823/",
-    "collegeUrl": "https://www.isec.ac.in/krishna-raj/"
+    "collegeUrl": "https://www.isec.ac.in/krishna-raj/",
+    "email":"krishnarajisec@yahoo.co.uk"
   },
   {
     "Id": "Lurnexa_2562m36",
@@ -63,7 +67,8 @@ const page = () => {
     "Role": "Managing Editor",
     "Designation/College Name": "Professor / Jawaharlal Nehru University",
     "linkedinUrl": "",
-    "collegeUrl": "https://www.jnu.ac.in/content/minaketan"
+    "collegeUrl": "https://www.jnu.ac.in/content/minaketan",
+    "email":"behera.minaketan@gmail.com"
   },
 
   {
@@ -74,7 +79,8 @@ const page = () => {
     "Role": "Associate Managing Editor",
     "Designation/College Name": "Associate Professor / XLRI Jamshedpur",
     "linkedinUrl": "https://www.linkedin.com/in/debi-prasad-bal-4386136a/",
-    "collegeUrl": "https://xlri.ac.in/about/full-time-faculty/debi-prasad"
+    "collegeUrl": "https://xlri.ac.in/about/full-time-faculty/debi-prasad",
+    "email":" debiprasad@xlri.ac.in"
   },
   {
     "Id": "Lurnexa_2562p38",
@@ -84,7 +90,8 @@ const page = () => {
     "Role": "Sr Review Editor",
     "Designation/College Name": "Associate Professor and HoD / Institute of Infrastructure Technology Research and Management (IITRAM), Ahmedabad",
     "linkedinUrl": "https://www.linkedin.com/in/pravin-jadhav-16314322/",
-    "collegeUrl": "https://iitram.ac.in/empdetail/2015152"
+    "collegeUrl": "https://iitram.ac.in/empdetail/2015152",
+    "email":" pravinqed@gmail.com"
   },
     {
    "Id": "Lurnexa_2562s39",
@@ -94,7 +101,8 @@ const page = () => {
     "Role": "Review Editor",
     "Designation/College Name": "Assistant Professor/Tata Institute of Social Sciences",
     "linkedinUrl": "https://www.linkedin.com/in/dr-subhash-chandra-09274565/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/"
+    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/",
+    "email":"subhchandraa@gmail.com"
   },
   // {
   //   "Id": 8,
@@ -122,7 +130,8 @@ const page = () => {
     "Role": "Editorial Executive",
     "Designation/College Name": "Assistant Professor / VVIT University",
     "linkedinUrl": "https://www.linkedin.com/in/puttu-guru-prasad-569014136/",
-    "collegeUrl": "https://www.vvitguntur.com/pgp-profile"
+    "collegeUrl": "https://www.vvitguntur.com/pgp-profile",
+    "email":"guruprasad.puttu.viva@gmail.com"
   }
 ]
 

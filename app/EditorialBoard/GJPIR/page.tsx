@@ -34,7 +34,8 @@ const page = () => {
     "Role": " Co - Editor-in-Chief",
    "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
-    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" 
+    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
+    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu" 
   },
   // {
   //   Id:"Lurnexa_2544oa22",
@@ -54,7 +55,8 @@ const page = () => {
     "Role": "Associate Editor",
     "Designation/College Name": "Associate Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/aruna-dash-62a74a19/",
-    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf"
+    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf",
+    "email":"akdash@ibsindia.org "
   },
   {
     Id:"Lurnexa_2553u42",
@@ -65,7 +67,8 @@ const page = () => {
     "Role": "Sr.Managing Editor",
     "Designation/College Name": "Professor / National Institute of Technology Rourkela",
     "linkedinUrl": "https://www.linkedin.com/in/dr-umesh-c-pati-13034a20/",
-    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
+    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf",
+    "email":"ucpati@nitrkl.ac.in"
   },
   {
     Id:"Lurnexa_2544ok23",
@@ -75,7 +78,8 @@ const page = () => {
     "Role": "Managing Editor",
     "Designation/College Name": "Assistant Professor / Indian Institute of Management Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
-    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
+    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY=",
+    "email":"kapil@iimj.ac.in"
   },
   {
     Id:"Lurnexa_2544fs13",

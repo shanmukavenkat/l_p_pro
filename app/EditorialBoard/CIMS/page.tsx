@@ -121,16 +121,16 @@ const  page = () => {
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx",
         "mail":"sarodanie@gmail.com"
     },
-    {
-      Id:"Lurnexa_2544fm14",
-      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
-        "Name": "Dr. Mohammad Munawar Alam Sayyad",
-        "Board": "CIMS-Finance Management",
-        "Role": "Editorial Executive",
-        "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
-       "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-       "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
-    }
+    // {
+    //   Id:"Lurnexa_2544fm14",
+    //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
+    //     "Name": "Dr. Mohammad Munawar Alam Sayyad",
+    //     "Board": "CIMS-Finance Management",
+    //     "Role": "Editorial Executive",
+    //     "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
+    //    "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
+    //    "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
+    // }
 ]
 const Operation_members = [
   // {
@@ -151,7 +151,8 @@ const Operation_members = [
     "role": "Deputy Editor in Chief",
     "Designation/College Name": "Assistant Professor/Indian Institute of Management Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
-    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
+    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY=",
+    "email":"kapil@iimj.ac.in"
   },
   {
     "id": "Lurnexa_2544od24",
@@ -161,7 +162,8 @@ const Operation_members = [
     "role": "Senior Associate Editor",
     "Designation/College Name": "Professor of Practice/Mahindra University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-debopam-chakarabarti-3352b97/",
-    "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/"
+    "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/",
+    "email":"debopam.chakrabarti@mahindrauniversity.edu.in"
   },
   {
     "id": "Lurnexa_2544ov25",
@@ -171,7 +173,8 @@ const Operation_members = [
     "role": "Associate Editor",
     "Designation/College Name": "Associate Professor/IBS Hyderabad",
     "linkedinUrl": null,
-    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf"
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf",
+      "email":" Cs.vaibhavmishra@gmail.com"
   },
   {
     "id": "Lurnexa_2544or26",
@@ -181,7 +184,8 @@ const Operation_members = [
     "role": "Managing Editor",
     "Designation/College Name": "Assistant Professor/Kristu Jayanti Institute of Management, Bengaluru",
     "linkedinUrl": "https://www.linkedin.com/in/ravindran-d-b65b8416/?originalSubdomain=in",
-    "collegeUrl": "https://kristujayanti.irins.org/profile/168699"
+    "collegeUrl": "https://kristujayanti.irins.org/profile/168699",
+    "email":"rtkob@yahoo.co.in"
   },
   // {
   //   "id": 6,
@@ -200,7 +204,8 @@ const Operation_members = [
     "role": "Review Editor",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/sourav-mondal-a13906a7/?originalSubdomain=in",
-    "collegeUrl": "https://iimj.ac.in/faculty-datad429.php?n=MTMy"
+    "collegeUrl": "https://iimj.ac.in/faculty-datad429.php?n=MTMy",
+    "email":"sourav@iimj.ac.in"
   },
   // {
   //   "id": 8,
@@ -219,7 +224,8 @@ const Operation_members = [
     "role": "Assistant Editor",
     "Designation/College Name": "Assistant Professor/IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/bijeta-shaw-5576269b/?originalSubdomain=in",
-    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eUrjppP7DJtxe9oBQK2hBVp8Jv0UmNwKTMVPHPBp.pdf"
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eUrjppP7DJtxe9oBQK2hBVp8Jv0UmNwKTMVPHPBp.pdf",
+    "email":" bijetapkumar.research@gmail.com"
   }
 ]
 

@@ -23,7 +23,8 @@ const Page = () => {
       "role": "Sub Division – Editor in Chief",
       "Designation/College Name": "Professor/National Institute of Technology Rourkela",
       "linkedinUrl": "https://www.linkedin.com/in/dr-umesh-c-pati-13034a20/",
-      "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
+      "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf",
+    "email":"ucpati@nitrkl.ac.in"
     },
     {
       Id: "Lurnexa_2553n43",
@@ -33,7 +34,8 @@ const Page = () => {
       "role": "Deputy Editor in Chief",
       "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
       "linkedinUrl": "",
-      "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
+      "collegeUrl": "https://www.vvitguntur.com/chnsk-profile",
+      "email":"kalyanchallapalli@gmail.com"
     },
     {
       Id: "Lurnexa_2553s45",
@@ -43,7 +45,8 @@ const Page = () => {
       "role": "Associate Editor ",
       "Designation/College Name": "Professor/VVIT Guntur",
       "linkedinUrl": "https://www.linkedin.com/in/srilatha-dande-86a62937b/",
-      "collegeUrl": "https://www.vvitguntur.com/drsrilatha-profile"
+      "collegeUrl": "https://www.vvitguntur.com/drsrilatha-profile",
+    "email":"srilatha.dande@gmail.com"
     },
     {
       Id: "Lurnexa_2553c47",
@@ -53,7 +56,8 @@ const Page = () => {
       "role": "Associate Managing Editor",
       "Designation/College Name": "asst professor/ vit-ap",
       "linkedinUrl": "https://www.linkedin.com/in/dr-chandan-nayak-143447128?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      "collegeUrl": "https://share.google/EvGjVqhAixAA2uQdH"
+      "collegeUrl": "https://share.google/EvGjVqhAixAA2uQdH",
+    "email":"chandan.nayak@vitap.ac.in"
     },
     // {
     //   Id: "8", // Changed to string for consistency

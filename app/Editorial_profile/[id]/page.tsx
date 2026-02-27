@@ -125,7 +125,8 @@ const All_Editorial_Boards = [
     "Role": "Sub Division-Editor in Chief",
     "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
-    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html"
+    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
+    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu"
   },
   {
     "Id": "Lurnexa_2562a33",
@@ -135,7 +136,8 @@ const All_Editorial_Boards = [
     "Role": "Deputy Editor in Chief",
     "Designation/College Name": "Associate Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/aruna-dash-62a74a19/",
-    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf"
+    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf",
+    "email":"akdash@ibsindia.org "
   },
   {
     "Id": "Lurnexa_2562s34",
@@ -145,7 +147,8 @@ const All_Editorial_Boards = [
     "Role": "Sr Associate Editor",
     "Designation/College Name": "Professor and Associate Dean - IQAC at UPES",
     "linkedinUrl": "https://www.linkedin.com/search/results/all/?keywords=Dr.Sumeet%20Gupta&origin=GLOBAL_SEARCH_HEADER&sid=-dZ",
-    "collegeUrl": "https://www.upes.ac.in/faculty/school-of-business/prof-dr-sumeet-gupta"
+    "collegeUrl": "https://www.upes.ac.in/faculty/school-of-business/prof-dr-sumeet-gupta",
+    "email":"sumeetbgh2007@gmail.com"
   },
   {
     "Id": "Lurnexa_2562k35",
@@ -155,7 +158,8 @@ const All_Editorial_Boards = [
     "Role": "Associate Editor",
     "Designation/College Name": "Professor and Head, Centre for Economic Studies and Policy (CESP)",
     "linkedinUrl": "https://www.linkedin.com/in/krishna-raj-71098823/",
-    "collegeUrl": "https://www.isec.ac.in/krishna-raj/"
+    "collegeUrl": "https://www.isec.ac.in/krishna-raj/",
+    "email":"krishnarajisec@yahoo.co.uk"
   },
   {
     "Id": "Lurnexa_2562m36",
@@ -165,7 +169,8 @@ const All_Editorial_Boards = [
     "Role": "Managing Editor",
     "Designation/College Name": "Professor / Jawaharlal Nehru University",
     "linkedinUrl": "",
-    "collegeUrl": "https://www.jnu.ac.in/content/minaketan"
+    "collegeUrl": "https://www.jnu.ac.in/content/minaketan",
+    "email":"behera.minaketan@gmail.com"
   },
 
   {
@@ -176,7 +181,8 @@ const All_Editorial_Boards = [
     "Role": "Associate Managing Editor",
     "Designation/College Name": "Associate Professor / XLRI Jamshedpur",
     "linkedinUrl": "https://www.linkedin.com/in/debi-prasad-bal-4386136a/",
-    "collegeUrl": "https://xlri.ac.in/about/full-time-faculty/debi-prasad"
+    "collegeUrl": "https://xlri.ac.in/about/full-time-faculty/debi-prasad",
+    "email":" debiprasad@xlri.ac.in"
   },
   {
     "Id": "Lurnexa_2562p38",
@@ -186,7 +192,8 @@ const All_Editorial_Boards = [
     "Role": "Sr Review Editor",
     "Designation/College Name": "Associate Professor and HoD / Institute of Infrastructure Technology Research and Management (IITRAM), Ahmedabad",
     "linkedinUrl": "https://www.linkedin.com/in/pravin-jadhav-16314322/",
-    "collegeUrl": "https://iitram.ac.in/empdetail/2015152"
+    "collegeUrl": "https://iitram.ac.in/empdetail/2015152",
+    "email":" pravinqed@gmail.com"
   },
     {
    "Id": "Lurnexa_2562s39",
@@ -196,7 +203,8 @@ const All_Editorial_Boards = [
     "Role": "Review Editor",
     "Designation/College Name": "Assistant Professor/Tata Institute of Social Sciences",
     "linkedinUrl": "https://www.linkedin.com/in/dr-subhash-chandra-09274565/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/"
+    "collegeUrl": "https://tiss.ac.in/view/9/employee/subhash-chandra/",
+    "email":"subhchandraa@gmail.com"
   },
   // {
   //   "Id": 8,
@@ -224,7 +232,8 @@ const All_Editorial_Boards = [
     "Role": "Editorial Executive",
     "Designation/College Name": "Assistant Professor / VVIT University",
     "linkedinUrl": "https://www.linkedin.com/in/puttu-guru-prasad-569014136/",
-    "collegeUrl": "https://www.vvitguntur.com/pgp-profile"
+    "collegeUrl": "https://www.vvitguntur.com/pgp-profile",
+    "email":"guruprasad.puttu.viva@gmail.com"
   },
   // {
   //   "id": "Lurnexa_2544oa22",
@@ -244,7 +253,8 @@ const All_Editorial_Boards = [
     "role": "Deputy Editor in Chief",
     "Designation/College Name": "Assistant Professor/Indian Institute of Management Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
-    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
+    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY=",
+    "email":"kapil@iimj.ac.in"
   },
   {
     "id": "Lurnexa_2544od24",
@@ -254,7 +264,8 @@ const All_Editorial_Boards = [
     "role": "Senior Associate Editor",
     "Designation/College Name": "Professor of Practice/Mahindra University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-debopam-chakarabarti-3352b97/",
-    "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/"
+    "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/",
+    "email":"debopam.chakrabarti@mahindrauniversity.edu.in"
   },
   {
     "id": "Lurnexa_2544ov25",
@@ -264,7 +275,8 @@ const All_Editorial_Boards = [
     "role": "Associate Editor",
     "Designation/College Name": "Associate Professor/IBS Hyderabad",
     "linkedinUrl": null,
-    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf"
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf",
+      "email":" Cs.vaibhavmishra@gmail.com"
   },
   {
     "id": "Lurnexa_2544or26",
@@ -274,7 +286,8 @@ const All_Editorial_Boards = [
     "role": "Managing Editor",
     "Designation/College Name": "Assistant Professor/Kristu Jayanti Institute of Management, Bengaluru",
     "linkedinUrl": "https://www.linkedin.com/in/ravindran-d-b65b8416/?originalSubdomain=in",
-    "collegeUrl": "https://kristujayanti.irins.org/profile/168699"
+    "collegeUrl": "https://kristujayanti.irins.org/profile/168699",
+    "email":"rtkob@yahoo.co.in"
   },
   // {
   //   "id": 6,
@@ -293,7 +306,8 @@ const All_Editorial_Boards = [
     "role": "Review Editor",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/sourav-mondal-a13906a7/?originalSubdomain=in",
-    "collegeUrl": "https://iimj.ac.in/faculty-datad429.php?n=MTMy"
+    "collegeUrl": "https://iimj.ac.in/faculty-datad429.php?n=MTMy",
+    "email":"sourav@iimj.ac.in"
   },
   // {
   //   "id": 8,
@@ -312,7 +326,8 @@ const All_Editorial_Boards = [
     "role": "Assistant Editor",
     "Designation/College Name": "Assistant Professor/IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/bijeta-shaw-5576269b/?originalSubdomain=in",
-    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eUrjppP7DJtxe9oBQK2hBVp8Jv0UmNwKTMVPHPBp.pdf"
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eUrjppP7DJtxe9oBQK2hBVp8Jv0UmNwKTMVPHPBp.pdf",
+    "email":" bijetapkumar.research@gmail.com"
   },
   {   Id:"Lurnexa_2544fm11",
         "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm11.jpg",
@@ -418,16 +433,16 @@ const All_Editorial_Boards = [
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx",
         "mail":"sarodanie@gmail.com"
     },
-    {
-      Id:"Lurnexa_2544fm14",
-      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
-        "Name": "Dr. Mohammad Munawar Alam Sayyad",
-        "Board": "CIMS-Finance Management",
-        "Role": "Editorial Executive",
-        "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
-       "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-       "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
-    },
+    // {
+    //   Id:"Lurnexa_2544fm14",
+    //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
+    //     "Name": "Dr. Mohammad Munawar Alam Sayyad",
+    //     "Board": "CIMS-Finance Management",
+    //     "Role": "Editorial Executive",
+    //     "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
+    //    "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
+    //    "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
+    // },
      {
     Id:"Lurnexa_2538a01",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2538a01.jpeg",
@@ -448,7 +463,8 @@ const All_Editorial_Boards = [
     "Role": " Co - Editor-in-Chief",
    "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
-    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" 
+    "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" ,
+    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu"
   },
   // {
   //   Id:"Lurnexa_2544oa22",
@@ -468,7 +484,8 @@ const All_Editorial_Boards = [
     "Role": "Associate Editor",
     "Designation/College Name": "Associate Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/aruna-dash-62a74a19/",
-    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf"
+    "collegeUrl": "https://www.ifheindia.org/icfai-school-of-social-sciences/Facultyprofiles/Economics/Aruna-Kumar-Dash.pdf",
+    "email":"akdash@ibsindia.org "
   },
   {
     Id:"Lurnexa_2553u42",
@@ -479,7 +496,8 @@ const All_Editorial_Boards = [
     "Role": "Sr.Managing Editor",
     "Designation/College Name": "Professor / National Institute of Technology Rourkela",
     "linkedinUrl": "https://www.linkedin.com/in/dr-umesh-c-pati-13034a20/",
-    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
+    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf",
+    "email":"ucpati@nitrkl.ac.in"
   },
   {
     Id:"Lurnexa_2544ok23",
@@ -489,7 +507,8 @@ const All_Editorial_Boards = [
     "Role": "Managing Editor",
     "Designation/College Name": "Assistant Professor / Indian Institute of Management Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
-    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY="
+    "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY=",
+    "email":"kapil@iimj.ac.in"
   },
   {
     Id:"Lurnexa_2544fs13",
@@ -542,7 +561,8 @@ const All_Editorial_Boards = [
     "role": "Sub Division – Editor in Chief",
     "Designation/College Name": "Professor/National Institute of Technology Rourkela",
     "linkedinUrl": "https://www.linkedin.com/in/dr-umesh-c-pati-13034a20/",
-    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf"
+    "collegeUrl": "https://www.nitrkl.ac.in/docs/Faculty/CV/1970695.pdf",
+    "email":"ucpati@nitrkl.ac.in"
   },
   {
    Id: "Lurnexa_2553n43",
@@ -583,7 +603,8 @@ const All_Editorial_Boards = [
     "role": "Associate Managing Editor",
     "Designation/College Name": "asst professor/ vit-ap",
     "linkedinUrl": "https://www.linkedin.com/in/dr-chandan-nayak-143447128?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "collegeUrl": "https://share.google/EvGjVqhAixAA2uQdH"
+    "collegeUrl": "https://share.google/EvGjVqhAixAA2uQdH",
+    "email":"chandan.nayak@vitap.ac.in"
   },
 //   {
 //    "id": 7,
