@@ -22,7 +22,8 @@ const page = () => {
     "Role": "Editor-in-Chief",
     "Designation/College Name": "Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-anand-shukla-59342838/",
-    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898"
+    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898",
+    "mail": "anand.shukla@lpu.co.in"
     
   },
   {
@@ -80,11 +81,11 @@ const page = () => {
     Id:"Lurnexa_2544fs13",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs13.jpg",
     "Name": "Dr. Susanta K Mishra",
-
     "Role": "Assistant Editor",
     "Designation/College Name": "Professor / Centurion University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
-    "collegeUrl": "https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in"
+    "collegeUrl": "https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in",
+       "mail":"susanta65@gmail.com"
   },
   {
     Id:"Lurnexa_2544fs12",
@@ -94,7 +95,8 @@ const page = () => {
     "Role": "Section Editor",
     "Designation/College Name": "Assistant Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
-    "collegeUrl": "https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf"
+    "collegeUrl": "https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
+       "mail":"srikanthyadav444p@gmail.com"
   },
   {
     Id:"Lurnexa_2538c04",
@@ -104,7 +106,8 @@ const page = () => {
     "Role": "Review Editor",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/dr-chinmaya-kumar-swain-77b358128/",
-    "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0"
+    "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0",
+    "mail":"chinmaya@iimj.ac.in"
   },
   {
     Id:"Lurnexa_2553n43",
@@ -177,6 +180,8 @@ const page = () => {
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
+            mail={member.mail}
+           
         />
 
       ))}

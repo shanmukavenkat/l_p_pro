@@ -23,7 +23,8 @@ const page = () => {
     "Role": "Sub Division-Editor in Chief",
     "Designation/College Name": "Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-anand-shukla-59342838/",
-    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898"
+    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898",
+     "mail": "anand.shukla@lpu.co.in"
   },
   {
     "Id": "Lurnexa_2538c02",
@@ -33,7 +34,8 @@ const page = () => {
     "Role": "Deputy Editor in Chief",
     "Designation/College Name": "Assistant Professor / National Institute of Technology, Raipur",
     "linkedinUrl": "",
-    "collegeUrl": "https://nitrr.ac.in/viewdetails.php?q=it.jchandrashekar"
+    "collegeUrl": "https://nitrr.ac.in/viewdetails.php?q=it.jchandrashekar",
+    "mail": "jchandrashekar.it@nitrr.ac.in"
   },
   {
     "Id": "Lurnexa_2538e03",
@@ -43,7 +45,8 @@ const page = () => {
     "Role": "Sr Associate Editor",
     "Designation/College Name": "Director / Indus Business Academy (IBA), Bengaluru",
     "linkedinUrl": "https://www.linkedin.com/in/dr-easwar-krishna-iyer/",
-    "collegeUrl": "https://iba.ac.in/about-iba/director-message"
+    "collegeUrl": "https://iba.ac.in/about-iba/director-message",
+    "mail":" easwar.pva@gmail.com"
   },
   {
     "Id": "Lurnexa_2538c04",
@@ -53,7 +56,8 @@ const page = () => {
     "Role": "Associate Editor",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/dr-chinmaya-kumar-swain-77b358128/",
-    "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0"
+    "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0",
+    "mail":"chinmaya@iimj.ac.in"
   },
   {
     "Id": "Lurnexa_2538r05",
@@ -63,7 +67,8 @@ const page = () => {
     "Role": "Managing Editor",
     "Designation/College Name": "Associate Professor & Asst. Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-rishi-chopra-5b3260247/",
-    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=11111"
+    "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=11111",
+    "mail":"rishi.chopra@lpu.co.in"
   },
   {
     "Id": "Lurnexa_2538t06",
@@ -73,7 +78,8 @@ const page = () => {
     "Role": "Associate Managing Editor",
     "Designation/College Name": "Professor & Convener RDC / MGIT Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/dr-rajini-kanth-t-v-22384724/",
-    "collegeUrl": "https://mgit.ac.in/wp-content/uploads/2025/01/Dr.-TV-Rajini-Kanth.pdf"
+    "collegeUrl": "https://mgit.ac.in/wp-content/uploads/2025/01/Dr.-TV-Rajini-Kanth.pdf",
+    "mail":"rajinitv@gmail.com"
   },
   {
     "Id": "Lurnexa_2538s07",
@@ -83,7 +89,8 @@ const page = () => {
     "Role": "Sr Review Editor",
     "Designation/College Name": "Professor & Head of Department (CSE) / Sree Dattha Institute of Engineering and Science, Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/dr-mahaboob-4a086657/",
-    "collegeUrl": "https://www.sreedattha.ac.in/sdes/departments/computer-science-engineering/about-cse-department/faculty-members"
+    "collegeUrl": "https://www.sreedattha.ac.in/sdes/departments/computer-science-engineering/about-cse-department/faculty-members",
+    "mail":"dr.mahaboob@gmail.com"
   },
   {
     "Id": "Lurnexa_2538u08",
@@ -93,7 +100,8 @@ const page = () => {
     "Role": "Review Editor",
     "Designation/College Name": "Head of the Department, IT / Jawaharlal Nehru Technological University Hyderabad (JNTUH)",
     "linkedinUrl": "https://www.linkedin.com/in/dr-uma-rani-vanamala-87053620b/",
-    "collegeUrl": "https://jntuhceh.ac.in/faculty_portal/uploads/resumes/uma_rani_profile.pdf"
+    "collegeUrl": "https://jntuhceh.ac.in/faculty_portal/uploads/resumes/uma_rani_profile.pdf",
+    "mail":"umarani@jntuh.ac.in"
   },
   {
     "Id": "Lurnexa_2538b09",
@@ -103,7 +111,8 @@ const page = () => {
     "Role": "Domain Editor",
     "Designation/College Name": "Professor, CSE Department / Sreenidhi Institute of Science & Technology, Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/balaji-halavath-065268297/",
-    "collegeUrl": "https://sreenidhi.edu.in/departments-faculty/dr-halavath-balaji-ph-d/"
+    "collegeUrl": "https://sreenidhi.edu.in/departments-faculty/dr-halavath-balaji-ph-d/",
+    "mail":"balajimitk@gmail.com"
   },
   {
     "Id": "Lurnexa_2538k10",
@@ -113,7 +122,8 @@ const page = () => {
     "Role": "Editorial Executive",
     "Designation/College Name": "Associate Professor & In-Charge / Symbiosis Institute of Technology, Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/dr-kranthi-kumar-singamaneni-smieee-761540168/",
-    "collegeUrl": "https://sithyd.edu.in/faculty/dr-kranthi-kumar-singamaneni"
+    "collegeUrl": "https://sithyd.edu.in/faculty/dr-kranthi-kumar-singamaneni",
+    "mail":" kkranthicse@gmail.com"
   }
 ]
 
@@ -164,6 +174,7 @@ Our goal is to ensure that every published study adds meaningful value to the sc
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
+            mail={member.mail}
         />
 
       ))}

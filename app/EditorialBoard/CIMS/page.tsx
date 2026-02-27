@@ -23,7 +23,8 @@ const  page = () => {
         "Role": "Sub Division-Editor in Chief",
         "Designation/College Name": "Associate Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/dr-kameshwar-rao-modekurti-45145223/",
-       "collegeUrl":"https://www.ifheindia.org/FacultyImages/Mq5sTPjgSkn8J4jPjlnscFWYy0p5MvTXrigIGJsvcPDF5qOn1r3b6nnL3Ne6KVk.pdf"
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/Mq5sTPjgSkn8J4jPjlnscFWYy0p5MvTXrigIGJsvcPDF5qOn1r3b6nnL3Ne6KVk.pdf",
+        "mail":"kami2020@gmail.com"
     },
     {   
         Id:"Lurnexa_2544fs12",
@@ -33,7 +34,8 @@ const  page = () => {
         "Role": "Deputy Editor in Chief",
         "Designation/College Name": "Assistant Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
-       "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf"
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
+       "mail":"srikanthyadav444p@gmail.com"
     },
     {
         Id:"Lurnexa_2544fs13",
@@ -43,17 +45,19 @@ const  page = () => {
         "Role": "Sr Associate Editor",
         "Designation/College Name": "Professor/ Centurion University",
         "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
-       "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in"
+       "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in",
+       "mail":"susanta65@gmail.com"
     },
-    {  Id:"Lurnexa_2544fm21",
-       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
-        "Name": "Dr.Muhammed Shafi M K",
-        "Board": "CIMS-Finance Management",
-        "Role": "Associate Editor",
-        "Designation/College Name": "Assistant Professor/ NIT Warangal",
-        "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
-       "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk"
-    },
+    // {  Id:"Lurnexa_2544fm21",
+    //    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
+    //     "Name": "Dr.Muhammed Shafi M K",
+    //     "Board": "CIMS-Finance Management",
+    //     "Role": "Associate Editor",
+    //     "Designation/College Name": "Assistant Professor/ NIT Warangal",
+    //     "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
+    //    "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk",
+    //    "mail":"shafimk@nitw.ac.in"
+    // },
     {    Id:"Lurnexa_2544fm15",
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm15.jpg",
         "Name": "Dr. Manisha Kumari",
@@ -61,7 +65,8 @@ const  page = () => {
         "Role": "Managing Editor",
         "Designation/College Name": "Associate Faculty Member/ (ni-msme)",
         "linkedinUrl": "https://www.linkedin.com/in/manishakumari-ba344857/",
-       "collegeUrl":"https://www.nimsme.gov.in/employee/a7b4a35465d9853607aaa02f9ea4f0a3"
+       "collegeUrl":"https://www.nimsme.gov.in/employee/a7b4a35465d9853607aaa02f9ea4f0a3",
+       "mail":"kmanisha44@gmail.com"
     },
     {
         Id:"Lurnexa_2544fs16",
@@ -71,7 +76,8 @@ const  page = () => {
         "Role": "Sr Review Editor",
         "Designation/College Name": "Associate Professor/ Indian Institute of Information Technology",
        "linkedinUrl": "https://www.linkedin.com/in/dr-sandeep-kumar-kesarwani-48023755/?originalSubdomain=in",
-       "collegeUrl":"https://imparc.org/dr-sandeep-kumar-kesarwani/"
+       "collegeUrl":"https://imparc.org/dr-sandeep-kumar-kesarwani/",
+       "mail":"sandeep20046@gmail.com"
     },
     {   
         Id:"Lurnexa_2544fc17",
@@ -81,7 +87,8 @@ const  page = () => {
         "Role": "Review Editor",
         "Designation/College Name": "Assistant Professor/ Geetam Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/dr-ch-shankar-30881a3b/",
-       "collegeUrl":"https://www.gitam.edu/faculty/chanagala-shankar"
+       "collegeUrl":"https://www.gitam.edu/faculty/chanagala-shankar",
+       "mail":"shankar_123987@yahoo.co.in"
     },
     {   Id:"Lurnexa_2544fk18",
       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fk18.jpg",
@@ -90,7 +97,8 @@ const  page = () => {
         "Role": "Domain Editor",
         "Designation/College Name": "Assistant Professor/Vignan's University, Vadlamudi",
        "linkedinUrl": "https://www.linkedin.com/in/manepalli-kumaraswamy-71b310126/?originalSubdomain=in",
-       "collegeUrl":"https://vignan.ac.in/newvignan/departments/deptpeople.php?deptid=sch5_dept1&school=sch5&deptnm=MG"
+       "collegeUrl":"https://vignan.ac.in/newvignan/departments/deptpeople.php?deptid=sch5_dept1&school=sch5&deptnm=MG",
+        "mail":"Ksm_mgt@vignanc.ac.in"
     },
     {
       Id:"Lurnexa_2544fr19",
@@ -100,7 +108,8 @@ const  page = () => {
         "Role": "Assistant Editor",
         "Designation/College Name": "Assistant Professor / Rajagiri Business School",
        "linkedinUrl": "https://www.linkedin.com/in/rintu-anthony-8b2bb124/?originalSubdomain=in",
-       "collegeUrl":"https://www.rajagiribusinessschool.edu.in/faculty-details/rintu-anthony"
+       "collegeUrl":"https://www.rajagiribusinessschool.edu.in/faculty-details/rintu-anthony",
+       "mail":"rintu.anthony0343@gmail.com"
     },
     {   Id:"Lurnexa_2544fs20",
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fs20.jpg",
@@ -109,18 +118,19 @@ const  page = () => {
         "Role": "Editorial Executive",
         "Designation/College Name": "Assistant Professor / Christ University",
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
-       "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx"
+       "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx",
+        "mail":"sarodanie@gmail.com"
     },
-    // {
-    //   Id:"Lurnexa_2544fm14",
-    //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
-    //     "Name": "Dr. Mohammad Munawar Alam Sayyad",
-    //     "Board": "CIMS-Finance Management",
-    //     "Role": "Editorial Executive",
-    //     "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
-    //    "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-    //    "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
-    // }
+    {
+      Id:"Lurnexa_2544fm14",
+      "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
+        "Name": "Dr. Mohammad Munawar Alam Sayyad",
+        "Board": "CIMS-Finance Management",
+        "Role": "Editorial Executive",
+        "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
+       "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
+       "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
+    }
 ]
 const Operation_members = [
   // {

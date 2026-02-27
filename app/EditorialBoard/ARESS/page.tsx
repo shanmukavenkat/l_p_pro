@@ -168,13 +168,13 @@ We welcome studies that offer clear insights, inform public policy, and contribu
           id={member.Id ?? member.Id}
           key ={member.Id ?? member.Id}
            image={member.image ? `${member.image}?${version}` : ''}
-
           name={member.Name}
           role={member.Role}
           Desgination={member['Designation/College Name']}
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
+              // mail={member.mail}
         />
 
       ))}

@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { MdEmail } from "react-icons/md";
 
 interface ProfileCardProps {
   id: number | string;
@@ -11,6 +12,7 @@ interface ProfileCardProps {
   linkedinUrl?: string;
   Desgination: string;
   collegeUrl?: string;
+  mail?: string;
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
@@ -21,7 +23,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   college,
   linkedinUrl,
   Desgination,
-  collegeUrl
+  collegeUrl,
+  mail
 }) => {
   // Prevent router errors by checking if the component is mounted
   const [mounted, setMounted] = useState(false);
@@ -82,7 +85,13 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             <p className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-2" style={{ fontFamily: '"Montserrat", sans-serif' }}>
               {Desgination}
             </p>
-
+            <p
+  className="text-gray-400 text-xs tracking-wide font-medium uppercase mb-2 flex items-center gap-2"
+  style={{ fontFamily: '"Montserrat", sans-serif' }}
+>
+  <MdEmail className="text-blue-500 text-sm" />
+  {mail}
+</p>
             {/* Icons Container */}
             <div className="flex items-center gap-4 mb-2 pointer-events-auto relative z-30">
                 {linkedinUrl && (
