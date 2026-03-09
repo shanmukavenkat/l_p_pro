@@ -100,7 +100,7 @@ const page = () => {
     "Designation/College Name": "Assistant Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
     "collegeUrl": "https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
-       "email":"srikanthyadav444p@gmail.com"
+       "email":"psk@ibsindia.org"
   },
   {
     Id:"Lurnexa_2538c04",
@@ -143,6 +143,7 @@ const page = () => {
       <br />
 
       <p className="text-lg text-gray-700 leading-relaxed">
+       
         The Global Journal for Progressive Innovation & Research was created
         with the intention of providing a reliable academic space where
         meaningful research can be shared and preserved. Each of our four

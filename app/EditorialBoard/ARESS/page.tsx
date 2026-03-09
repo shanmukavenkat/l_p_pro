@@ -24,7 +24,7 @@ const page = () => {
     "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
-    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu"
+    "email":"badri.gopalakrishnan@bc.edu"
   },
   {
     "Id": "Lurnexa_2562a33",

@@ -129,7 +129,7 @@ const All_Editorial_Boards = [
     "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
-    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu"
+    "email":"badri.gopalakrishnan@bc.edu"
   },
   {
     "Id": "Lurnexa_2562a33",
@@ -352,7 +352,7 @@ const All_Editorial_Boards = [
         "Designation/College Name": "Assistant Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
-       "mail":"srikanthyadav444p@gmail.com"
+       "mail":"psk@ibsindia.org"
     },
     {
         Id:"Lurnexa_2544fs13",
@@ -468,7 +468,7 @@ const All_Editorial_Boards = [
    "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" ,
-    "email":"badrinarayanang@gmail.com, gopalakb@bc.edu"
+    "email":"badri.gopalakrishnan@bc.edu"
   },
   // {
   //   Id:"Lurnexa_2544oa22",

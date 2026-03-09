@@ -347,7 +347,7 @@ const All_Editorial_Boards = [
         "Designation/College Name": "Assistant Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
-       "mail":"srikanthyadav444p@gmail.com"
+       "mail":"psk@ibsindia.org"
     },
     {
         Id:"Lurnexa_2544fs13",
@@ -530,7 +530,7 @@ const All_Editorial_Boards = [
     "Designation/College Name": "Assistant Professor / IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
     "collegeUrl": "https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
-       "mail":"srikanthyadav444p@gmail.com"
+       "mail":"psk@ibsindia.org"
   },
   {
     Id:"Lurnexa_2538c04",
