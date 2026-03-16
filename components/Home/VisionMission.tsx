@@ -143,11 +143,7 @@
          <div className="flex flex-col md:flex-row h-full mt-5 gap-6 md:gap-10">
            <div className="md:w-[40%] w-full relative md:top-[10%]">
              <p className="flex items-center text-xl">{description}</p>
-             <span className="flex items-center gap-2 ">
-               <a href="#" target="_blank" className="underline cursor-pointer">
-                 Learn More
-               </a>
-             </span>
+        
            </div>
  
            <div className="relative md:w-[60%] w-full h-[200px] md:h-auto rounded-lg overflow-hidden bg-[#FFF0E6]" >
