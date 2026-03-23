@@ -42,7 +42,7 @@ const page = () => {
     "image": "https://fbsf.wyb.ac.lk/wp-content/uploads/2023/06/Hiranya.jpg",
     "Name": "Hiranya Dissanayake ",
     "Board": "GJPIR",
-    "Role": "Sr.Associate Editor",
+    "Role": "Member",
     "Designation/College Name": " Faculty of Business Studies & Finance Wayamba University of Sri Lanka Kuliyapitiya ",
     "linkedinUrl": "https://www.linkedin.com/in/hiranya-dissanayake-bb835a89",
     "collegeUrl": "https://fbsf.wyb.ac.lk/personnel/mrs-dhsw-dissanayake/",
