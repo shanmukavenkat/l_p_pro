@@ -138,13 +138,23 @@ export default function ArchivePage() {
                 </div>
               </div>
 
-              <div className="mt-12">
+              <div className="mt-12 flex flex-col sm:flex-row gap-6">
                 <Link href="/Archive" className="inline-flex items-center gap-4 text-lg font-bold group/link">
                   Explore this Issue
                   <span className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center group-hover/link:bg-blue-600 group-hover/link:border-blue-600 group-hover/link:text-white transition-all duration-300">
                     <MoveRight className="w-5 h-5" />
                   </span>
                 </Link>
+
+                 {/* 🔥 NEW ARTICLES BUTTON */}
+              <Link href="/articles" className="inline-flex items-center gap-4 text-lg font-bold group/link">
+                Articles
+                <span className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center group-hover/link:bg-blue-600 group-hover/link:border-blue-600 group-hover/link:text-white transition-all duration-300">
+                  <MoveRight className="w-5 h-5" />
+                </span>
+              </Link>
+
+
               </div>
             </div>
           </div>

@@ -19,7 +19,7 @@ const menuItems = [
     link: "/publications",
   },
   { label: "Text Books", ariaLabel: "Explore our text books", link: "/textbooks" },
-  { label: "Articles", ariaLabel: "Browse our articles", link: "/Articles" },
+  // { label: "Articles", ariaLabel: "Browse our articles", link: "/Articles" },
   // {
   //   label: "Join Editorial Board",
   //   ariaLabel: "Apply to join the editorial board",
