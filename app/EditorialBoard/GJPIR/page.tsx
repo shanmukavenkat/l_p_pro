@@ -37,17 +37,7 @@ const page = () => {
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
     "email":"badrinarayanang@gmail.com" 
   },
-  {
-    Id:"Lurnexa_2544oa22",
-    "image": "https://fbsf.wyb.ac.lk/wp-content/uploads/2023/06/Hiranya.jpg",
-    "Name": "Hiranya Dissanayake ",
-    "Board": "GJPIR",
-    "Role": "Member",
-    "Designation/College Name": " Faculty of Business Studies & Finance Wayamba University of Sri Lanka Kuliyapitiya ",
-    "linkedinUrl": "https://www.linkedin.com/in/hiranya-dissanayake-bb835a89",
-    "collegeUrl": "https://fbsf.wyb.ac.lk/personnel/mrs-dhsw-dissanayake/",
-    "email":"hiranya@wyb.ac.lk " 
-},
+  
   {
     Id:"Lurnexa_2562a33",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2562a33.jpg",
@@ -123,7 +113,17 @@ const page = () => {
    "Designation/College Name": " M.Tech, Ph.D, Associate Professor/vvit Guntur",
     "linkedinUrl": "",
     "collegeUrl": "https://www.vvitguntur.com/chnsk-profile"
-  }
+  },{
+    Id:"Lurnexa_2544oa22",
+    "image": "https://fbsf.wyb.ac.lk/wp-content/uploads/2023/06/Hiranya.jpg",
+    "Name": "Hiranya Dissanayake ",
+    "Board": "GJPIR",
+    "Role": "Member",
+    "Designation/College Name": " Faculty of Business Studies & Finance Wayamba University of Sri Lanka Kuliyapitiya ",
+    "linkedinUrl": "https://www.linkedin.com/in/hiranya-dissanayake-bb835a89",
+    "collegeUrl": "https://fbsf.wyb.ac.lk/personnel/mrs-dhsw-dissanayake/",
+    "email":"hiranya@wyb.ac.lk " 
+}
 
 ]
   return (
