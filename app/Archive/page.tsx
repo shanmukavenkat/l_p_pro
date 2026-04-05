@@ -119,11 +119,11 @@ export default function ArchivePage() {
                     Issue 01 / 2026
                   </span>
                   <span className="h-px w-12 bg-slate-300" />
-                  <span className="text-xs font-bold text-blue-600 uppercase">Proposed Inaugural Issue</span>
+                  {/* <span className="text-xs font-bold text-blue-600 uppercase">Proposed Inaugural Issue</span> */}
                 </div>
 
                 <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-[1.1] group-hover:translate-x-2 transition-transform duration-500">
-                    June 2026 <br/> Edition
+                    April 2026 <br/> Edition
                 </h3>
 
                 <div className="grid grid-cols-2 gap-8 mt-12 border-t border-slate-200 pt-8">
@@ -133,7 +133,7 @@ export default function ArchivePage() {
                   </div>
                   <div>
                     <p className="text-[10px] font-black uppercase text-slate-400 mb-2 tracking-widest">Mode</p>
-                    <p className="font-medium text-slate-900">Print and online </p>
+                    <p className="font-medium text-slate-900"> Online </p>
                   </div>
                 </div>
               </div>
@@ -147,14 +147,6 @@ export default function ArchivePage() {
                 </Link>
 
                  {/* 🔥 NEW ARTICLES BUTTON */}
-              <Link href="/articles" className="inline-flex items-center gap-4 text-lg font-bold group/link">
-                Articles
-                <span className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center group-hover/link:bg-blue-600 group-hover/link:border-blue-600 group-hover/link:text-white transition-all duration-300">
-                  <MoveRight className="w-5 h-5" />
-                </span>
-              </Link>
-
-
               </div>
             </div>
           </div>
