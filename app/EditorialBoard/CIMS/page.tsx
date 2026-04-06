@@ -49,7 +49,7 @@ const  page = () => {
        "mail":"susanta65@gmail.com"
     },
     {  Id:"Lurnexa_2544fm21",
-       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
+       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
         "Name": "Dr.Muhammed Shafi M K",
         "Board": "CIMS-Finance Management",
         "Role": "Associate Editor",
