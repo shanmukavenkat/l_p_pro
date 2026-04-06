@@ -138,7 +138,7 @@ export default function ProfessionalExplore() {
     setFilteredArticles(result);
   }, [searchTerm, activeFilter]);
 
-  const categories = ['All', 'Finance', 'Technology', 'Environment'];
+  const categories = ['All', 'ARESS', 'CIMS', 'IAEES'];
 
   return (
     <div className="relative min-h-screen bg-white">
