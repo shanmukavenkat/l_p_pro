@@ -138,7 +138,7 @@ export default function ProfessionalExplore() {
     setFilteredArticles(result);
   }, [searchTerm, activeFilter]);
 
-  const categories = ['All', 'ARESS', 'CIMS', 'IAEES'];
+  const categories = ['All', 'ARESS', 'CIMS', 'IAEES','AICET'];
 
   return (
     <div className="relative min-h-screen bg-white">
