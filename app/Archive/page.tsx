@@ -139,8 +139,10 @@ export default function ArchivePage() {
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-6">
-                <Link href="/Archive" className="inline-flex items-center gap-4 text-lg font-bold group/link">
+                <Link href="/Articles" className="inline-flex items-center gap-4 text-lg font-bold group/link">
+                <button className="px-6 py-3 bg-blue-600 text-white rounded-full border border-blue-600 group-hover/link:bg-blue-700 group-hover/link:border-blue-700 transition-all duration-300">
                   Explore this Issue
+                  </button>
                   <span className="w-12 h-12 rounded-full border border-slate-300 flex items-center justify-center group-hover/link:bg-blue-600 group-hover/link:border-blue-600 group-hover/link:text-white transition-all duration-300">
                     <MoveRight className="w-5 h-5" />
                   </span>

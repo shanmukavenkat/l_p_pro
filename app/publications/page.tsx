@@ -22,7 +22,7 @@ export default function PublicationsPage() {
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-[0.6] flex justify-center">
               <img
-                src="/Gjpir.png"
+                src="/gjpir1.png"
                 alt="GJPIR Cover"
                 className="w-[520px] h-[500px] object-contain rounded-lg shadow-md border bg-white p-2"
               />

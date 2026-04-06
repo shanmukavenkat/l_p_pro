@@ -48,16 +48,16 @@ const  page = () => {
        "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in",
        "mail":"susanta65@gmail.com"
     },
-    // {  Id:"Lurnexa_2544fm21",
-    //    "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
-    //     "Name": "Dr.Muhammed Shafi M K",
-    //     "Board": "CIMS-Finance Management",
-    //     "Role": "Associate Editor",
-    //     "Designation/College Name": "Assistant Professor/ NIT Warangal",
-    //     "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
-    //    "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk",
-    //    "mail":"shafimk@nitw.ac.in"
-    // },
+    {  Id:"Lurnexa_2544fm21",
+       "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm21.jpg",
+        "Name": "Dr.Muhammed Shafi M K",
+        "Board": "CIMS-Finance Management",
+        "Role": "Associate Editor",
+        "Designation/College Name": "Assistant Professor/ NIT Warangal",
+        "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
+       "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk",
+       "mail":"shafimk@nitw.ac.in"
+    },
     {    Id:"Lurnexa_2544fm15",
       "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm15.jpg",
         "Name": "Dr. Manisha Kumari",
@@ -121,16 +121,16 @@ const  page = () => {
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx",
         "mail":"sarodanie@gmail.com"
     },
-    // {
-    //   Id:"Lurnexa_2544fm14",
-    //   "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fm14.jpg",
-    //     "Name": "Dr. Mohammad Munawar Alam Sayyad",
-    //     "Board": "CIMS-Finance Management",
-    //     "Role": "Editorial Executive",
-    //     "Designation/College Name": "Assistant Professor/ IBS Hyderabad",
-    //    "linkedinUrl": "https://www.linkedin.com/in/munawar-alam-sayyad-a6304a107/?originalSubdomain=ae",
-    //    "collegeUrl":"https://www.ifheindia.org/FacultyImages/i0XM4hGH94EmMaWOLIWwcQMBXqQpOjoItCxNEp1h9ostR2fIEU57B5Bwau4AVg.pdf"
-    // }
+    {
+      Id:"Lurnexa_2544fm14",
+      "image":"../editorial-images/madam.jpeg",
+        "Name": "Dr. Sofia Ahmed Sait",
+        "Board": "CIMS-Finance Management",
+        "Role": "Editorial Executive",
+        "Designation/College Name": "Assistant Professor/Loyola Academy Degree & PG College, Secunderabad ",
+       "linkedinUrl": "https://www.linkedin.com/in/dr-sofia-sait-4a841626b",
+       "collegeUrl":"https://loyolaacademy.edu.in/bcom-business-analytics/"
+    }
 ]
 const Operation_members = [
   // {
