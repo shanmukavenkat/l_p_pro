@@ -14,7 +14,6 @@ const allArticles = [
     title: 'CLIMATE FINANCE AND GREEN TRADE TRANSITIONS: EU CARBON BORDER ADJUSTMENT MECHANISM, GREEN BOND MARKETS, AND CLIMATE RISK IN BANK LENDING PORTFOLIOS',
     description: 'An analysis of EU Carbon Border Adjustment Mechanism, green bond markets, and climate risk management in banking.',
     author: 'Dr. Sofia Ahmed Sait',
-
     pages: '1-19 Pages',
     pdfUrl: '../htm/climate_paper.html',    // Used for the Viewer
     downloadUrl: '/climate_paper.pdf' // Used for the Download Button
@@ -301,7 +300,7 @@ function ArticleCard({ article, onRead }: { article: any, onRead: () => void }) 
 
         <div className="mt-6 space-y-0.5">
           <div className="border-b border-slate-100 pb-1 flex items-center justify-between">
-            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Section:</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Sub Division Journal:</span>
             <span className="text-[10px] font-bold text-slate-600 truncate max-w-[150px]">{article.subJournal}</span>
           </div>
           <div className="border-b border-slate-100 py-1.5 flex items-center justify-between">
