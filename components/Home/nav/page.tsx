@@ -26,9 +26,9 @@ const menuItems = [
   //   link: "/",
   // },
   { label: "Contact", ariaLabel: "Get in touch with us", link: "/contact" },
-   {label:"Editorial Login " ,
-    ariaLabel:"editorial Login ",
-    link:"/EditoralLogins"},
+  //  {label:"Editorial Login " ,
+  //   ariaLabel:"editorial Login ",
+  //   link:"/EditoralLogins"},
   { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/signup" },
  
 ];
