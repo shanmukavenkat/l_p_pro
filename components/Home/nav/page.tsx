@@ -85,7 +85,6 @@ export default function NavigationPage({ showLogoName = false, logoName = "" }: 
         menuButtonColor="#000"
         openMenuButtonColor="#000"
         changeMenuColorOnOpen={true}
-        colors={["#B19EEF", "#5227FF"]}
         logoUrl="/Logo.png"
         accentColor="#ff6b6b"
         isFixed={false}

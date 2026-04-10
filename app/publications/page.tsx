@@ -1,6 +1,6 @@
 "use client";
 
-import NavigationPage from "@/components/Home/nav/page";
+import NavigationPage from "@/components/Home/Navigation_Gjpir";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
 
@@ -150,7 +150,7 @@ export default function PublicationsPage() {
         </div>
         
         {/* ==== BUTTONS ==== */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+        {/* <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
           <Link href="/publications/explore" className="w-full sm:w-auto">
             <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition">
               Explore Journals
@@ -172,7 +172,7 @@ export default function PublicationsPage() {
               Archive
             </button>
           </Link>
-        </div>
+        </div> */}
       </section>
 
       <FooterSection />
