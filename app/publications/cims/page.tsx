@@ -1,5 +1,5 @@
 "use client";
-import NavigationPage from "@/components/Home/nav/page";
+import NavigationPage from "@/components/Home/Navigation_SubJournals";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ export default function CIMSPage() {
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-[0.6] flex justify-center">
-              <img src="/Cimms.png" alt="CIMS Cover" className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border"/>
+              <img src="/Cimss4.png" alt="CIMS Cover" className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border"/>
             </div>
 
             <div className="flex-[1.5] bg-white p-6 md:p-8 rounded-xl shadow-inner border max-h-[550px] overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">

@@ -1,5 +1,5 @@
 "use client";
-import NavigationPage from "@/components/Home/nav/page";
+import NavigationPage from "@/components/Home/Navigation_SubJournals";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export default function ACIETPage() {
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-[0.6] flex justify-center">
-              <Image src="/Aciet.png" alt="Journal cover for Advanced Computational Intelligence & Emerging Technologies, ACIET. The cover features an abstract design with interconnected lines and glowing nodes set against a dark background, conveying themes of advanced technology and digital networks."
+              <Image src="/Aciet2.png" alt="Journal cover for Advanced Computational Intelligence & Emerging Technologies, ACIET. The cover features an abstract design with interconnected lines and glowing nodes set against a dark background, conveying themes of advanced technology and digital networks."
           width={300}
           height={400}
           className="object-cover rounded-lg shadow-xl border"

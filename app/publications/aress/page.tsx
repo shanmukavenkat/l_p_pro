@@ -1,5 +1,5 @@
 "use client";
-import NavigationPage from "@/components/Home/nav/page";
+import NavigationPage from "@/components/Home/Navigation_SubJournals";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +22,7 @@ export default function ARESSPage() {
             {/* Left Image */}
             <div className="flex-[0.6] flex justify-center">
               <Image
-                src="/Aress.png"
+                src="/Aress5.png"
                 alt="ARESS Cover"
                 width={240}
                 height={320}

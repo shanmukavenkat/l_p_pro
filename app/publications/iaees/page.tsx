@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import NavigationPage from "@/components/Home/nav/page";
+import NavigationPage from "@/components/Home/Navigation_SubJournals";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
 
@@ -15,13 +15,15 @@ export default function IAEESPage() {
           </h1>
           <p className="text-center text-lg text-gray-600 italic mb-12">
             “Empowering Innovation in Electrical and Electronic Frontiers”
+             <br />
+            ISSN:
           </p>
 
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Left Image */}
             <div className="flex-[0.6] flex justify-center">
               <img
-                src="/iaees.png"
+                src="/Iaees3.png"
                 alt="IAEES Cover"
                 className="w-[240px] h-[320px] object-cover rounded-lg shadow-md border border-gray-200"
               />
