@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'; // Added these
 import FooterSection from '@/components/Home/FooterSection'
-import NavigationPage from '@/components/Home/nav/page'
+import NavigationPage from '@/components/Home/Navigation_SubJournals_IAEES' // Assuming NavigationPage component path
 import ProfileCard from '@/components/Home/ProfileCard'
 
 const Page = () => {

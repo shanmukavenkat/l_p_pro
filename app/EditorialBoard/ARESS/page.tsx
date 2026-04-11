@@ -1,7 +1,7 @@
 "use client";
 
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
-import NavigationPage from '@/components/Home/nav/page'
+import NavigationPage from '@/components/Home/Navigation_SubJournals_ACIET' // Assuming NavigationPage component path
 import ProfileCard from '@/components/Home/ProfileCard'
 import { useEffect, useState } from 'react'; // Added these
 

@@ -3,7 +3,7 @@
 import FooterSection from '@/components/Home/FooterSection' // Assuming FooterSection component path
 import { useState ,useEffect} from 'react';
 import ProfileCard from '@/components/Home/ProfileCard'
-import NavigationPage from '@/components/Home/nav/page';
+import NavigationPage from '@/components/Home/Navigation_SubJournals_CIMS' // Assuming NavigationPage component path;
 
 const  page = () => {
     // 1. Create a dynamic version state
