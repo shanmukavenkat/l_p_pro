@@ -13,7 +13,7 @@ const SECTION_IDS = [
   
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
-  { label: "CIMS Editorial Board", ariaLabel: "Board Members", link: "/EditorialBoard/CIMS" },
+  // { label: "ACIET Editorial Board", ariaLabel: "Board Members", link: "/EditorialBoard/ACIET" },
   { 
     label: 'Policies', 
     link: '#', 
@@ -53,7 +53,7 @@ const menuItems = [
   // {label:"Archives" ,ariaLabel:"Archives" , link:"/Archive",},
   {label:"Editorial Login " ,ariaLabel:"editorial Login " , link:"/EditoralLogins"},
   // {label:"Sub Division Journals" ,ariaLabel:"Sub Division Journals" , link:"/publications/explore",},
-  // { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/signup" },
+  { label: "Login / Sign up", ariaLabel: "Access your account or sign up", link: "/signup" },
 ];
 
 export default function NavigationPage({ showLogoName = false, logoName = "" }: { showLogoName?: boolean; logoName?: string }) {

@@ -1,6 +1,6 @@
 "use client";
 
-import NavigationPage from "@/components/Home/Navigation_SubJournals";
+import NavigationPage from "@/components/Home/Navigation_SubJournals_Explore";
 import FooterSection from "@/components/Home/FooterSection";
 import Link from "next/link";
 
