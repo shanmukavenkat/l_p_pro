@@ -4,7 +4,7 @@ export function LeadershipSection() {
   const testimonials = [
     {
       quote:
-         `Lurnexa Publications was founded with a commitment to create knowledge that empowers, enlightens, and encourages inquiry. What began as a publishing vision has grown into a platform dedicated to promoting research-oriented learning and nurturing a culture of critical thinking.
+        `Lurnexa Publications was founded with a commitment to create knowledge that empowers, enlightens, and encourages inquiry. What began as a publishing vision has grown into a platform dedicated to promoting research-oriented learning and nurturing a culture of critical thinking.
 
 We believe education should spark curiosity, inspire questions, and guide learners toward deeper understanding. Every book, journal, and academic resource we publish reflects this belief—built on analytical insight, evidence-based content, and real-world relevance.
 
@@ -19,7 +19,8 @@ Thank you for being part of the Lurnexa journey. Together, let us build a future
       `,
       name: "Narendra Kumar Kurakula",
       designation: "Founder & Director — Lurnexa Publications",
-      src: ""
+      src: "/founder.jpeg",
+
     },
     {
       quote:
@@ -36,9 +37,9 @@ Together, we are not just upholding a vision.
 We are driving it forward`,
       name: "Rushik Burla",
       designation: "Chief Executive Officer — Lurnexa Publications",
-      src: ""
+      src: "/ceo.jpg",
 
     },
   ];
-  return <AnimatedTestimonials testimonials={testimonials} autoplay={true}  />;
+  return <AnimatedTestimonials testimonials={testimonials} autoplay={true} />;
 }

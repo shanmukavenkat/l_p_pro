@@ -3,15 +3,13 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Upcoming from "@/components/Textbooks/Upcoming";
-import EditorialDetails from "@/components/Textbooks/EditorialDetails";
-import Manuscript from "@/components/Textbooks/Manuscript";
+import PublishedBooks from "@/components/Textbooks/PublishedBooks";
 import { motion, AnimatePresence } from "framer-motion";
 
 /* 🔥 Tab Config */
 const TABS = [
-  { key: "upcoming", label: "Upcoming", component: Upcoming, activeClass: "bg-slate-900 text-white" },
-  { key: "editorial", label: "Editorial Details", component: EditorialDetails, activeClass: "bg-white border text-slate-900" },
-  { key: "manuscript", label: "Manuscript", component: Manuscript, activeClass: "bg-indigo-600 text-white" },
+  { key: "upcoming", label: "Upcoming Books", component: Upcoming, activeClass: "bg-slate-900 text-white" },
+  { key: "published", label: "Published Books", component: PublishedBooks, activeClass: "bg-orange-600 text-white" },
 ];
 
 export default function TextbooksClient() {

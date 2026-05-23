@@ -3,103 +3,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, FileText, ArrowUpRight, Sparkles, ChevronRight, X, Filter, Check, Download, ArrowLeft } from 'lucide-react';
 import NavigationPage from '@/components/Home/nav/page';
-
-// 1. Updated Data Structure: pdfUrl for viewing (.html), downloadUrl for saving (.pdf)
-const allArticles = [
-  {
-    id: '1',
-    category: 'ARESS',
-     subJournal: 'ARESS',
-    journal: 'GJPIR',
-    title: 'CLIMATE FINANCE AND GREEN TRADE TRANSITIONS: EU CARBON BORDER ADJUSTMENT MECHANISM, GREEN BOND MARKETS, AND CLIMATE RISK IN BANK LENDING PORTFOLIOS',
-    description: 'An analysis of EU Carbon Border Adjustment Mechanism, green bond markets, and climate risk management in banking.',
-    author: 'Dr. Sofia Ahmed Sait',
-    pages: '1-19 Pages',
-    pdfUrl: '../htm/climate_paper.html',    // Used for the Viewer
-    downloadUrl: '/climate_paper.pdf' // Used for the Download Button
-  },
-  {
-    id: '2',
-    category: 'CIMS',
-    journal: 'GJPIR',
-    subJournal: 'CIMS',
-    title: 'Bridging the Protection Gap: A Systematic Analysis of Social Security Deficits in the Gig Economy and Organisational–Governmental Pathways Toward Inclusive Platform Work',
-    description: 'Bridging the Protection Gap: A Systematic Analysis of Social Security Deficits in the Gig Economy and Organisational–Governmental Pathways Toward Inclusive Platform Work',
-    author: 'Dr. Sofia Ahmed Sait',
-    pages: '20-44 Pages',
-    pdfUrl: '../htm/Gig_Economy_Social_Security_Research_Paper.html',
-    downloadUrl: '../pdfs/Gig_Economy_Social_Security_Research_Paper.pdf'
-  },
-  {
-    id: '3',
-    category: 'IAEES',
-    journal: 'GJPIR',
-    subJournal: 'IAEES',
-    title: 'A Framework for Smart Retailing and NFC Mobile Payment Services',
-    description: 'A Framework for Smart Retailing and NFC Mobile Payment Services',
-    author: 'Dr. Bijeta Shaw',
-    pages: '45-55 Pages',
-    pdfUrl: '../htm/Internet of things & NFC.html',
-    downloadUrl: '../pdfs/Internet of things & NFC.pdf'
-  },
-   {
-    id: '4',
-    category: 'ARESS',
-    journal: 'GJPIR',
-    subJournal: 'ARESS',
-    title: 'External Blockholder Concentration and Real Earnings Management in India: Re-evaluating the Private Benefit Hypothesis in Group-Affiliated Firms',
-    description: 'External Blockholder Concentration and Real Earnings Management in India: Re-evaluating the Private Benefit Hypothesis in Group-Affiliated Firms',
-    author: 'Srikanth Potharla',
-    pages: '56-78 Pages',
-    pdfUrl: '../htm/PBH&REM_Manuscript_updated_11.12.2025.html',
-    downloadUrl: '../pdfs/PBH&REM_Manuscript_updated_11.12.2025.pdf'
-  },{
-    id: '5',
-    category: 'CIMS',
-    journal: 'GJPIR',
-    subJournal: 'CIMS',
-    title: 'PHYGITAL CONSUMER ENGAGEMENT: INTEGRATING PHYSICAL AND DIGITAL REALITIES IN MODERN MARKETING STRATEGY',
-    description: 'PHYGITAL CONSUMER ENGAGEMENT: INTEGRATING PHYSICAL AND DIGITAL REALITIES IN MODERN MARKETING STRATEGY',
-    author: 'Dr. Sofia Ahmed Sait',
-    pages: '79-97 Pages',
-    pdfUrl: '../htm/Phygital Omnichannel.html',
-    downloadUrl: '../pdfs/Phygital Omnichannel.pdf'
-  },{
-    id: '6',
-    category: 'ARESS',
-    journal: 'GJPIR',
-    subJournal: 'ARESS',
-    title: 'The Impact of Digital Financial Literacy on Financial Behavior among Generation Z in Sri Lanka',
-    description: 'The Impact of Digital Financial Literacy on Financial Behavior among Generation Z in Sri Lanka',
-    author: 'Shanika Wijerathne, Hiranya Dissanayake',
-    pages: '98-111 Pages',
-    pdfUrl: '../htm/The Impact of Digital Financial Literacy on Financial Behavior among Generation Z in Sri Lanka.html',
-    downloadUrl: '../pdfs/The Impact of Digital Financial Literacy on Financial Behavior among Generation Z in Sri Lanka.pdf'
-  },
-    {
-    id: '7',
-    category: 'CIMS',
-    journal: 'GJPIR',
-    subJournal: 'CIMS',
-    title: 'US TARIFF WARS AND GLOBAL TRADE FRAGMENTATION:EMERGING MARKET EXPORT IMPACTS, SUPPLY CHAIN RELOCATION, AND TRADE DIVERSION EFFECTS IN INDIA, VIETNAM, AND BANGLADESH',
-    description: 'US TARIFF WARS AND GLOBAL TRADE FRAGMENTATION: EMERGING MARKET EXPORT IMPACTS, SUPPLY CHAIN RELOCATION, AND TRADE DIVERSION EFFECTS IN INDIA, VIETNAM, AND BANGLADESH',
-    author: 'Dr. Sofia Ahmed Sait',
-    pages: '112-135 Pages',
-    pdfUrl: '../htm/US_Tariff_Wars_Global_Trade_Fragmentation_Q1_Paper.html',
-    downloadUrl: '../pdfs/US_Tariff_Wars_Global_Trade_Fragmentation_Q1_Paper.pdf'
-
-
-
-
-    }
-];
+import { allArticles, slugify } from '@/lib/data/articles';
+import Link from 'next/link';
 
 export default function ProfessionalExplore() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeFilter, setActiveFilter] = useState('All');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filteredArticles, setFilteredArticles] = useState(allArticles);
-  const [selectedPdf, setSelectedPdf] = useState<any>(null);
   
   const searchInputRef = useRef<HTMLInputElement>(null);
   const filterRef = useRef<HTMLDivElement>(null);
@@ -120,7 +31,6 @@ export default function ProfessionalExplore() {
         e.preventDefault();
         searchInputRef.current?.focus();
       }
-      if (e.key === 'Escape') setSelectedPdf(null);
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
@@ -143,61 +53,6 @@ export default function ProfessionalExplore() {
   return (
     <div className="relative min-h-screen bg-white">
       <NavigationPage />
-
-      {/* --- FULL SCREEN VIEW MODAL --- */}
-      {selectedPdf && (
-        <div className="fixed inset-0 z-[100] bg-white flex flex-col animate-in fade-in duration-300">
-          {/* Top Header Bar */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white">
-            <div className="flex items-center gap-4">
-              <button 
-                onClick={() => setSelectedPdf(null)} 
-                className="p-2 hover:bg-slate-100 rounded-full transition-colors text-slate-600"
-              >
-                <ArrowLeft size={20} />
-              </button>
-              <div className="max-w-[200px] md:max-w-md">
-                <h3 className="text-sm font-bold text-slate-900 truncate">{selectedPdf.title}</h3>
-                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">{selectedPdf.journal} • {selectedPdf.pages}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <a 
-                href={selectedPdf.downloadUrl} 
-                download={`${selectedPdf.title.substring(0, 20)}.pdf`}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-xl text-xs font-bold hover:bg-orange-600 transition-all shadow-lg shadow-orange-100"
-              >
-                <Download size={16} /> <span className="hidden sm:inline">Download PDF</span>
-              </a>
-              <button onClick={() => setSelectedPdf(null)} className="p-2 text-slate-400 hover:text-slate-900 transition-colors">
-                <X size={24} />
-              </button>
-            </div>
-          </div>
-
-          {/* Content Area - No Overlays here */}
-          <div className="flex-grow w-full bg-slate-50 overflow-hidden">
-            <div className="w-full h-full max-w-7xl mx-auto md:p-4">
-              <div className="w-full h-full bg-white shadow-2xl overflow-hidden md:rounded-t-2xl">
-                <object
-                  data={selectedPdf.pdfUrl}
-                  type="text/html"
-                  className="w-full h-full border-none"
-                >
-                  <div className="flex flex-col items-center justify-center h-full text-slate-500 p-10 text-center">
-                    <FileText size={48} className="mb-4 text-slate-300" />
-                    <p className="text-lg font-bold">Unable to load preview</p>
-                    <a href={selectedPdf.downloadUrl} className="mt-4 px-6 py-2 bg-orange-500 text-white rounded-lg">Download PDF</a>
-                  </div>
-                </object>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Decorative Background */}
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
@@ -258,10 +113,9 @@ export default function ProfessionalExplore() {
         {/* Results Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredArticles.map((article) => (
-            <ArticleCard 
+              <ArticleCard 
               key={article.id} 
               article={article} 
-              onRead={() => setSelectedPdf(article)} 
             />
           ))}
         </div>
@@ -270,7 +124,7 @@ export default function ProfessionalExplore() {
   );
 }
 
-function ArticleCard({ article, onRead }: { article: any, onRead: () => void }) {
+function ArticleCard({ article }: { article: any }) {
   return (
     <div className="group relative">
       <div className="absolute -inset-1 bg-gradient-to-br from-orange-500/5 to-transparent rounded-[24px] opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
@@ -309,12 +163,12 @@ function ArticleCard({ article, onRead }: { article: any, onRead: () => void }) 
           </div>
         </div>
 
-        <button 
-          onClick={onRead}
-          className="w-full mt-6 py-3 rounded-xl bg-slate-950 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all hover:bg-orange-600 active:scale-95 shadow-md"
+        <Link 
+          href={`/Articles/${slugify(article.title)}`}
+          className="w-full mt-6 py-3 rounded-xl bg-slate-950 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all hover:bg-orange-600 shadow-md"
         >
           View Full Publication <ChevronRight size={14} />
-        </button>
+        </Link>
       </div>
     </div>
   );

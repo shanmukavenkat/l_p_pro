@@ -14,9 +14,9 @@ const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About Us", ariaLabel: "Learn about us", link: "/aboutus" },
   {
-    label: "Publications",
-    ariaLabel: "View our publications",
-    link: "/publications",
+    label: "Journal",
+    ariaLabel: "View our journal",
+    link: "/journal",
   },
   { label: "Text Books", ariaLabel: "Explore our text books", link: "/textbooks" },
   // { label: "Articles", ariaLabel: "Browse our articles", link: "/Articles" },

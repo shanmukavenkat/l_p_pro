@@ -33,7 +33,7 @@ export default function HeroSection() {
            
             <button className="rounded-full bg-blue-600 px-8 py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-700 hover:shadow-blue-500/50">
             <Link
-            href="/publications">
+            href="/journal">
               Explore Journals
               </Link>
             </button>

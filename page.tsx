@@ -129,7 +129,7 @@ const All_Editorial_Boards = [
     "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html",
-    "email":"badri.gopalakrishnan@bc.edu"
+    "email":"gopalakb@bc.edu"
   },
   {
     "Id": "Lurnexa_2562a33",
@@ -466,9 +466,10 @@ const All_Editorial_Boards = [
     "Board": "GJPIR",
     "Role": " Co - Editor-in-Chief",
    "Designation/College Name": "Fellow, NITI Aayog, Government of India / Boston College",
+   "Department": "Economics",
     "linkedinUrl": "https://www.linkedin.com/in/badrinarayanang/",
     "collegeUrl": "https://www.bc.edu/bc-web/schools/wcas/about/faculty-research/faculty-directory-folder/badri-narayanan-gopalakrishnan.html" ,
-    "email":"badri.gopalakrishnan@bc.edu"
+    "email":"gopalakb@bc.edu"
   },
   // {
   //   Id:"Lurnexa_2544oa22",

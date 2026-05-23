@@ -21,6 +21,7 @@ const page = () => {
     "Name": "Dr. Anand Shukla",
     "Board": "ACIET",
     "Role": "Sub Division-Editor in Chief",
+    "Department": "School of Computer Applications",
     "Designation/College Name": "Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-anand-shukla-59342838/",
     "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=32898",
@@ -32,6 +33,7 @@ const page = () => {
     "Name": "Dr. Chandrashekar Jatoth",
     "Board": "ACIET",
     "Role": "Deputy Editor in Chief",
+    "Department": "Department of Information Technology",
     "Designation/College Name": "Assistant Professor / National Institute of Technology, Raipur",
     "linkedinUrl": "",
     "collegeUrl": "https://nitrr.ac.in/viewdetails.php?q=it.jchandrashekar",
@@ -43,6 +45,7 @@ const page = () => {
     "Name": "Dr. Easwar Krishna Iyer",
     "Board": "ACIET",
     "Role": "Sr Associate Editor",
+    "Department": "Department of Management Studies",
     "Designation/College Name": "Director / Indus Business Academy (IBA), Bengaluru",
     "linkedinUrl": "https://www.linkedin.com/in/dr-easwar-krishna-iyer/",
     "collegeUrl": "https://iba.ac.in/about-iba/director-message",
@@ -54,6 +57,7 @@ const page = () => {
     "Name": "Dr. Chinmaya Kumar Swain",
     "Board": "ACIET",
     "Role": "Associate Editor",
+    "Department": "IT Systems & Analytics",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/dr-chinmaya-kumar-swain-77b358128/",
     "collegeUrl": "https://iimj.ac.in/faculty-datae8d3.php?n=MTI0",
@@ -65,6 +69,7 @@ const page = () => {
     "Name": "Dr. Rishi Chopra",
     "Board": "ACIET",
     "Role": "Managing Editor",
+    "Department": "School of Computer Applications",
     "Designation/College Name": "Associate Professor & Asst. Dean / Lovely Professional University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-rishi-chopra-5b3260247/",
     "collegeUrl": "https://www.lpu.in/faculty/staff-profile.php?EmpCode=11111",
@@ -76,6 +81,7 @@ const page = () => {
     "Name": "Dr. T.V. Rajini Kanth",
     "Board": "ACIET",
     "Role": "Associate Managing Editor",
+    "Department": "Department of Computer Science and Engineering",
     "Designation/College Name": "Professor & Convener RDC / MGIT Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/dr-rajini-kanth-t-v-22384724/",
     "collegeUrl": "https://mgit.ac.in/wp-content/uploads/2025/01/Dr.-TV-Rajini-Kanth.pdf",
@@ -87,6 +93,7 @@ const page = () => {
     "Name": "Dr. Shaik Mahaboob Basha",
     "Board": "ACIET",
     "Role": "Sr Review Editor",
+    "Department": "Department of Computer Science and Engineering",
     "Designation/College Name": "Professor & Head of Department (CSE) / Sree Dattha Institute of Engineering and Science, Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/dr-mahaboob-4a086657/",
     "collegeUrl": "https://www.sreedattha.ac.in/sdes/departments/computer-science-engineering/about-cse-department/faculty-members",
@@ -98,6 +105,7 @@ const page = () => {
     "Name": "Dr. Uma Rani Vanamala",
     "Board": "ACIET",
     "Role": "Review Editor",
+    "Department": "Department of Information Technology",
     "Designation/College Name": "Head of the Department, IT / Jawaharlal Nehru Technological University Hyderabad (JNTUH)",
     "linkedinUrl": "https://www.linkedin.com/in/dr-uma-rani-vanamala-87053620b/",
     "collegeUrl": "https://jntuhceh.ac.in/faculty_portal/uploads/resumes/uma_rani_profile.pdf",
@@ -109,6 +117,7 @@ const page = () => {
     "Name": "Dr. Balaji Halavath",
     "Board": "ACIET",
     "Role": "Domain Editor",
+    "Department": "Department of Computer Science and Engineering",
     "Designation/College Name": "Professor, CSE Department / Sreenidhi Institute of Science & Technology, Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/balaji-halavath-065268297/",
     "collegeUrl": "https://sreenidhi.edu.in/departments-faculty/dr-halavath-balaji-ph-d/",
@@ -120,6 +129,7 @@ const page = () => {
     "Name": "Dr. Kranthi Kumar Singamaneni",
     "Board": "ACIET",
     "Role": "Editorial Executive",
+    "Department": "Department of Computer Science and Engineering",
     "Designation/College Name": "Associate Professor & In-Charge / Symbiosis Institute of Technology, Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/dr-kranthi-kumar-singamaneni-smieee-761540168/",
     "collegeUrl": "https://sithyd.edu.in/faculty/dr-kranthi-kumar-singamaneni",
@@ -151,7 +161,7 @@ Our goal is to ensure that every published study adds meaningful value to the sc
     </div>
   </div>
 </section>
-
+ 
   <section className="py-10 px-6 ">
    <div className=" flex-1 text-start lg:text-left space-y-2">
       {/* Centered title */}
@@ -175,6 +185,7 @@ Our goal is to ensure that every published study adds meaningful value to the sc
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
             mail={member.email}
+            department={member.Department}
         />
 
       ))}

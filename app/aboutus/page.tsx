@@ -1,6 +1,17 @@
 import { ShieldCheck, BookOpen, Scale, Users, CheckCircle, Quote, Globe, Microscope, ScrollText } from "lucide-react";
 import FooterSection from "@/components/Home/FooterSection";
 import NavigationPage from "@/components/Home/nav/page";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Lurnexa Publications",
+  description: "Learn about Lurnexa Publications' academic philosophy, foundational values, and commitment to scholarly rigor and ethical publishing.",
+  openGraph: {
+    title: "About Us | Lurnexa Publications",
+    description: "Our commitment to academic excellence and scholarly integrity.",
+    url: "https://lurnexa.in/aboutus",
+  },
+};
 
 export default function AboutUsPage() {
   return (

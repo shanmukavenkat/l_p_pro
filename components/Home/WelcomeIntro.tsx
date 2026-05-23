@@ -8,10 +8,10 @@ export default function WelcomeIntro() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const played = sessionStorage.getItem("introPlayed");
+    const played = localStorage.getItem("introPlayed");
     if (!played) {
       setShow(true);
-      sessionStorage.setItem("introPlayed", "true");
+      localStorage.setItem("introPlayed", "true");
 
       setTimeout(() => {
         setShow(false);

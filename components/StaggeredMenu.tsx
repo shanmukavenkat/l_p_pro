@@ -69,9 +69,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const offscreen = position === 'left' ? -100 : 100;
-      gsap.set(panelRef.current, { xPercent: offscreen });
+      gsap.set(panelRef.current, { xPercent: offscreen, visibility: 'visible' });
       gsap.set(overlayRef.current, { opacity: 0, visibility: 'hidden' });
-      gsap.set(plusVRef.current, { rotate: 90 });
+      gsap.set(plusVRef.current, { rotate: 90, opacity: 1 });
     });
     return () => ctx.revert();
   }, [position]);
@@ -171,6 +171,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             style={{ color: menuButtonColor }}
             onClick={toggleMenu}
             type="button"
+            suppressHydrationWarning
           >
             <span className="sm-toggle-textWrap relative overflow-hidden h-[1.1em] w-12">
               <span ref={textInnerRef} className="sm-toggle-textInner flex flex-col text-end">
@@ -179,7 +180,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             </span>
             <span ref={iconRef} className="relative w-5 h-5 flex items-center justify-center">
               <span ref={plusHRef} className="absolute w-full h-[2px] bg-current rounded" />
-              <span ref={plusVRef} className="absolute w-full h-[2px] bg-current rounded" />
+              <span ref={plusVRef} className="absolute w-full h-[2px] bg-current rounded" style={{ opacity: 0 }} />
             </span>
           </button>
         </header>
@@ -187,7 +188,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           ref={panelRef}
           className="staggered-menu-aside fixed top-0 right-0 h-screen bg-white flex flex-col p-[7em_2em_2em_2em] z-10 pointer-events-auto shadow-[-20px_0_50px_rgba(0,0,0,0.1)]"
-          style={{ width: 'clamp(300px, 45vw, 500px)' }}
+          style={{ width: 'clamp(300px, 45vw, 500px)', visibility: 'hidden' }}
         >
           <div className="flex-1 flex flex-col">
             <nav>

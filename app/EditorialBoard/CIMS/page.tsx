@@ -21,6 +21,7 @@ const  page = () => {
         "Name": "Dr.Modekurti Venkata Surya Kameshwar Rao",
         "Board": "CIMS-Finance Management",
         "Role": "Sub Division-Editor in Chief",
+        "Department": "Department of Finance and Accounting",
         "Designation/College Name": "Associate Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/dr-kameshwar-rao-modekurti-45145223/",
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/Mq5sTPjgSkn8J4jPjlnscFWYy0p5MvTXrigIGJsvcPDF5qOn1r3b6nnL3Ne6KVk.pdf",
@@ -32,10 +33,11 @@ const  page = () => {
         "Name": "Dr.Srikanth Potharla",
           "Board": "CIMS-Finance Management",
         "Role": "Deputy Editor in Chief",
+        "Department": "Department of Finance and Accounting",
         "Designation/College Name": "Assistant Professor/IBS Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/srikanth-p-2a06751a/",
        "collegeUrl":"https://www.ifheindia.org/FacultyImages/N3DYZbNMKEAYseOGmrIl82HhZWPoLASoqtAlM751FNF4wbU4jtHblFT5GokaxCW.pdf",
-       "mail":"psk@ibsindia.org"
+        "mail":"psk@ibsindia.org"
     },
     {
         Id:"Lurnexa_2544fs13",
@@ -43,6 +45,7 @@ const  page = () => {
         "Name": "Dr Susanta K Mishra",
         "Board": "CIMS-Finance Management",
         "Role": "Sr Associate Editor",
+        "Department": "Department of Management",
         "Designation/College Name": "Professor/ Centurion University",
         "linkedinUrl": "https://www.linkedin.com/in/dr-susanta-k-mishra-3b5a9433/?originalSubdomain=in",
        "collegeUrl":"https://faculty.cutm.ac.in/general_profilesc.php?xyz=susanta.mishra@cutm.ac.in",
@@ -53,6 +56,7 @@ const  page = () => {
         "Name": "Dr.Muhammed Shafi M K",
         "Board": "CIMS-Finance Management",
         "Role": "Associate Editor",
+        "Department": "School of Management",
         "Designation/College Name": "Assistant Professor/ NIT Warangal",
         "linkedinUrl": "https://www.linkedin.com/in/dr-muhammed-shafi-mk-68a49254/?originalSubdomain=in",
        "collegeUrl":"https://erp.nitw.ac.in/ext/profile/sm-shafimk",
@@ -63,6 +67,7 @@ const  page = () => {
         "Name": "Dr. Manisha Kumari",
         "Board": "CIMS-Finance Management",
         "Role": "Managing Editor",
+        "Department": "School of Enterprise Development",
         "Designation/College Name": "Associate Faculty Member/ (ni-msme)",
         "linkedinUrl": "https://www.linkedin.com/in/manishakumari-ba344857/",
        "collegeUrl":"https://www.nimsme.gov.in/employee/a7b4a35465d9853607aaa02f9ea4f0a3",
@@ -74,6 +79,7 @@ const  page = () => {
         "Name": "Dr. Sandeep Kumar Kesarwani",
         "Board": "CIMS-Finance Management",
         "Role": "Sr Review Editor",
+        "Department": "Department of Management Studies",
         "Designation/College Name": "Associate Professor/ Indian Institute of Information Technology",
        "linkedinUrl": "https://www.linkedin.com/in/dr-sandeep-kumar-kesarwani-48023755/?originalSubdomain=in",
        "collegeUrl":"https://imparc.org/dr-sandeep-kumar-kesarwani/",
@@ -81,10 +87,11 @@ const  page = () => {
     },
     {   
         Id:"Lurnexa_2544fc17",
-        "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fc17.jpg",
+         "image":"https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544fc17.jpg",
         "Name": "Dr.CH Shanker",
         "Board": "CIMS-Finance Management",
         "Role": "Review Editor",
+        "Department": "Department of Finance",
         "Designation/College Name": "Assistant Professor/ Geetam Hyderabad",
         "linkedinUrl": "https://www.linkedin.com/in/dr-ch-shankar-30881a3b/",
        "collegeUrl":"https://www.gitam.edu/faculty/chanagala-shankar",
@@ -95,6 +102,7 @@ const  page = () => {
         "Name": "Dr. Kumaraswamy Manepalli",
         "Board": "CIMS-Finance Management",
         "Role": "Domain Editor",
+        "Department": "Department of Management Studies",
         "Designation/College Name": "Assistant Professor/Vignan's University, Vadlamudi",
        "linkedinUrl": "https://www.linkedin.com/in/manepalli-kumaraswamy-71b310126/?originalSubdomain=in",
        "collegeUrl":"https://vignan.ac.in/newvignan/departments/deptpeople.php?deptid=sch5_dept1&school=sch5&deptnm=MG",
@@ -106,6 +114,7 @@ const  page = () => {
         "Name": "Dr.Rintu Anthony",
         "Board": "CIMS-Finance Management",
         "Role": "Assistant Editor",
+        "Department": "Department of Finance",
         "Designation/College Name": "Assistant Professor / Rajagiri Business School",
        "linkedinUrl": "https://www.linkedin.com/in/rintu-anthony-8b2bb124/?originalSubdomain=in",
        "collegeUrl":"https://www.rajagiribusinessschool.edu.in/faculty-details/rintu-anthony",
@@ -116,6 +125,7 @@ const  page = () => {
         "Name": "Dr.Saravanan Vellaiyan",
         "Board": "CIMS-Finance Management",
         "Role": "Editorial Executive",
+        "Department": "School of Business and Management",
         "Designation/College Name": "Assistant Professor / Christ University",
        "linkedinUrl": "https://www.linkedin.com/in/saravanan-vellaiyan/?originalSubdomain=in",
        "collegeUrl":"https://m.christuniversity.in/dept/faculty-details/NDc1OA==/MzAx",
@@ -127,28 +137,20 @@ const  page = () => {
         "Name": "Dr. Sofia Ahmed Sait",
         "Board": "CIMS-Finance Management",
         "Role": "Editorial Executive",
+        "Department": "Department of Commerce",
         "Designation/College Name": "Assistant Professor/Loyola Academy Degree & PG College, Secunderabad ",
        "linkedinUrl": "https://www.linkedin.com/in/dr-sofia-sait-4a841626b",
        "collegeUrl":"https://loyolaacademy.edu.in/bcom-business-analytics/"
     }
 ]
 const Operation_members = [
-  // {
-  //   "id": "Lurnexa_2544oa22",
-  //   "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544oa22.png",
-  //   "name": "Dr. Amitava Mukherjee",
-  //     "Board": "CIMS-Operation Management",
-  //   "role": "Sub Division Editor in Chief",
-  //   "Designation/College Name": "Professor/XLRI - Xavier School of Management",
-  //   "linkedinUrl": "https://www.linkedin.com/in/amitava-mukherjee-96b4511b/?originalSubdomain=in",
-  //   "collegeUrl": "https://www.xlri.ac.in/about/full-time-faculty/amitava-mukherjee"
-  // },
   {
     "id": "Lurnexa_2544ok23",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ok23.jpg",
     "name": "Dr. Kapil Manohar Gumte",
       "Board": "CIMS-Operation Management",
     "role": "Deputy Editor in Chief",
+    "Department": "Operations & Supply Chain",
     "Designation/College Name": "Assistant Professor/Indian Institute of Management Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/kapilgumte/",
     "collegeUrl": "https://www.iimj.ac.in/faculty-data4261.php?n=ODY=",
@@ -160,6 +162,7 @@ const Operation_members = [
     "name": "Dr. Debopam Chakrabarti",
       "Board": "CIMS-Operation Management",
     "role": "Senior Associate Editor",
+    "Department": "Operations and Supply Chain Management",
     "Designation/College Name": "Professor of Practice/Mahindra University",
     "linkedinUrl": "https://www.linkedin.com/in/dr-debopam-chakarabarti-3352b97/",
     "collegeUrl": "https://www.mahindrauniversity.edu.in/faculty/dr-debopam-chakrabarti/",
@@ -171,6 +174,7 @@ const Operation_members = [
     "name": "Dr. Vaibhav Mishra",
       "Board": "CIMS-Operation Management",
     "role": "Associate Editor",
+    "Department": "Operations and IT",
     "Designation/College Name": "Associate Professor/IBS Hyderabad",
     "linkedinUrl": null,
     "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eRiY6syRgLdpuVNmdTj9FyDSgYZbxAUTyEainLYJS.pdf",
@@ -182,46 +186,31 @@ const Operation_members = [
     "name": "Dr. D. Ravindran",
       "Board": "CIMS-Operation Management",
     "role": "Managing Editor",
+    "Department": "Department of Management Studies",
     "Designation/College Name": "Assistant Professor/Kristu Jayanti Institute of Management, Bengaluru",
     "linkedinUrl": "https://www.linkedin.com/in/ravindran-d-b65b8416/?originalSubdomain=in",
     "collegeUrl": "https://kristujayanti.irins.org/profile/168699",
     "email":"rtkob@yahoo.co.in"
   },
-  // {
-  //   "id": 6,
-  //   "image": "",
-  //   "name": null,
-  //   "role": "Senior Review Editor",
-  //   "Designation/College Name": null,
-  //   "linkedinUrl": null,
-  //   "collegeUrl": null
-  // },
   {
     "id": "Lurnexa_2544os28",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544os28.jpg",
     "name": "Dr. Sourav Mondal",
       "Board": "CIMS-Operation Management",
     "role": "Review Editor",
+    "Department": "Operations & Supply Chain",
     "Designation/College Name": "Assistant Professor / IIM Jammu",
     "linkedinUrl": "https://www.linkedin.com/in/sourav-mondal-a13906a7/?originalSubdomain=in",
     "collegeUrl": "https://iimj.ac.in/faculty-datad429.php?n=MTMy",
     "email":"sourav@iimj.ac.in"
   },
-  // {
-  //   "id": 8,
-  //   "image": "",
-  //   "name": null,
-  //   "role": "Domain Editor",
-  //   "Designation/College Name": null,
-  //   "linkedinUrl": null,
-  //   "collegeUrl": null
-  // },
   {
     "id": "Lurnexa_2544ob30",
     "image": "https://lurnexa.s3.ap-south-1.amazonaws.com/editorial_board_photos/Lurnexa_2544ob30.jpg",
     "name": "Dr. Bijetha Shaw",
       "Board": "CIMS-Operation Management",
     "role": "Assistant Editor",
+    "Department": "Operations and IT",
     "Designation/College Name": "Assistant Professor/IBS Hyderabad",
     "linkedinUrl": "https://www.linkedin.com/in/bijeta-shaw-5576269b/?originalSubdomain=in",
     "collegeUrl": "https://www.ifheindia.org/FacultyImages/ZFUqkjs63hPyifyetu45eUrjppP7DJtxe9oBQK2hBVp8Jv0UmNwKTMVPHPBp.pdf",
@@ -297,6 +286,8 @@ We invite research that enhances organizational performance, addresses contempor
          college={member['Designation/College Name']}
           linkedinUrl={member.linkedinUrl}
            collegeUrl={member.collegeUrl}
+           mail={member.mail}
+           department={member.Department}
               />
             ))}
 
@@ -314,6 +305,7 @@ We invite research that enhances organizational performance, addresses contempor
           linkedinUrl={members.linkedinUrl || undefined }
            collegeUrl={members.collegeUrl || undefined}
               mail={members.email || undefined}
+              department={members.Department}
               />
             ))}
         </div>

@@ -9,6 +9,7 @@ import FeaturesSectionDemo from "@/components/features-section-demo-2";
 import { LeadershipSection } from "@/components/Home/LeadershipSection";
 import NavigationPage from "@/components/Home/nav/page";
 import LurnexaAim from "@/components/Home/LurnexaAim";
+import WelcomeIntro from "@/components/Home/WelcomeIntro";
 
 export default function Home() {
   // ✅ Section tracking
@@ -64,6 +65,7 @@ export default function Home() {
 
   return (
     <>
+      <WelcomeIntro />
       <div className="min-h-screen text-slate-900">
         {/* Fixed navigation */}
         <section>
